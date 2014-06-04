@@ -19,3 +19,6 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
+
+# DRM
+drm.service.enabled=true

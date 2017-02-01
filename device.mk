@@ -16,6 +16,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 

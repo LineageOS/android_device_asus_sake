@@ -388,10 +388,6 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     sensors.sake
 
-# Service Tracker
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2.vendor
-
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
 

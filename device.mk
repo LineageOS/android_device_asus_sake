@@ -257,6 +257,7 @@ PRODUCT_PACKAGES += \
     WifiResCommon \
     WifiResTarget \
     ZenFone8Frameworks \
+    ZenFone8Snap \
     ZenFone8SystemUI
 
 # Partitions

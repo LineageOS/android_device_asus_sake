@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BUILD_BROKEN_DUP_RULES := true
+
 DEVICE_PATH := device/asus/sake
 
 include build/make/target/board/BoardConfigMainlineCommon.mk

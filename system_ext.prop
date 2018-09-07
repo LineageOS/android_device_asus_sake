@@ -10,6 +10,9 @@ ro.charger.enable_suspend=1
 # DPM
 persist.vendor.dpm.feature=11
 
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
 # QC Value Addons
 ro.vendor.qti.va_aosp.support=1
 

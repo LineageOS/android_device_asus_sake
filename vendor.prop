@@ -32,6 +32,10 @@ ro.hardware.fingerprint=goodixfp
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+
 # Incremental FS
 ro.incremental.enable=yes
 

@@ -16,6 +16,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Initialization
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/recovery.fstab:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default

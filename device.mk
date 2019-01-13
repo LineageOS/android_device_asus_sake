@@ -288,6 +288,9 @@ PRODUCT_PACKAGES += \
 BOOT_SECURITY_PATCH := 2021-05-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
 # Sensors
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \

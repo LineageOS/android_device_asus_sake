@@ -56,6 +56,9 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 # DTBO
 BOARD_KERNEL_SEPARATED_DTBO := true
 
+# Display
+TARGET_SCREEN_DENSITY := 440
+
 # Kernel
 BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \

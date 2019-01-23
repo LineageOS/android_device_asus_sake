@@ -20,6 +20,9 @@ genfscon sysfs /class/asuslib/slow_charging_enable  u:object_r:vendor_sysfs_batt
 # Fingerprint
 genfscon proc /driver/fp_xy    u:object_r:vendor_proc_fingerprint:s0
 
+# Livedisplay
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/hbm   u:object_r:sysfs_hbm:s0
+
 # Performance
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable    u:object_r:vendor_sysfs_msm_perf:s0
 

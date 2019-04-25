@@ -1,4 +1,5 @@
 binder_call(hal_camera_default, system_server)
+get_prop(hal_camera_default, vendor_camera_prop)
 
 allow hal_camera_default mnt_vendor_file:dir w_dir_perms;
 allow hal_camera_default mnt_vendor_file:file create_file_perms;

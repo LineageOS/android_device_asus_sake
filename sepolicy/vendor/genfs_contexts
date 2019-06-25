@@ -16,6 +16,9 @@ genfscon proc /asusevtlog    u:object_r:vendor_proc_evt:s0
 # Fingerprint
 genfscon proc /driver/fp_xy    u:object_r:vendor_proc_fingerprint:s0
 
+# Performance
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable    u:object_r:vendor_sysfs_msm_perf:s0
+
 # Sensors
 genfscon sysfs /class/icm206xx             u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/virtual/sensors    u:object_r:vendor_sysfs_sensors:s0

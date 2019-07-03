@@ -257,6 +257,9 @@ PRODUCT_PACKAGES += \
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# QMI
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
 

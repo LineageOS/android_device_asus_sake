@@ -1,0 +1,1 @@
+allow hal_power vendor_proc_graphics:file w_file_perms;

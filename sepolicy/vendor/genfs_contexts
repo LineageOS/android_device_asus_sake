@@ -6,6 +6,7 @@ genfscon proc /driver/ois_i2c_rw      u:object_r:vendor_proc_camera:s0
 # Display
 genfscon sysfs /class/drm/fod_touched    u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /class/drm/hdr_mode       u:object_r:vendor_sysfs_graphics:s0
+genfscon proc  /driver/dclick            u:object_r:vendor_proc_graphics:s0
 genfscon proc  /globalHbm                u:object_r:vendor_proc_graphics:s0
 
 # EVT

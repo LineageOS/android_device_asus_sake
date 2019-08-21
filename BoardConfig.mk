@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DEVICE_PATH := device/asus/sake
+
 include build/make/target/board/BoardConfigMainlineCommon.mk
 
 # A/B
@@ -100,3 +102,4 @@ TARGET_BOARD_PLATFORM := lahaina
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/recovery.fstab

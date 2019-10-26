@@ -914,10 +914,8 @@ vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/fp_cali_mv
 vendor/bin/gf_ver.sh
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/etc/init/init.goodixfp.rc
 vendor/firmware/goodixfp64.b00
 vendor/firmware/goodixfp64.b01

@@ -1,3 +1,6 @@
+# Audio
+persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
+
 # Bluetooth
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false

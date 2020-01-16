@@ -212,6 +212,10 @@ $(call inherit-product, vendor/nxp/opensource/pn5xx/halimpl/nfc_vendor_product.m
 
 TARGET_USES_NQ_NFC := true
 
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
+    frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
+
 PRODUCT_PACKAGES += \
     ls_nq_client:64 \
     jcos_nq_client:64 \

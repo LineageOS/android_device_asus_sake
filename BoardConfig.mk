@@ -93,6 +93,9 @@ DEVICE_MATRIX_FILE := \
 ODM_MANIFEST_SKUS := eSE
 ODM_MANIFEST_ESE_FILES := $(DEVICE_PATH)/hidl/eSE_manifest.xml
 
+# Hacks
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \

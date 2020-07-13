@@ -768,7 +768,7 @@ vendor/firmware/goodixfp64.b05
 vendor/firmware/goodixfp64.b06
 vendor/firmware/goodixfp64.b07
 vendor/firmware/goodixfp64.mdt
-vendor/lib64/hw/fingerprint.default.so
+vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.lahaina.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 

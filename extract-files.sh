@@ -53,6 +53,16 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+
+    # Change soname for fingerprint.default.so.
+    vendor/lib64/hw/fingerprint.lahaina.so)
+        patchelf --set-soname "fingerprint.lahaina.so" "${2}"
+        ;;
+    esac
+}
+
 # Initialize the helper.
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 

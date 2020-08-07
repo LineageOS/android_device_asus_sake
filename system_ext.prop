@@ -6,3 +6,6 @@ ro.charger.enable_suspend=1
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
+
+# Telephony
+ro.telephony.default_network=33,33

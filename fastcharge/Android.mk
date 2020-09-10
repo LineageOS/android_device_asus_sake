@@ -26,7 +26,6 @@ LOCAL_SHARED_LIBRARIES := \
     libbase \
     libbinder \
     libhidlbase \
-    libhidltransport \
     libutils \
     vendor.lineage.fastcharge@1.0
 

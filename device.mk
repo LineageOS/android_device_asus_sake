@@ -45,6 +45,9 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
+
+BOARD_HAVE_QCOM_FM := false
+
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
 
 PRODUCT_COPY_FILES += \

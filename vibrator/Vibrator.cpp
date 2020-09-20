@@ -29,6 +29,7 @@
 
 #define LOG_TAG "vendor.qti.vibrator"
 
+#include <android-base/properties.h>
 #include <dirent.h>
 #include <inttypes.h>
 #include <linux/input.h>
@@ -42,9 +43,8 @@
 #include "effect.h"
 #endif
 
-extern "C" {
-#include "libsoc_helper.h"
-}
+using android::base::GetProperty;
+
 namespace aidl {
 namespace android {
 namespace hardware {
@@ -70,7 +70,6 @@ InputFFDevice::InputFFDevice()
     const char *INPUT_DIR = "/dev/input/";
     char name[NAME_BUF_SIZE];
     int fd, ret;
-    soc_info_v0_1_t soc = {MSM_CPU_UNKNOWN};
 
     mVibraFd = INVALID_VALUE;
     mSupportGain = false;
@@ -130,20 +129,11 @@ InputFFDevice::InputFFDevice()
             if (test_bit(FF_GAIN, ffBitmask))
                 mSupportGain = true;
 
-            get_soc_info(&soc);
-            ALOGD("msm CPU SoC ID: %d\n", soc.msm_cpu);
-            switch (soc.msm_cpu) {
-            case MSM_CPU_LAHAINA:
-            case APQ_CPU_LAHAINA:
-            case MSM_CPU_SHIMA:
-            case MSM_CPU_SM8325:
-            case APQ_CPU_SM8325P:
-            case MSM_CPU_YUPIK:
+            if (GetProperty("ro.board.platform", "") == "lahaina") {
                 mSupportExternalControl = true;
-                break;
-            default:
+            } else {
+                ALOGD("External control not supported for platform\n");
                 mSupportExternalControl = false;
-                break;
             }
             break;
         }

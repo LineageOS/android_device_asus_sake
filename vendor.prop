@@ -42,3 +42,6 @@ ro.crypto.volume.metadata.method=dm-default-key
 # Media
 debug.stagefright.ccodec=4
 vendor.mm.enable.qcom_parser=16777215
+
+# Netflix
+ro.netflix.bsp_rev=Q875-32408-1

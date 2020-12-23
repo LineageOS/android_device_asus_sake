@@ -125,6 +125,15 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.mwqemadapter</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMwqemAdapter</name>
+            <instance>MwqemAdapter</instance>
+        </interface>
+    </hal>
     <!-- Camera -->
     <hal format="hidl">
         <name>android.hardware.camera.provider</name>

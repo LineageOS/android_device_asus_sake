@@ -293,6 +293,15 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.mwqemadapter</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMwqemAdapter</name>
+            <instance>MwqemAdapter</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.perf</name>
         <version>2.2</version>
         <interface>

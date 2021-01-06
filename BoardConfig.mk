@@ -140,6 +140,7 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     mbhc_dlkm.ko \
     mc44s803.ko \
     msi001.ko \
+    msm_drm.ko \
     mt2060.ko \
     mt2063.ko \
     mt20xx.ko \
@@ -260,7 +261,10 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_USES_RECOVERY_AS_BOOT := true
-BOOT_KERNEL_MODULES := focaltech_fts_zf.ko
+BOOT_KERNEL_MODULES := \
+    focaltech_fts_zf.ko \
+    msm_drm.ko
+
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888

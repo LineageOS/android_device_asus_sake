@@ -186,6 +186,9 @@
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
+    <!-- Whether to select voice/data/sms preference without user confirmation. -->
+    <bool name="config_voice_data_sms_auto_fallback">true</bool>
+
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:

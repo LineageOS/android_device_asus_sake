@@ -71,10 +71,12 @@ TARGET_SCREEN_DENSITY := 440
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/asus_framework_matrix.xml \
     $(DEVICE_PATH)/device_framework_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := \
+    $(DEVICE_PATH)/asus_manifest.xml \
     $(DEVICE_PATH)/manifest.xml
 
 DEVICE_MATRIX_FILE := \

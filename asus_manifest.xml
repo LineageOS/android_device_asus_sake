@@ -1,0 +1,16 @@
+<!--
+     Copyright (C) 2021 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest version="1.0" type="device">
+    <!-- Camera -->
+    <hal format="hidl">
+        <name>vendor.asus.bspcam</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAsusBspCameraInterface</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>

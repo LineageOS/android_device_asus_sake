@@ -80,7 +80,9 @@ extern "C" {
 #define AB_SLOT_B_SUFFIX                "_b"
 #define PTN_XBL                         "xbl"
 #define PTN_XBL_CFG                     "xbl_config"
-#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, \
+#define PTN_MULTIIMGOEM                 "multiimgoem"
+#define PTN_MULTIIMGQTI                 "multiimgqti"
+#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, PTN_MULTIIMGOEM, PTN_MULTIIMGQTI, \
             "abl", "aop", "bluetooth" "cpucp" "devcfg", "dsp", "dtbo", "featenabler", \
             "hyp", "keymaster", "multiimgoem", "qupfw", "qweslicstore", "shrm", "tz", \
             "uefisecapp", "vbmeta_system", "vbmeta"

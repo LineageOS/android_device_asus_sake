@@ -1,2 +1,5 @@
 # Partitions
-/dev/block/platform/soc/1d84000.ufshc/by-name/asusfw_a    u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/asusfw_a                           u:object_r:vendor_custom_ab_block_device:s0
+
+# Vibrator
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.sake    u:object_r:hal_vibrator_default_exec:s0

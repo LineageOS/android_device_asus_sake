@@ -1,0 +1,40 @@
+#
+# Copyright (C) 2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on boot
+    # PSensor
+    chown system system /sys/class/sensors/psensor/hi_cal
+    chown system system /sys/class/sensors/psensor/inf_cal
+    chown system system /sys/class/sensors/psensor/load_cal
+    chown system system /sys/class/sensors/psensor/low_cal
+    chown system system /sys/class/sensors/psensor/proxm
+    chown system system /sys/class/sensors/psensor/selection
+    chown system system /sys/class/sensors/psensor/switch
+
+    # PSensor 2
+    chown system system /sys/class/sensors/psensor_2nd/hi_cal
+    chown system system /sys/class/sensors/psensor_2nd/inf_cal
+    chown system system /sys/class/sensors/psensor_2nd/load_cal
+    chown system system /sys/class/sensors/psensor_2nd/low_cal
+    chown system system /sys/class/sensors/psensor_2nd/proxm
+    chown system system /sys/class/sensors/psensor_2nd/selection
+    chown system system /sys/class/sensors/psensor_2nd/switch
+
+    # LSensor
+    chown system system /sys/class/sensors/lsensor/adc
+    chown system system /sys/class/sensors/lsensor/cal
+    chown system system /sys/class/sensors/lsensor/selection
+    chown system system /sys/class/sensors/lsensor/switch
+
+    # LSensor 2
+    chown system system /sys/class/sensors/lsensor_2nd/adc
+    chown system system /sys/class/sensors/lsensor_2nd/cal
+    chown system system /sys/class/sensors/lsensor_2nd/selection
+    chown system system /sys/class/sensors/lsensor_2nd/switch
+
+on post-fs-data
+    write /sys/class/sensors/psensor/load_cal 1
+    write /sys/class/sensors/psensor_2nd/load_cal 1

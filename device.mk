@@ -93,6 +93,7 @@ PRODUCT_PACKAGES += \
     fstab.default \
     init.asus.camera.rc \
     init.asus.recovery.rc \
+    init.asus.sensors.rc \
     init.class_main.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \

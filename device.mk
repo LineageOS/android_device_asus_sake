@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     TelephonyResCommon \
     WifiResCommon \
-    ZenFone8Frameworks
+    ZenFone8Frameworks \
+    ZenFone8SystemUI
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

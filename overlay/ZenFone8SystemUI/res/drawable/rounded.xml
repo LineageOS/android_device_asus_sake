@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="145.26999dp"
+    android:height="145.26999dp"
+    android:viewportWidth="145.27"
+    android:viewportHeight="145.27">
+
+    <path
+        android:fillColor="#000000"
+        android:pathData="M145.27,0c-9.91,0 -36.06,0.17 -53.76,3.57C71.64,7.4 50.16,15.4 32.78,32.78S7.4,71.64 3.57,91.51C0.17,109.21 0,135.36 0,145.27V0Z" />
+
+</vector>

@@ -6,6 +6,18 @@
 <resources>
 
     <!-- The padding on the top of the statusbar (usually 0). -->
-    <dimen name="status_bar_padding_top">33px</dimen>
+    <dimen name="status_bar_padding_top">33.5px</dimen>
+
+    <!-- The padding on the start of the status bar. -->
+    <dimen name="status_bar_padding_start">0px</dimen>
+
+    <!-- The padding on the end of the status bar. -->
+    <dimen name="status_bar_padding_end">30px</dimen>
+
+    <!-- Margin on the left side of the carrier text on Keyguard -->
+    <dimen name="keyguard_carrier_text_margin">@dimen/status_bar_padding_start</dimen>
+
+    <!-- Margin on the right side of the system icon group on Keyguard. -->
+    <dimen name="system_icons_keyguard_padding_end">@dimen/status_bar_padding_end</dimen>
 
 </resources>

@@ -1,5 +1,6 @@
 # Adreno
 ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
 
 # Audio
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24

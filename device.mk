@@ -49,3 +49,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
+
+# Vendor
+$(call inherit-product, vendor/asus/sake/sake-vendor.mk)

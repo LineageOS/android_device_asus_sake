@@ -32,6 +32,11 @@ $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/dis
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
+
 # Initialization
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/recovery.fstab:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default

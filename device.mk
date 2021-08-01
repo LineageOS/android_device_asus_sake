@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
 

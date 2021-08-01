@@ -59,6 +59,8 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Display
+include hardware/qcom-caf/sm8350/display/config/display-board.mk
+
 TARGET_SCREEN_DENSITY := 440
 
 # HIDL

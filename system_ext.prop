@@ -4,6 +4,9 @@ ro.bluetooth.library_name=libbluetooth_qti.so
 # Charger
 ro.charger.enable_suspend=1
 
+# DPM
+persist.vendor.dpm.feature=11
+
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 

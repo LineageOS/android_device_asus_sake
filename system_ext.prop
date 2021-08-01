@@ -14,4 +14,5 @@ persist.vendor.dpm.feature=11
 persist.vendor.sensors.enable.mag_filter=true
 
 # Telephony
+ril.subscription.types=RUIM,RUIM
 ro.telephony.default_network=33,33

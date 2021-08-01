@@ -17,6 +17,9 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Initialization
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/recovery.fstab:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
+
 PRODUCT_PACKAGES += \
     init.asus.recovery.rc
 

@@ -87,9 +87,10 @@ PRODUCT_PACKAGES += \
 
 # Initialization
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/recovery.fstab:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
+    $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
 PRODUCT_PACKAGES += \
+    fstab.default \
     init.asus.recovery.rc \
     init.class_main.sh \
     init.qcom.class_core.sh \
@@ -97,6 +98,7 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
+    init.target.rc \
     ueventd.qcom.rc
 
 # Media

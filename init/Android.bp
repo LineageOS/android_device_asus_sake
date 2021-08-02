@@ -4,6 +4,12 @@
 //
 
 prebuilt_etc {
+    name: "fstab.default",
+    src: "fstab.default",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.asus.recovery.rc",
     src: "init.asus.recovery.rc",
     sub_dir: "init",
@@ -13,6 +19,13 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.qcom.rc",
     src: "init.qcom.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "init.target.rc",
     sub_dir: "init/hw",
     vendor: true,
 }

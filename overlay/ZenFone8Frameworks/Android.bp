@@ -5,5 +5,5 @@
 
 runtime_resource_overlay {
     name: "ZenFone8Frameworks",
-    product_specific: true,
+    vendor: true,
 }

@@ -185,7 +185,9 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # USB
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 TARGET_HAS_DIAG_ROUTER := true
+TARGET_KERNEL_VERSION := 5.4
 
 # Vendor
 $(call inherit-product, vendor/asus/sake/sake-vendor.mk)

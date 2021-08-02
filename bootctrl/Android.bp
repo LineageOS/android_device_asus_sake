@@ -1,0 +1,10 @@
+//
+// Copyright (C) 2021 The Android Open Source Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library {
+    name: "bootctrl.lahaina",
+    defaults: ["bootctrl_hal_defaults"],
+    static_libs: ["libgptutils.sake"],
+}

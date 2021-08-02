@@ -69,6 +69,9 @@ include hardware/qcom-caf/sm8350/display/config/display-board.mk
 
 TARGET_SCREEN_DENSITY := 440
 
+# FSConfig
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/asus_framework_matrix.xml \

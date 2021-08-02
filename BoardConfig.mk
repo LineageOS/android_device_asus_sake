@@ -47,6 +47,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
+# Audio
+AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
 

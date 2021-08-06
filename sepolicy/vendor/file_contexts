@@ -1,0 +1,2 @@
+# Partitions
+/dev/block/platform/soc/1d84000.ufshc/by-name/asusfw_a    u:object_r:vendor_custom_ab_block_device:s0

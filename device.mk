@@ -43,6 +43,10 @@ PRODUCT_PACKAGES += \
     libsndmonitor \
     libspkrprot
 
+# Bluetooth
+include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
+$(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
+
 # Display
 $(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-product.mk)
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk)

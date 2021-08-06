@@ -214,7 +214,8 @@ TARGET_USES_NQ_NFC := true
 
 PRODUCT_PACKAGES += \
     ls_nq_client:64 \
-    jcos_nq_client:64
+    jcos_nq_client:64 \
+    vendor.nxp.nxpnfc@1.0.vendor
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/nxp/opensource/pn5xx

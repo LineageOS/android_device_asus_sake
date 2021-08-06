@@ -212,6 +212,10 @@ $(call inherit-product, vendor/nxp/opensource/pn5xx/halimpl/nfc_vendor_product.m
 
 TARGET_USES_NQ_NFC := true
 
+PRODUCT_PACKAGES += \
+    ls_nq_client:64 \
+    jcos_nq_client:64
+
 PRODUCT_SOONG_NAMESPACES += \
     vendor/nxp/opensource/pn5xx
 

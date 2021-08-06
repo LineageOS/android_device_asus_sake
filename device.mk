@@ -92,6 +92,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.default \
     init.asus.camera.rc \
+    init.asus.fingerprint.rc \
     init.asus.recovery.rc \
     init.asus.sensors.rc \
     init.class_main.sh \

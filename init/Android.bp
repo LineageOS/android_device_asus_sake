@@ -17,6 +17,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.asus.fingerprint.rc",
+    src: "init.asus.fingerprint.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.asus.recovery.rc",
     src: "init.asus.recovery.rc",
     sub_dir: "init",

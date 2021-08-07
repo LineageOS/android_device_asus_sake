@@ -295,6 +295,10 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Storage
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# System Helper
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.systemhelper@1.0.vendor
+
 # USB
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 

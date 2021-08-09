@@ -88,6 +88,9 @@ DEVICE_MANIFEST_FILE := \
 DEVICE_MATRIX_FILE := \
     $(DEVICE_PATH)/compatibility_matrix.xml
 
+ODM_MANIFEST_SKUS := eSE
+ODM_MANIFEST_ESE_FILES := $(DEVICE_PATH)/eSE_manifest.xml
+
 # Kernel
 BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \

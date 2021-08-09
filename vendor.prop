@@ -25,3 +25,6 @@ drm.service.enabled=true
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# Fingerprint
+ro.hardware.fingerprint=goodixfp

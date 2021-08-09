@@ -226,6 +226,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
 
 PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0:64 \
     ls_nq_client:64 \
     jcos_nq_client:64 \
     vendor.nxp.nxpnfc@1.0.vendor

@@ -23,6 +23,16 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- Live Display -->
+    <hal format="hidl">
+        <name>vendor.lineage.livedisplay</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IPictureAdjustment</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <!-- NFC -->
     <hal format="hidl">
         <name>vendor.nxp.nxpnfclegacy</name>

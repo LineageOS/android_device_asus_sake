@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from our proprietary files directory.
+$(call inherit-product, vendor/asus/sake/sake-vendor.mk)
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
@@ -355,9 +358,6 @@ PRODUCT_PACKAGES += \
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
-
-# Vendor
-$(call inherit-product, vendor/asus/sake/sake-vendor.mk)
 
 # Verified Boot
 PRODUCT_COPY_FILES += \

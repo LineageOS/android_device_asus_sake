@@ -1,0 +1,3 @@
+set_prop(vendor_hal_gnss_qti, vendor_gps_prop)
+
+allow vendor_hal_gnss_qti vendor_proc_evt:file rw_file_perms;

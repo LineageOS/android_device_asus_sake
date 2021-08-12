@@ -1,1 +1,6 @@
 get_prop(vendor_init, vendor_thermal_prop)
+get_prop(vendor_init, vendor_fingerprint_prop)
+
+allow vendor_init vendor_goodix_data_file:file create_file_perms;
+allow vendor_init vendor_goodix_data_file:dir create_dir_perms;
+allow vendor_init vendor_proc_camera:file rw_file_perms;

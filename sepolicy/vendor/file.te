@@ -1,0 +1,12 @@
+# Camera
+type vendor_proc_camera, fs_type, proc_type;
+
+# Display
+type vendor_proc_graphics, fs_type, proc_type;
+
+# EVT
+type vendor_proc_evt, fs_type, proc_type;
+
+# Fingerprint
+type vendor_goodix_data_file, file_type, data_file_type;
+type vendor_proc_fingerprint, fs_type, proc_type;

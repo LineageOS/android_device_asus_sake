@@ -1,1 +1,4 @@
+get_prop(vendor_thermal-engine, vendor_camera_prop)
 set_prop(vendor_thermal-engine, vendor_thermal_prop)
+
+allow vendor_thermal-engine self:capability { fowner fsetid kill };

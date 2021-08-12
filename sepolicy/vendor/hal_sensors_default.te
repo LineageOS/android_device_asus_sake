@@ -1,0 +1,3 @@
+set_prop(hal_sensors_default, vendor_sensors_prop)
+
+allow hal_sensors_default sensors_device:chr_file rw_file_perms;

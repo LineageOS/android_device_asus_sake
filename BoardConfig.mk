@@ -96,7 +96,6 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
-    androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3 \
     cgroup.memory=nokmem,nosocket \
     console=ttyMSM0,115200n8 \
@@ -248,6 +247,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # WLAN
 BOARD_HAS_QCOM_WLAN := true

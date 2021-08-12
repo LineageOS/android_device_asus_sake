@@ -1,8 +1,21 @@
+# Display (Pixelworks)
+/(vendor|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.display\.iris-service           u:object_r:hal_graphics_composer_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.feature\.irisfeature-service    u:object_r:hal_graphics_composer_default_exec:s0
+/(vendor|system/vendor)/bin/irisConfig                                                       u:object_r:iris_config_exec:s0
+
 # FOD
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1\.0-service\.sake    u:object_r:hal_lineage_fod_default_exec:s0
 
+# Fingerprint
+/data/vendor/goodix/gf_data(/.*)?    u:object_r:vendor_goodix_data_file:s0
+/dev/goodix_fp                       u:object_r:fingerprint_device:s0
+
 # Partitions
-/dev/block/platform/soc/1d84000.ufshc/by-name/asusfw_a                                                  u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/asusfw_a    u:object_r:vendor_custom_ab_block_device:s0
+
+# Sensors
+/dev/asus2ndAccelSensor     u:object_r:sensors_device:s0
+/dev/asus2ndGyroSensor      u:object_r:sensors_device:s0
 
 # Vibrator
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.sake                           u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.sake    u:object_r:hal_vibrator_default_exec:s0

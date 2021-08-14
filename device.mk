@@ -180,6 +180,7 @@ PRODUCT_PACKAGES += \
     init.asus.nfc.rc \
     init.asus.recovery.rc \
     init.asus.sensors.rc \
+    init.asus.thermal.rc \
     init.class_main.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \

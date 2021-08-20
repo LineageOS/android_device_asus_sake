@@ -5,6 +5,14 @@
 #
 
 on boot
+    # Accelerometer
+    chown system camera /dev/asus2ndAccelSensor
+    chown system camera /sys/class/icm206xx/accel2_poll_delay
+
+    # Gyroscope
+    chown system camera /dev/asus2ndGyroSensor
+    chown system camera /sys/class/icm206xx/gyro2_poll_delay
+
     # PSensor
     chown system system /sys/class/sensors/psensor/hi_cal
     chown system system /sys/class/sensors/psensor/inf_cal

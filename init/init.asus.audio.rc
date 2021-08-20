@@ -1,0 +1,9 @@
+#
+# Copyright (C) 2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on post-fs-data
+    chown system audio /mnt/vendor/persist/audio/rcv_cal_val
+    chown system audio /mnt/vendor/persist/audio/spk_cal_val

@@ -174,6 +174,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     fstab.default \
+    init.asus.audio.rc \
     init.asus.camera.rc \
     init.asus.fingerprint.rc \
     init.asus.haptics.rc \

@@ -168,7 +168,6 @@ vendor/etc/audio/ZS590KS/mixer_paths_ZS590KS_EU.xml
 vendor/etc/audio/ZS590KS/mixer_paths_ZS590KS.xml
 vendor/etc/audio/ZS590KS/r_submix_audio_policy_configuration_ZS590KS.xml
 vendor/etc/audio/sku_lahaina/audio_platform_info_intcodec_ZS590KS.xml
-vendor/etc/audio/sku_lahaina/sound_trigger_mixer_paths_ZS590KS.xml
 vendor/etc/dirac/interfacedb
 vendor/etc/diracvdd.bin
 vendor/firmware/cs35l45-rcv-dsp1-spk-cali.bin
@@ -186,7 +185,6 @@ vendor/firmware/cs35l45-spk-music.txt
 vendor/firmware/cs35l45-spk-outdoor.txt
 vendor/firmware/cs35l45-spk-voice.txt
 vendor/lib/hw/audio.primary.lahaina.so
-vendor/lib/hw/sound_trigger.primary.lahaina.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libdiraceffect.so
 vendor/lib/soundfx/libqcbassboost.so
@@ -242,7 +240,6 @@ vendor/lib/libstagefright_soft_qtiflacdec.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib64/hw/audio.primary.lahaina.so
-vendor/lib64/hw/sound_trigger.primary.lahaina.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so

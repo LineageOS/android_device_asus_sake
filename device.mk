@@ -61,7 +61,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libsndmonitor \
-    libspkrprot
+    libspkrprot \
+    libvolumelistener
 
 # Biometrics
 PRODUCT_COPY_FILES += \

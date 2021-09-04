@@ -915,7 +915,6 @@ vendor/bin/lowirpcd
 vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
 -vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 vendor/etc/flp.conf
-vendor/etc/gnss_antenna_info.conf
 vendor/etc/gps.conf
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
 vendor/lib64/libbatching.so

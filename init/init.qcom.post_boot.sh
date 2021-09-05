@@ -3453,7 +3453,7 @@ case "$target" in
         fi
 
         case "$soc_id" in
-                 "394" )
+                 "394" | "467" | "468" )
 
             # Core control parameters on big
             echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
@@ -4347,13 +4347,11 @@ case "$target" in
             # Turn off scheduler boost at the end
             echo 0 > /proc/sys/kernel/sched_boost
 
+            echo 0 > /sys/module/lpm_levels/system/system-pc/idle_enabled
+            echo 0 > /sys/module/lpm_levels/system/system-pc/suspend_enabled
+
             # Turn on sleep modes
             echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
-
-            # Turn off sleep modes, core-control till bring up
-            # remove below two lines post bring up
-            echo 1 > /sys/module/lpm_levels/parameters/sleep_disabled
-            echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
 
             ;;
         esac

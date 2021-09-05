@@ -41,7 +41,7 @@ prebuilt_etc {
     name: "init.asus.nfc.rc",
     src: "init.asus.nfc.rc",
     sub_dir: "init",
-    vendor: true,
+    device_specific: true,
 }
 
 prebuilt_etc {

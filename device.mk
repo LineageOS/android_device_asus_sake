@@ -373,14 +373,6 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service.sake
 
-# WFD
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
-PRODUCT_PACKAGES += \
-    libnl \
-    libwfdaac_vendor
-
 # WiFi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \

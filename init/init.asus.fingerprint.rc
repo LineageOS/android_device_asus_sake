@@ -1,9 +1,0 @@
-#
-# Copyright (C) 2021 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
-# Let kernel know about the sensor status.
-on property:vendor.goodix.sensor.status=*
-   write /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fp_auth_status ${vendor.goodix.sensor.status}

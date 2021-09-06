@@ -1,4 +1,4 @@
-binder_call(hal_fingerprint_default, hal_perf_default)
+binder_call(hal_fingerprint_default, vendor_hal_perf_default)
 set_prop(hal_fingerprint_default, vendor_fingerprint_prop)
 
 allow hal_fingerprint_default fingerprint_device:chr_file rw_file_perms;

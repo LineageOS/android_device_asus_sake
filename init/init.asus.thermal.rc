@@ -1,8 +1,0 @@
-#
-# Copyright (C) 2021 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
-on property:vendor.asus.virtualtherm=*
-    write /sys/class/asuslib/virtual_thermal ${vendor.asus.virtualtherm}

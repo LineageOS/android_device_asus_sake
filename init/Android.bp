@@ -10,43 +10,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.asus.audio.rc",
-    src: "init.asus.audio.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.asus.camera.rc",
-    src: "init.asus.camera.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.asus.fingerprint.rc",
-    src: "init.asus.fingerprint.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.asus.haptics.rc",
-    src: "init.asus.haptics.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.asus.nfc.rc",
-    src: "init.asus.nfc.rc",
-    sub_dir: "init",
-    device_specific: true,
-}
-
-prebuilt_etc {
-    name: "init.asus.power.rc",
-    src: "init.asus.power.rc",
+    name: "init.asus.rc",
+    src: "init.asus.rc",
     sub_dir: "init",
     vendor: true,
 }
@@ -56,20 +21,6 @@ prebuilt_etc {
     src: "init.asus.recovery.rc",
     sub_dir: "init",
     recovery: true,
-}
-
-prebuilt_etc {
-    name: "init.asus.sensors.rc",
-    src: "init.asus.sensors.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.asus.thermal.rc",
-    src: "init.asus.thermal.rc",
-    sub_dir: "init",
-    vendor: true,
 }
 
 prebuilt_etc {

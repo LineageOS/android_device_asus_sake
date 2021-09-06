@@ -177,15 +177,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     fstab.default \
-    init.asus.audio.rc \
-    init.asus.camera.rc \
-    init.asus.fingerprint.rc \
-    init.asus.haptics.rc \
-    init.asus.nfc.rc \
-    init.asus.power.rc \
+    init.asus.rc \
     init.asus.recovery.rc \
-    init.asus.sensors.rc \
-    init.asus.thermal.rc \
     init.class_main.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \

@@ -83,7 +83,7 @@ extern "C" {
 #define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, \
             "abl", "aop", "bluetooth" "cpucp" "devcfg", "dsp", "dtbo", "featenabler", \
             "hyp", "keymaster", "multiimgoem", "qupfw", "qweslicstore", "shrm", "tz", \
-            "uefisecapp", "vbmeta_system", "vbmeta", "xrom"
+            "uefisecapp", "vbmeta_system", "vbmeta"
 
 #define AB_PTN_LIST                     PTN_SWAP_LIST, \
             "boot", "modem", "odm", "product", "system", "system_ext", "vendor", \

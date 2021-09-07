@@ -180,7 +180,6 @@ PRODUCT_PACKAGES += \
     init.asus.rc \
     init.asus.recovery.rc \
     init.class_main.sh \
-    init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \

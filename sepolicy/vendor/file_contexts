@@ -14,7 +14,7 @@
 /dev/goodix_fp                       u:object_r:fingerprint_device:s0
 
 # Partitions
-/dev/block/platform/soc/1d84000.ufshc/by-name/asusfw_a    u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/asusfw_[ab]    u:object_r:vendor_custom_ab_block_device:s0
 
 # Sensors
 /dev/asus2ndAccelSensor     u:object_r:sensors_device:s0

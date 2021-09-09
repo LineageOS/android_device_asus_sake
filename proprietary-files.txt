@@ -1068,9 +1068,6 @@ vendor/lib64/libspcom.so
 # Latency
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 
-# MDM
-vendor/bin/ks
-
 # MMI
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
 vendor/bin/mmid

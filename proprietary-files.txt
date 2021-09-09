@@ -1043,6 +1043,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 
 # Initialization
+vendor/bin/init.asus.zram.sh
 vendor/bin/init.kernel.post_boot-lahaina.sh
 vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.qti.kernel.sh

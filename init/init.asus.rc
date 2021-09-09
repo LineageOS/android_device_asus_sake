@@ -22,6 +22,9 @@ on post-fs-data
     write /sys/class/sensors/psensor/load_cal 1
     write /sys/class/sensors/psensor_2nd/load_cal 1
 
+    # ZRAM
+    swapon_all fstab.default
+
 on boot
     # Accelerometer
     chown system camera /dev/asus2ndAccelSensor
@@ -61,6 +64,11 @@ on boot
     chown system system /sys/class/sensors/lsensor_2nd/selection
     chown system system /sys/class/sensors/lsensor_2nd/switch
 
+on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
+    # ZRAM
+    setprop vendor.zram.enable ${persist.vendor.zram.enable}
+    setprop vendor.zram.disksize ${persist.vendor.zram.disksize}
+
 on property:ro.boot.country_code=JP
     # NFC
     setprop ro.boot.product.hardware.sku eSE
@@ -89,6 +97,17 @@ on property:vendor.audio.in_call=*
 on property:vendor.goodix.sensor.status=*
    # Fingerprint
    write /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fp_auth_status ${vendor.goodix.sensor.status}
+
+on property:vendor.zram.enable=*
+   # ZRAM
+   start asus_zram
+
+service asus_zram /vendor/bin/init.asus.zram.sh
+    user root
+    group root
+    disabled
+    seclabel u:r:vendor_qti_init_shell:s0
+    oneshot
 
 service vendor.camera-provider-2-5 /vendor/bin/hw/android.hardware.camera.provider@2.5-service_64
     override

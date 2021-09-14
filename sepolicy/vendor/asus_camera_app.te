@@ -1,0 +1,34 @@
+type asus_camera_app, domain, coredomain;
+
+app_domain(asus_camera_app)
+net_domain(asus_camera_app)
+
+allow asus_camera_app activity_service:service_manager find;
+allow asus_camera_app activity_task_service:service_manager find;
+allow asus_camera_app audio_service:service_manager find;
+allow asus_camera_app audioserver_service:service_manager find;
+allow asus_camera_app autofill_service:service_manager find;
+allow asus_camera_app cameraserver_service:service_manager find;
+allow asus_camera_app gpu_service:service_manager find;
+allow asus_camera_app hardware_properties_service:service_manager find;
+allow asus_camera_app mediaserver_service:service_manager find;
+allow asus_camera_app mediaextractor_service:service_manager find;
+allow asus_camera_app mediametrics_service:service_manager find;
+allow asus_camera_app radio_service:service_manager find;
+allow asus_camera_app sensorservice_service:service_manager find;
+allow asus_camera_app surfaceflinger_service:service_manager find;
+allow asus_camera_app tethering_service:service_manager find;
+allow asus_camera_app thermal_service:service_manager find;
+allow asus_camera_app trust_service:service_manager find;
+
+binder_call(asus_camera_app, gpuservice)
+binder_call(asus_camera_app, vendor_hal_qspmhal_default)
+
+domain_auto_trans(asus_camera_app, rs_exec, rs)
+
+allow asus_camera_app camera_lib_file:file r_file_perms;
+
+r_dir_file(asus_camera_app, vendor_camera_data_file);
+
+get_prop(asus_camera_app, vendor_asus_build_prop)
+get_prop(asus_camera_app, vendor_camera_prop)

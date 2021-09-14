@@ -1,5 +1,6 @@
 # Camera
-/vendor/lib(64)?/libipebpsstriping\.so    u:object_r:same_process_hal_file:s0
+/system/lib(64)?/DataSet/ispDB/ParameterDB\.db    u:object_r:camera_lib_file:s0
+/vendor/lib(64)?/libipebpsstriping\.so            u:object_r:same_process_hal_file:s0
 
 # Display (Pixelworks)
 /(vendor|system/vendor)/bin/hw/vendor\.pixelworks\.hardware\.display\.iris-service           u:object_r:hal_graphics_composer_default_exec:s0

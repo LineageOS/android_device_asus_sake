@@ -263,8 +263,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # WLAN
 BOARD_HAS_QCOM_WLAN := true

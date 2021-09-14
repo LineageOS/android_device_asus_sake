@@ -2,10 +2,14 @@
 sys.audio.system.brand            u:object_r:vendor_audio_prop:s0
 vendor.use.audio.eu.parameters    u:object_r:vendor_audio_prop:s0
 
+# Build
+ro.vendor.build.asus.    u:object_r:vendor_asus_build_prop:s0
+
 # Camera
 persist.camera.apk.usingname    u:object_r:vendor_camera_prop:s0
 ro.camera.req.fmq.size          u:object_r:vendor_camera_prop:s0
 ro.camera.res.fmq.size          u:object_r:vendor_camera_prop:s0
+ro.vendor.config.versatility    u:object_r:vendor_camera_prop:s0
 vendor.camera.                  u:object_r:vendor_camera_prop:s0
 
 # DRM

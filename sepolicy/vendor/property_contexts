@@ -1,5 +1,12 @@
 # Camera
-vendor.camera.    u:object_r:vendor_camera_prop:s0
+persist.vendor.sys.cta.security    u:object_r:vendor_camera_prop:s0
+ro.vendor.build.asus.              u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.                  u:object_r:vendor_camera_prop:s0
+ro.vendor.config.versatility       u:object_r:vendor_camera_prop:s0
+ro.vendor.memsize                  u:object_r:vendor_camera_prop:s0
+ro.vendor.vendor.camera.           u:object_r:vendor_camera_prop:s0
+vendor.camera.                     u:object_r:vendor_camera_prop:s0
+vendor.sys.asus.camprobe           u:object_r:vendor_camera_prop:s0
 
 # DRM
 vendor.drm.keystatus    u:object_r:vendor_display_prop:s0

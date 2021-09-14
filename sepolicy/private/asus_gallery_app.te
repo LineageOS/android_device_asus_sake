@@ -1,0 +1,25 @@
+app_domain(asus_gallery_app)
+net_domain(asus_gallery_app)
+
+allow asus_gallery_app {
+    activity_service
+    activity_task_service
+    audio_service
+    audioserver_service
+    autofill_service
+    content_capture_service
+    game_service
+    gpu_service
+    hint_service
+    legacy_permission_service
+    location_service
+    mediaextractor_service
+    mediametrics_service
+    mediaserver_service
+    package_native_service
+    permission_checker_service
+    sensorservice_service
+    surfaceflinger_service
+    textservices_service
+    thermal_service
+}:service_manager find;

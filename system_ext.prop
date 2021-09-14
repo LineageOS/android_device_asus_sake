@@ -4,6 +4,10 @@ persist.vendor.bt.a2dp.aac_whitelist=false
 # CNE
 persist.vendor.cne.feature=1
 
+# Camera
+persist.vendor.camera.privapp.list=com.asus.camera
+vendor.camera.aux.packagelist=com.asus.camera
+
 # Charger
 ro.charger.enable_suspend=1
 

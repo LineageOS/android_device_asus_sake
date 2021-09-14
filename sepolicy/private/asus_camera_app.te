@@ -1,0 +1,38 @@
+app_domain(asus_camera_app)
+net_domain(asus_camera_app)
+
+# Allow loading executable code from writable priv-app home
+# directories. This is a W^X violation, but it needs to be
+# supported for the RenderScript cache.
+allow asus_camera_app privapp_data_file:file execute;
+
+allow asus_camera_app {
+    activity_service
+    activity_task_service
+    audio_service
+    audioserver_service
+    autofill_service
+    cameraserver_service
+    content_capture_service
+    game_service
+    gpu_service
+    hardware_properties_service
+    hint_service
+    mediaextractor_service
+    mediametrics_service
+    mediaserver_service
+    radio_service
+    sensorservice_service
+    surfaceflinger_service
+    thermal_service
+    trust_service
+}:service_manager find;
+
+# Allow reading UTC build date from boot image.
+get_prop(asus_camera_app, build_bootimage_prop)
+
+# Allow reading DIT databases to load DIT libraries for camera.
+allow asus_camera_app system_camera_lib_file:file r_file_perms;
+
+# Allow reading and loading RenderScript executables.
+allow asus_camera_app rs_exec:file rx_file_perms;

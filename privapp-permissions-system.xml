@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This XML file declares which platform apps that need to access internal APIs. -->
 <permissions>
+
+    <!-- Audio -->
     <privapp-permissions package="se.dirac.acs">
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
+
+    <!-- Camera -->
+    <privapp-permissions package="com.asus.camera">
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+
+    <!-- Gallery -->
+    <privapp-permissions package="com.asus.ephotoburst">
+        <permission name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.asus.gallery">
+        <permission name="android.permission.DELETE_PACKAGES"/>
+        <permission name="android.permission.LOCAL_MAC_ADDRESS"/>
+        <permission name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+    </privapp-permissions>
+
 </permissions>

@@ -1,0 +1,4 @@
+binder_call(asus_camera_app, vendor_hal_qspmhal_default)
+r_dir_file(asus_camera_app, vendor_camera_data_file)
+
+get_prop(asus_camera_app, vendor_camera_prop)

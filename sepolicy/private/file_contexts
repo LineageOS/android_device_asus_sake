@@ -1,0 +1,2 @@
+# Camera
+/system/lib(64)?/DataSet/ispDB/ParameterDB\.db    u:object_r:system_camera_lib_file:s0

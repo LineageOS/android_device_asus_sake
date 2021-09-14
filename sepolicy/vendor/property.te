@@ -1,3 +1,6 @@
+# Build
+type vendor_asus_build_prop, property_type;
+
 # Fingerprint
 type vendor_fingerprint_prop, property_type;
 

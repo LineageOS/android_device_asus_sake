@@ -1,0 +1,40 @@
+app_domain(asus_camera_app)
+net_domain(asus_camera_app)
+
+# Some apps ship with shared libraries and binaries that they write out
+# to their sandbox directory and then execute.
+allow asus_camera_app privapp_data_file:file { r_file_perms execute };
+allow asus_camera_app app_data_file:file { r_file_perms execute };
+auditallow asus_camera_app app_data_file:file execute;
+
+# Allow handling of less common filesystem objects.
+allow asus_camera_app app_data_file:{ lnk_file sock_file fifo_file } create_file_perms;
+
+# Read and write system app data files passed over Binder.
+# Motivating case was /data/data/com.android.settings/cache/*.jpg for
+# cropping or taking user photos.
+allow asus_camera_app system_app_data_file:file { read write getattr };
+
+allow asus_camera_app activity_service:service_manager find;
+allow asus_camera_app activity_task_service:service_manager find;
+allow asus_camera_app audio_service:service_manager find;
+allow asus_camera_app audioserver_service:service_manager find;
+allow asus_camera_app autofill_service:service_manager find;
+allow asus_camera_app cameraserver_service:service_manager find;
+allow asus_camera_app gpu_service:service_manager find;
+allow asus_camera_app hardware_properties_service:service_manager find;
+allow asus_camera_app mediaserver_service:service_manager find;
+allow asus_camera_app mediaextractor_service:service_manager find;
+allow asus_camera_app mediametrics_service:service_manager find;
+allow asus_camera_app radio_service:service_manager find;
+allow asus_camera_app sensorservice_service:service_manager find;
+allow asus_camera_app surfaceflinger_service:service_manager find;
+allow asus_camera_app tethering_service:service_manager find;
+allow asus_camera_app thermal_service:service_manager find;
+allow asus_camera_app trust_service:service_manager find;
+
+binder_call(asus_camera_app, gpuservice)
+
+domain_auto_trans(asus_camera_app, rs_exec, rs)
+
+allow asus_camera_app camera_lib_file:file r_file_perms;

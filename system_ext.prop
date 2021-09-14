@@ -4,6 +4,32 @@ ro.bluetooth.library_name=libbluetooth_qti.so
 # CNE
 persist.vendor.cne.feature=1
 
+# Camera
+vendor.camera.ai_scene_mode=4:0;1:1;2:1;3:1;5:1
+vendor.camera.cam1.eis.sup_list=HD@30,FHD@60,4K@30
+vendor.camera.cam1.exposure_time_range=100000,16000000000
+vendor.camera.cam1.video_fps=HD@30,FHD@60,4K@30
+vendor.camera.cam2.eis.sup_list=HD@30,FHD@60,4K@60
+vendor.camera.cam2.exposure_time_range=100000,16000000000
+vendor.camera.cam2.video_fps=HD@30,FHD@60,4K@60
+vendor.camera.cam3.eis.sup_list=HD@60,FHD@60,4K@60,8K@30
+vendor.camera.cam3.exposure_time_range=100000,32000000000
+vendor.camera.cam3.video_fps=HD@60,FHD@60,4K@60,8K@30
+vendor.camera.cam5.crop_region=2:0,0,4032,3024;3:728,546,3304,2478
+vendor.camera.cam5.eis.sup_list=HD@30,FHD@60,4K@60,8K@30
+vendor.camera.cam5.video_fps=HD@30,FHD@60,4K@60,8K@30
+vendor.camera.capture.override_max_digital_zoom=3:8
+vendor.camera.dual_bokeh=4:1;1:0;2:0;3:0;5:0
+vendor.camera.eis_ois.sup_list=8K@24,4K@60,4K@30,FHD@60,FHD@30,HD@60,HD@30
+vendor.camera.fovc=0:0;1:1;2:1;3:1;4:0;5:0
+vendor.camera.lens_type=1:std;2:wid;3:std;4:vir;5:sat
+vendor.camera.night=2:1;3:1;5:1
+vendor.camera.preview_beauty=4:1;1:1;2:1;3:1;5:1
+vendor.camera.preview_portrait=4:0;1:1;2:0;3:0
+vendor.camera.undistortion.preview=4:0;1:0;2:1;3:0;5:1
+vendor.camera.undistortion.video=4:0;1:0;2:0;3:0;5:0
+vendor.camera.aux.packagelist=com.asus.camera
+
 # Charger
 ro.charger.enable_suspend=1
 

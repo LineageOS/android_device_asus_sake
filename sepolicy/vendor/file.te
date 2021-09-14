@@ -1,4 +1,5 @@
 # Camera
+type camera_lib_file, system_file_type, file_type;
 type vendor_proc_camera, fs_type, proc_type;
 
 # Display

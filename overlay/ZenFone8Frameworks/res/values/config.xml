@@ -352,4 +352,10 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
+    <!-- The list of packages to automatically opt out of refresh rates higher than 60hz because
+         of known compatibility issues. -->
+    <string-array name="config_highRefreshRateBlacklist">
+        <item>com.asus.camera</item>
+    </string-array>
+
 </resources>

@@ -1,0 +1,2 @@
+# Camera
+user=_app seinfo=platform name=com.asus.camera isPrivApp=true domain=asus_camera_app type=privapp_data_file levelFrom=all

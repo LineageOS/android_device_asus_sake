@@ -403,6 +403,34 @@ vendor/lib64/libcvp2_1.so
 vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
+# Camera (App)
+system/lib64/DataSet/arch/DIT_List.cfg
+system/lib64/DataSet/ditSCidGen/msgchk.db
+system/lib64/DataSet/ispDB/ParameterDB.db
+system/lib64/libxditk_DIT_Manager.so
+system/lib64/libxditk_ISP.so
+system/lib64/libxditk_arch.so
+system/lib64/libxditk_ditArchLIB.so
+system/lib64/libxditk_ditBSP.so
+system/lib64/libxditk_ditBSP_JNI.so
+-system/priv-app/AsusCamera/AsusCamera.apk;OVERRIDES=Camera2,Snap;PRESIGNED
+system/priv-app/AsusCamera/lib/arm64/libarcsoft_object_tracking.so
+system/priv-app/AsusCamera/lib/arm64/libarcsoft_panorama_burstcapture.so
+system/priv-app/AsusCamera/lib/arm64/libarcsoft_panorama_interval_capture.so
+system/priv-app/AsusCamera/lib/arm64/libarcsoft_portrait_distortion_correction_zf7.so
+system/priv-app/AsusCamera/lib/arm64/libasusundistort.so
+system/priv-app/AsusCamera/lib/arm64/libasus_camera_interval_panorama.so
+system/priv-app/AsusCamera/lib/arm64/libasus_camera_object_tracking.so
+system/priv-app/AsusCamera/lib/arm64/libasus_camera_panorama.so
+system/priv-app/AsusCamera/lib/arm64/libbitmap.so
+system/priv-app/AsusCamera/lib/arm64/libmainstone.so
+system/priv-app/AsusCamera/lib/arm64/libmpbase.so
+system/priv-app/AsusCamera/lib/arm64/libscanner.so
+system/priv-app/AsusCamera/lib/arm64/libtensorflowlite_jni.so
+system/priv-app/AsusCamera/lib/arm64/libUndistort.so
+system/priv-app/AsusCamera/lib/arm64/libyuv_camera.so
+system/priv-app/AsusCamera/lib/arm64/libyuv_util.so
+
 # Camera
 vendor/bin/dualcam_default_cali.bin
 vendor/etc/camera/camxoverridesettings.txt

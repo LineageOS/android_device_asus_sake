@@ -13,6 +13,9 @@ persist.vendor.dpm.feature=11
 # Display
 debug.sf.enable_hwc_vds=1
 
+# IORAP
+persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
+
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true

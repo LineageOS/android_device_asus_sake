@@ -5,14 +5,6 @@
 -->
 <resources>
 
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
-         should be empty. -->
-    <string-array translatable="false" name="config_tether_bluetooth_regexs">
-        <item>bnep\\d</item>
-        <item>bt-pan</item>
-    </string-array>
-
     <!-- Array of ConnectivityManager.TYPE_{BLUETOOTH, ETHERNET, MOBILE, MOBILE_DUN, MOBILE_HIPRI,
          WIFI} values allowable for tethering.
 

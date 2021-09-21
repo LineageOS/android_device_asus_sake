@@ -17,6 +17,11 @@ persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 
+# Camera
+vendor.camera.asus.system=1
+vendor.camera.cam5.crop_region=2:0,0,4032,3024;3:728,546,3304,2478
+vendor.camera.expTimeMax=0
+
 # DPM
 persist.vendor.dpmhalservice.enable=1
 

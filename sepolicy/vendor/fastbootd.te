@@ -1,0 +1,2 @@
+# /dev/block/by-name/xrom_(a|b)
+allow fastbootd xrom_block_device:blk_file rw_file_perms;

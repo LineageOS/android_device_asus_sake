@@ -1,2 +1,5 @@
 # Fingerprint
 type fingerprint_device, dev_type;
+
+# Xrom
+type xrom_block_device, dev_type;

@@ -63,6 +63,10 @@
 
          For example, a device with notification and battery lights that supports
          pulsating and RGB control would set this config to 75. -->
-    <integer name="config_deviceLightCapabilities">232</integer>
+    <!--
+        LIGHTS_PULSATING_LED                             8
+        LIGHTS_BATTERY_LED                              64
+    -->
+    <integer name="config_deviceLightCapabilities">72</integer>
 
 </resources>

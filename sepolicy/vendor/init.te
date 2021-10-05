@@ -1,0 +1,2 @@
+# Battery
+allow init battery_file:dir mounton;

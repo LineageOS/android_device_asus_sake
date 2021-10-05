@@ -1,2 +1,5 @@
+# Battery
+type battery_block_device, dev_type;
+
 # Fingerprint
 type fingerprint_device, dev_type;

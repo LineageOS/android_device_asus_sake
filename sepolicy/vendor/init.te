@@ -1,0 +1,2 @@
+# /batinfo
+allow init bat_file:dir { mounton };

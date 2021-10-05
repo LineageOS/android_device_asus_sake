@@ -1,0 +1,2 @@
+# Battery
+allow fsck vendor_battery_block_device:blk_file rw_file_perms;

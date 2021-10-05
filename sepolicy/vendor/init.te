@@ -1,0 +1,2 @@
+# Battery
+allow init vendor_battery_file:dir mounton;

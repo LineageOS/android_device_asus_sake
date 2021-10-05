@@ -18,6 +18,10 @@ on post-fs-data
     chown system audio /mnt/vendor/persist/audio/rcv_cal_val
     chown system audio /mnt/vendor/persist/audio/spk_cal_val
 
+    # Battery
+    mount_all /vendor/etc/fstab.battery
+    restorecon_recursive /batinfo
+
     # Sensors
     write /sys/class/sensors/psensor/load_cal 1
     write /sys/class/sensors/psensor_2nd/load_cal 1
@@ -67,6 +71,10 @@ on boot
     chown system system /sys/class/sensors/lsensor_2nd/cal
     chown system system /sys/class/sensors/lsensor_2nd/selection
     chown system system /sys/class/sensors/lsensor_2nd/switch
+
+on charger
+    # Battery
+    mount_all /vendor/etc/fstab.battery --early
 
 on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
     # ZRAM

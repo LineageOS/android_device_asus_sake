@@ -12,6 +12,11 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 
 # A/B builds require us to create the mount points at compile time.
 # Just creating it for all cases since it does not hurt.
+BATINFO_MOUNT_POINT := $(TARGET_OUT_VENDOR)/batinfo
+$(BATINFO_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating $(BATINFO_MOUNT_POINT)"
+	@mkdir -p $(TARGET_OUT_VENDOR)/batinfo
+
 FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt
 $(FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating $(FIRMWARE_MOUNT_POINT)"

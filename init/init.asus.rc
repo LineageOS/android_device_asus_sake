@@ -64,6 +64,14 @@ on boot
     chown system system /sys/class/sensors/lsensor_2nd/selection
     chown system system /sys/class/sensors/lsensor_2nd/switch
 
+on charger
+    wait /dev/block/bootdevice/by-name/batinfo
+    exec /system/bin/e2fsck -p /dev/block/bootdevice/by-name/batinfo
+    mount ext4 /dev/block/bootdevice/by-name/batinfo /batinfo nosuid nodev noatime barrier=1
+    chown shell root /batinfo
+    chmod 0775 /batinfo
+    restorecon_recursive /batinfo
+
 on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
     # ZRAM
     setprop vendor.zram.enable ${persist.vendor.zram.enable}

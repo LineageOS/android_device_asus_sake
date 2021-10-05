@@ -1,0 +1,2 @@
+# /dev/block/sda8 (batinfo)
+allow fsck batinfo_block_device:blk_file rw_file_perms;

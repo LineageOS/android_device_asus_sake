@@ -25,6 +25,13 @@ on post-fs-data
     # ZRAM
     swapon_all fstab.default
 
+    wait /dev/block/bootdevice/by-name/batinfo
+    exec /system/bin/e2fsck -p /dev/block/bootdevice/by-name/batinfo
+    mount ext4 /dev/block/bootdevice/by-name/batinfo /vendor/batinfo nosuid nodev noatime barrier=1
+    chown shell root /vendor/batinfo
+    chmod 0775 /vendor/batinfo
+    restorecon_recursive /vendor/batinfo
+
 on boot
     # Accelerometer
     chown system camera /dev/asus2ndAccelSensor
@@ -67,6 +74,14 @@ on boot
     chown system system /sys/class/sensors/lsensor_2nd/cal
     chown system system /sys/class/sensors/lsensor_2nd/selection
     chown system system /sys/class/sensors/lsensor_2nd/switch
+
+on charger
+    wait /dev/block/bootdevice/by-name/batinfo
+    exec /system/bin/e2fsck -p /dev/block/bootdevice/by-name/batinfo
+    mount ext4 /dev/block/bootdevice/by-name/batinfo /vendor/batinfo nosuid nodev noatime barrier=1
+    chown shell root /vendor/batinfo
+    chmod 0775 /vendor/batinfo
+    restorecon_recursive /vendor/batinfo
 
 on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
     # ZRAM

@@ -176,6 +176,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
 PRODUCT_PACKAGES += \
+    fstab.battery \
     fstab.default \
     init.asus.rc \
     init.asus.recovery.rc \

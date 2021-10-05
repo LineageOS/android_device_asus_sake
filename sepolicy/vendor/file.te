@@ -1,3 +1,6 @@
+# Battery
+type battery_file, file_type;
+
 # Camera
 type vendor_proc_camera, fs_type, proc_type;
 

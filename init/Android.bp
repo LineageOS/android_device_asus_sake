@@ -4,6 +4,12 @@
 //
 
 prebuilt_etc {
+    name: "fstab.battery",
+    src: "fstab.battery",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "fstab.default",
     src: "fstab.default",
     vendor: true,

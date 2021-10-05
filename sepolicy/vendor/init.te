@@ -1,0 +1,2 @@
+# Battery
+allow init system_battery_file:dir mounton;

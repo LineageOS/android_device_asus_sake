@@ -1,0 +1,3 @@
+# Battery
+r_dir_file(kernel, system_battery_file)
+allow kernel system_battery_file:file rw_file_perms;

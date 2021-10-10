@@ -1686,6 +1686,7 @@ vendor/firmware/hdcpsrm.mdt
 
 # WLAN
 vendor/bin/cnss-daemon
+vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 vendor/firmware/Data.msc
 vendor/firmware/amss.bin
 vendor/firmware/bdwlan.elf

@@ -4,6 +4,8 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <!-- The default setting for minimum refresh rate -->
+    <integer name="config_defaultMinRefreshRate">120</integer>
 
     <!-- Default value for proximity check on screen wake
      NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->

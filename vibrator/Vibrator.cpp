@@ -74,7 +74,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
     { Effect::CLICK, {
         { DURATION_PATH, "8" },
         { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x45" },
+        { GAIN_PATH, "0xa5" },
         { SEQ_PATH, "0x00 0x01" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
@@ -82,14 +82,14 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
     { Effect::DOUBLE_CLICK, {
         { DURATION_PATH, "13" },
         { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x50" },
+        { GAIN_PATH, "0x96" },
         { SEQ_PATH, "0x00 0x01" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
         { "SLEEP", "150" },
         { DURATION_PATH, "13" },
         { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x50" },
+        { GAIN_PATH, "0x96" },
         { SEQ_PATH, "0x00 0x01" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
@@ -97,7 +97,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
     { Effect::TICK, {
         { DURATION_PATH, "6" },
         { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x40" },
+        { GAIN_PATH, "0xaa" },
         { SEQ_PATH, "0x00 0x01" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },
@@ -113,7 +113,7 @@ static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EF
     { Effect::HEAVY_CLICK, {
         { DURATION_PATH, "30" },
         { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x85" },
+        { GAIN_PATH, "0xdc" },
         { SEQ_PATH, "0x00 0x01" },
         { LOOP_PATH, "0x00 0x00" },
         { BRIGHTNESS_PATH, "1" },

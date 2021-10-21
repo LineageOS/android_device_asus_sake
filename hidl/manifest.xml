@@ -251,6 +251,16 @@
            <instance>default</instance>
        </interface>
     </hal>
+    <!-- Lights -->
+    <hal format="hidl">
+       <name>android.hardware.light</name>
+       <transport>hwbinder</transport>
+       <version>2.0</version>
+       <interface>
+           <name>ILight</name>
+           <instance>default</instance>
+       </interface>
+    </hal>
     <!-- MMI -->
     <hal format="hidl">
         <name>vendor.qti.hardware.factory</name>

@@ -67,6 +67,7 @@ on boot
     # Display
     chown system system /proc/globalHbm
     chown system system /sys/class/drm/fod_touched
+    chown system system /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_fp_mode
 
 on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
     # ZRAM

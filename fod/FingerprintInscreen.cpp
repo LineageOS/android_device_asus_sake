@@ -18,6 +18,10 @@
 #define FOD_TOUCHED_ON "1"
 #define FOD_TOUCHED_OFF "0"
 
+#define FP_MODE_PATH "/sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_fp_mode"
+#define FP_MODE_NOTIFY_ON "1"
+#define FP_MODE_NOTIFY_OFF "0"
+
 namespace vendor {
 namespace lineage {
 namespace biometrics {
@@ -62,10 +66,14 @@ Return<void> FingerprintInscreen::onRelease() {
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
+    if (!android::base::WriteStringToFile(FP_MODE_NOTIFY_ON, FP_MODE_PATH)) {
+        ALOGE("Failed to write to %s", FP_MODE_PATH);
+    }
     return Void();
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
+    android::base::WriteStringToFile(FP_MODE_NOTIFY_OFF, FP_MODE_PATH);
     android::base::WriteStringToFile(GLOBAL_HBM_OFF, GLOBAL_HBM_PATH);
     android::base::WriteStringToFile(FOD_TOUCHED_OFF, FOD_TOUCHED_PATH);
     return Void();

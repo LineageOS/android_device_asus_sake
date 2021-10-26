@@ -41,15 +41,21 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 Return<void> FingerprintInscreen::onPress() {
     this->mGoodixFingerprintDaemon->sendCommand(200001, {},
                                                 [](int, const hidl_vec<signed char>&) {});
-    android::base::WriteStringToFile(FOD_TOUCHED_ON, FOD_TOUCHED_PATH);
-    android::base::WriteStringToFile(GLOBAL_HBM_ON, GLOBAL_HBM_PATH);
+    if (!android::base::WriteStringToFile(FOD_TOUCHED_ON, FOD_TOUCHED_PATH)) {
+        ALOGE("Failed to write to %s", FOD_TOUCHED_PATH);
+    }
+    if (!android::base::WriteStringToFile(GLOBAL_HBM_ON, GLOBAL_HBM_PATH)) {
+        ALOGE("Failed to write to %s", GLOBAL_HBM_PATH);
+    }
     this->mGoodixFingerprintDaemon->sendCommand(200002, {},
                                                 [](int, const hidl_vec<signed char>&) {});
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
-    android::base::WriteStringToFile(GLOBAL_HBM_OFF, GLOBAL_HBM_PATH);
+    if (!android::base::WriteStringToFile(GLOBAL_HBM_OFF, GLOBAL_HBM_PATH)) {
+        ALOGE("Failed to write to %s", GLOBAL_HBM_PATH);
+    }
     this->mGoodixFingerprintDaemon->sendCommand(200003, {},
                                                 [](int, const hidl_vec<signed char>&) {});
     return Void();

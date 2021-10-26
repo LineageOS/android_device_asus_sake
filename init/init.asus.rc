@@ -64,6 +64,10 @@ on boot
     chown system system /sys/class/sensors/lsensor_2nd/selection
     chown system system /sys/class/sensors/lsensor_2nd/switch
 
+    # Display
+    chown system system /proc/globalHbm
+    chown system system /sys/class/drm/fod_touched
+
 on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
     # ZRAM
     setprop vendor.zram.enable ${persist.vendor.zram.enable}

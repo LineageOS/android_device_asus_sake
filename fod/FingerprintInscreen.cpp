@@ -10,6 +10,12 @@
 
 #include <hidl/HidlTransportSupport.h>
 
+#define CMD_FINGER_DOWN 200001
+#define CMD_FINGER_UP 200003
+#define CMD_LIGHT_AREA_CLOSE 200000
+#define CMD_LIGHT_AREA_STABLE 200002
+#define CMD_PARTIAL_FINGER_DETECTED 200004
+
 #define GLOBAL_HBM_PATH "/proc/globalHbm"
 #define GLOBAL_HBM_ON "1"
 #define GLOBAL_HBM_OFF "0"
@@ -35,12 +41,12 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
-    this->mGoodixFingerprintDaemon->sendCommand(200001, {},
+    this->mGoodixFingerprintDaemon->sendCommand(CMD_FINGER_DOWN, {},
                                                 [](int, const hidl_vec<signed char>&) {});
     if (!android::base::WriteStringToFile(GLOBAL_HBM_ON, GLOBAL_HBM_PATH)) {
         ALOGE("Failed to write to %s", GLOBAL_HBM_PATH);
     }
-    this->mGoodixFingerprintDaemon->sendCommand(200002, {},
+    this->mGoodixFingerprintDaemon->sendCommand(CMD_LIGHT_AREA_STABLE, {},
                                                 [](int, const hidl_vec<signed char>&) {});
     return Void();
 }
@@ -49,7 +55,7 @@ Return<void> FingerprintInscreen::onRelease() {
     if (!android::base::WriteStringToFile(GLOBAL_HBM_OFF, GLOBAL_HBM_PATH)) {
         ALOGE("Failed to write to %s", GLOBAL_HBM_PATH);
     }
-    this->mGoodixFingerprintDaemon->sendCommand(200003, {},
+    this->mGoodixFingerprintDaemon->sendCommand(CMD_FINGER_UP, {},
                                                 [](int, const hidl_vec<signed char>&) {});
     return Void();
 }

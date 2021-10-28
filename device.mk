@@ -140,9 +140,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.qti \
+    android.hardware.lights-service.sake \
     libtinyxml \
-    lights.qcom \
     vendor.lineage.livedisplay@2.0-service-sdm
 
 # Fastboot

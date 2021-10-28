@@ -1,109 +1,93 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include "Lights.h"
-#include <log/log.h>
+#include <aidl/android/hardware/light/BnLights.h>
+#include <android/binder_manager.h>
+#include <android/binder_process.h>
+#include <android-base/file.h>
 #include <android-base/logging.h>
 
-namespace aidl {
-namespace android {
-namespace hardware {
-namespace light {
+using aidl::android::hardware::light::BnLights;
+using aidl::android::hardware::light::HwLight;
+using aidl::android::hardware::light::HwLightState;
+using aidl::android::hardware::light::ILights;
+using aidl::android::hardware::light::LightType;
+using android::base::WriteStringToFile;
+using ndk::ScopedAStatus;
+using ndk::SharedRefBase;
 
-const static std::map<LightType, const char*> kLogicalLights = {
-    {LightType::BACKLIGHT,     LIGHT_ID_BACKLIGHT},
-    {LightType::KEYBOARD,      LIGHT_ID_KEYBOARD},
-    {LightType::BUTTONS,       LIGHT_ID_BUTTONS},
-    {LightType::BATTERY,       LIGHT_ID_BATTERY},
-    {LightType::NOTIFICATIONS, LIGHT_ID_NOTIFICATIONS},
-    {LightType::ATTENTION,     LIGHT_ID_ATTENTION},
-    {LightType::BLUETOOTH,     LIGHT_ID_BLUETOOTH},
-    {LightType::WIFI,          LIGHT_ID_WIFI}
+char const* const GREEN_LED_FILE = "/sys/class/leds/green/brightness";
+char const* const RED_LED_FILE = "/sys/class/leds/red/brightness";
+
+class Lights : public BnLights {
+  private:
+    std::vector<HwLight> availableLights;
+
+    void addLight(LightType const type, int const ordinal) {
+        HwLight light{};
+        light.id = availableLights.size();
+        light.type = type;
+        light.ordinal = ordinal;
+        availableLights.emplace_back(light);
+    }
+
+  public:
+    Lights() : BnLights() {
+        addLight(LightType::BACKLIGHT, 0);
+        addLight(LightType::KEYBOARD, 0);
+        addLight(LightType::BUTTONS, 0);
+        addLight(LightType::BATTERY, 0);
+        addLight(LightType::NOTIFICATIONS, 0);
+        addLight(LightType::ATTENTION, 0);
+        addLight(LightType::BLUETOOTH, 0);
+        addLight(LightType::WIFI, 0);
+    }
+
+    ScopedAStatus getLights(std::vector<HwLight>* lights) override {
+        for (auto i = availableLights.begin(); i != availableLights.end(); i++) {
+            lights->push_back(*i);
+        }
+
+        return ScopedAStatus::ok();
+    }
+
+    ScopedAStatus setLightState(int id, const HwLightState&) override {
+        if (!(0 <= id && id < availableLights.size())) {
+            return ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+        }
+
+        HwLight const& light = availableLights[id];
+
+        switch (light.type) {
+            case LightType::BATTERY:
+                WriteStringToFile("255", RED_LED_FILE);
+                break;
+            case LightType::NOTIFICATIONS:
+                WriteStringToFile("255", GREEN_LED_FILE);
+                break;
+            default:
+                break;
+        }
+
+        return ScopedAStatus::ok();
+    }
 };
 
-light_device_t* getLightDevice(const char* name) {
-    light_device_t* lightDevice;
-    const hw_module_t* hwModule = NULL;
-    int ret = hw_get_module (LIGHTS_HARDWARE_MODULE_ID, &hwModule);
-    if (ret == 0) {
-        ret = hwModule->methods->open(hwModule, name,
-            reinterpret_cast<hw_device_t**>(&lightDevice));
-        if (ret != 0) {
-            ALOGE("light_open %s %s failed: %d", LIGHTS_HARDWARE_MODULE_ID, name, ret);
-        }
-    } else {
-        ALOGE("hw_get_module %s %s failed: %d", LIGHTS_HARDWARE_MODULE_ID, name, ret);
-    }
-    if (ret == 0) {
-        return lightDevice;
-    } else {
-        ALOGE("Light passthrough failed to load legacy HAL.");
-        return nullptr;
-    }
-}
+int main() {
+    ABinderProcess_setThreadPoolMaxThreadCount(0);
 
-Lights::Lights() {
-    std::map<int, light_device_t*> lights;
-    std::vector<HwLight> availableLights;
-    int lightCount =0;
-    for(auto const &pair : kLogicalLights) {
-        LightType type = pair.first;
-        const char* name = pair.second;
-        light_device_t* lightDevice = getLightDevice(name);
-        lightCount++;
-        if (lightDevice != nullptr) {
-            HwLight hwLight{};
-            hwLight.id = (int)type;
-            hwLight.type = type;
-            hwLight.ordinal = 0;
-            lights[hwLight.id] = lightDevice;
-            availableLights.emplace_back(hwLight);
-        }
-    }
-    mAvailableLights = availableLights;
-    mLights = lights;
-    maxLights = lightCount;
-}
+    std::shared_ptr<Lights> light = SharedRefBase::make<Lights>();
 
-ndk::ScopedAStatus Lights::setLightState(int id, const HwLightState& state) {
-    if (id >= maxLights) {
-        ALOGE("Invalid Light id : %d", id);
-        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
-    }
-    auto it = mLights.find(id);
-    if (it == mLights.end()) {
-        ALOGE("Light not supported");
-        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
-    }
-    light_device_t* hwLight = it->second;
-    light_state_t legacyState {
-        .color = static_cast<unsigned int>(state.color),
-        .flashMode = static_cast<int>(state.flashMode),
-        .flashOnMS = state.flashOnMs,
-        .flashOffMS = state.flashOffMs,
-        .brightnessMode = static_cast<int>(state.brightnessMode),
-    };
-    int ret = hwLight->set_light(hwLight, &legacyState);
-    switch (ret) {
-        case -ENOSYS:
-            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
-        case 0:
-            return ndk::ScopedAStatus::ok();
-        default:
-            return ndk::ScopedAStatus::fromServiceSpecificError(ret);
-    }
-}
+    const std::string instance = std::string() + ILights::descriptor + "/default";
+    binder_status_t status = AServiceManager_addService(light->asBinder().get(), instance.c_str());
 
-ndk::ScopedAStatus Lights::getLights(std::vector<HwLight>* lights) {
-    for (auto i = mAvailableLights.begin(); i != mAvailableLights.end(); i++) {
-        lights->push_back(*i);
+    if (status != STATUS_OK) {
+        LOG(ERROR) << "Could not register" << instance;
     }
-    return ndk::ScopedAStatus::ok();
-}
 
-}  // namespace light
-}  // namespace hardware
-}  // namespace android
-}  // namespace aidl
+    ABinderProcess_joinThreadPool();
+
+    return 1;
+}

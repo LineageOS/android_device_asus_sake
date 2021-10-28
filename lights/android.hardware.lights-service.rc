@@ -1,0 +1,5 @@
+service vendor.light-sake /vendor/bin/hw/android.hardware.lights-service.sake
+    class hal
+    user system
+    group system
+    shutdown critical

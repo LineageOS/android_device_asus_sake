@@ -10,7 +10,7 @@
 /(vendor|system/vendor)/bin/irisConfig                                                       u:object_r:iris_config_exec:s0
 
 # Fingerprint
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.sake    u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.sake    u:object_r:hal_fingerprint_default_exec:s0
 /data/vendor/goodix/gf_data(/.*)?                                                               u:object_r:vendor_goodix_data_file:s0
 /dev/goodix_fp                                                                                  u:object_r:fingerprint_device:s0
 

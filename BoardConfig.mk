@@ -24,6 +24,9 @@ AB_OTA_PARTITIONS := \
     vendor \
     vendor_boot
 
+# Assert
+TARGET_BOARD_INFO_FILE := ${DEVICE_PATH}/board-info.txt
+
 # AVB
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 

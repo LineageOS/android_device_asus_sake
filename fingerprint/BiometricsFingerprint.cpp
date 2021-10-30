@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2017-2022 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,11 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.sake"
-#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.1-service.sake"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.sake"
+#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.3-service.sake"
 
 #include <hardware/hw_auth_token.h>
 
+#include <android-base/file.h>
 #include <android-base/properties.h>
 #include <hardware/hardware.h>
 #include <hardware/fingerprint.h>
@@ -26,11 +27,19 @@
 #include <inttypes.h>
 #include <unistd.h>
 
+#define FOD_TOUCHED_PATH "/sys/class/drm/fod_touched"
+#define FOD_TOUCHED_ON "1"
+#define FOD_TOUCHED_OFF "0"
+
+#define GLOBAL_HBM_PATH "/proc/globalHbm"
+#define GLOBAL_HBM_ON "1"
+#define GLOBAL_HBM_OFF "0"
+
 namespace android {
 namespace hardware {
 namespace biometrics {
 namespace fingerprint {
-namespace V2_1 {
+namespace V2_3 {
 namespace implementation {
 
 // Supported fingerprint HAL version
@@ -47,6 +56,7 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
     if (!mDevice) {
         ALOGE("Can't open HAL module");
     }
+    this->mGoodixFingerprintDaemon = IGoodixFingerprintDaemon::getService();
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
@@ -62,6 +72,30 @@ BiometricsFingerprint::~BiometricsFingerprint() {
         return;
     }
     mDevice = nullptr;
+}
+
+Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
+    return true;
+}
+
+Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
+    this->mGoodixFingerprintDaemon->sendCommand(200001, {},
+                                                [](int, const hidl_vec<signed char>&) {});
+    android::base::WriteStringToFile(FOD_TOUCHED_ON, FOD_TOUCHED_PATH);
+    android::base::WriteStringToFile(GLOBAL_HBM_ON, GLOBAL_HBM_PATH);
+    this->mGoodixFingerprintDaemon->sendCommand(200002, {},
+                                                [](int, const hidl_vec<signed char>&) {});
+
+    return Void();
+}
+
+Return<void> BiometricsFingerprint::onFingerUp() {
+    android::base::WriteStringToFile(GLOBAL_HBM_OFF, GLOBAL_HBM_PATH);
+    android::base::WriteStringToFile(FOD_TOUCHED_OFF, FOD_TOUCHED_PATH);
+    this->mGoodixFingerprintDaemon->sendCommand(200003, {},
+                                                [](int, const hidl_vec<signed char>&) {});
+
+    return Void();
 }
 
 Return<RequestStatus> BiometricsFingerprint::ErrorFilter(int32_t error) {
@@ -148,7 +182,7 @@ Return<uint64_t> BiometricsFingerprint::setNotify(
         const sp<IBiometricsFingerprintClientCallback>& clientCallback) {
     std::lock_guard<std::mutex> lock(mClientCallbackMutex);
     mClientCallback = clientCallback;
-    // This is here because HAL 2.1 doesn't have a way to propagate a
+    // This is here because HAL 2.3 doesn't have a way to propagate a
     // unique token for its driver. Subsequent versions should send a unique
     // token for each call to setNotify(). This is fine as long as there's only
     // one fingerprint device on the platform.
@@ -251,7 +285,7 @@ fingerprint_device_t* BiometricsFingerprint::openHal() {
     }
 
     if (kVersion != device->version) {
-        // enforce version on new devices because of HIDL@2.1 translation layer
+        // enforce version on new devices because of HIDL@2.3 translation layer
         ALOGE("Wrong fp version. Expected %d, got %d", kVersion, device->version);
         return nullptr;
     }
@@ -335,6 +369,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                         msg->data.authenticated.finger.gid,
                         token).isOk()) {
                     ALOGE("failed to invoke fingerprint onAuthenticated callback");
+                    getInstance()->onFingerUp();
                 }
             } else {
                 // Not a recognized fingerprint
@@ -362,7 +397,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
 }
 
 } // namespace implementation
-}  // namespace V2_1
+}  // namespace V2_3
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace hardware

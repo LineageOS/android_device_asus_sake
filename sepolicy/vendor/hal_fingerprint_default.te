@@ -8,5 +8,6 @@ allow hal_fingerprint_default vendor_hal_perf_hwservice:hwservice_manager find;
 allow hal_fingerprint_default vendor_sysfs_battery_supply:dir search;
 allow hal_fingerprint_default vendor_sysfs_battery_supply:file { read getattr open };
 allow hal_fingerprint_default vendor_proc_fingerprint:file rw_file_perms;
+allow hal_fingerprint_default vendor_proc_graphics:file rw_file_perms;
 allow hal_fingerprint_default vendor_goodix_data_file:file create_file_perms;
 allow hal_fingerprint_default vendor_goodix_data_file:dir create_dir_perms;

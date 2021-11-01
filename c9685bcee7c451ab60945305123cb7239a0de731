@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "167c018b_d7b03d77",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2320
+      },
+      "writtenOn": "2021-11-01T18:43:26Z",
+      "side": 1,
+      "message": "This should be $(DEVICE_PATH) -\u003e round brackets ...",
+      "revId": "c9685bcee7c451ab60945305123cb7239a0de731",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}

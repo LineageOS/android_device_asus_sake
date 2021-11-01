@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1326c4df_7ba1cc9c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2021-11-01T19:12:28Z",
+      "side": 1,
+      "message": "if you use vim you could remove unnecessary bullet point and rewrap text with `gq`.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 69
+      },
+      "revId": "d51b48cedf1d2f0aed9ce6db5b4fb5713535d981",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}

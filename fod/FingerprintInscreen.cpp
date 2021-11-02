@@ -81,8 +81,8 @@ Return<void> FingerprintInscreen::setLongPressEnabled(bool) {
     return Void();
 }
 
-Return<int32_t> FingerprintInscreen::getDimAmount(int32_t) {
-    return 0;
+Return<int32_t> FingerprintInscreen::getDimAmount(int32_t brightness) {
+    return 255 - (brightness % 255);
 }
 
 Return<bool> FingerprintInscreen::shouldBoostBrightness() {

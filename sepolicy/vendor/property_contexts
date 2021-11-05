@@ -1,5 +1,5 @@
 # Adreno
-ro.gfx.driver.1    u:object_r:exported3_default_prop:s0
+ro.gfx.driver.1    u:object_r:graphics_config_prop:s0
 
 # Audio
 sys.audio.system.brand            u:object_r:vendor_audio_prop:s0

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "de7432ef_d83ba017",
+        "filename": "fod/FingerprintInscreen.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2021-11-06T19:29:56Z",
+      "side": 1,
+      "message": "android::base::ReadFileToString?",
+      "revId": "56b09283ef544b089bedcf13eea5d692a13f63ad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}

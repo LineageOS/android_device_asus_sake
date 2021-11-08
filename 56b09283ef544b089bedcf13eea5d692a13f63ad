@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "de7432ef_d83ba017",
         "filename": "fod/FingerprintInscreen.cpp",
@@ -14,8 +15,25 @@
       "side": 1,
       "message": "android::base::ReadFileToString?",
       "revId": "56b09283ef544b089bedcf13eea5d692a13f63ad",
-      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
-      "unresolved": true
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "787ad14a_5b9e7668",
+        "filename": "fod/FingerprintInscreen.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2320
+      },
+      "writtenOn": "2021-11-08T11:10:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "de7432ef_d83ba017",
+      "revId": "56b09283ef544b089bedcf13eea5d692a13f63ad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

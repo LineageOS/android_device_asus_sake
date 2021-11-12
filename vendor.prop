@@ -58,6 +58,9 @@ debug.stagefright.ccodec=4
 # Netflix
 ro.netflix.bsp_rev=Q875-32408-1
 
+# Netmgr
+persist.vendor.data.iwlan.enable=true
+
 # Performance
 ro.vendor.extension_library=libqti-perfd-client.so
 

@@ -28,9 +28,6 @@ persist.vendor.dpmhalservice.enable=1
 # DRM
 drm.service.enabled=true
 
-# Data
-persist.vendor.data.iwlan.enable=true
-
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
@@ -57,6 +54,9 @@ debug.stagefright.ccodec=4
 
 # Netflix
 ro.netflix.bsp_rev=Q875-32408-1
+
+# Netmgr
+persist.vendor.data.iwlan.enable=true
 
 # Performance
 ro.vendor.extension_library=libqti-perfd-client.so

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f39c0cb_2d0183be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29914
+      },
+      "writtenOn": "2021-11-13T18:08:00Z",
+      "side": 1,
+      "message": "waiting for 318117, 317922 and 317921 to get merged",
+      "revId": "77d8ff62263e8150da76b2568de7513cea61414f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

@@ -36,7 +36,6 @@ on boot
 
     # Display
     chown system system /proc/globalHbm
-    chown system system /proc/lcd_brightness
 
     # Gyroscope
     chown system camera /dev/asus2ndGyroSensor

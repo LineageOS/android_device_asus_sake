@@ -9,7 +9,6 @@ genfscon sysfs /class/drm/hdr_mode       u:object_r:vendor_sysfs_graphics:s0
 genfscon proc  /driver/dclick            u:object_r:vendor_proc_graphics:s0
 genfscon proc  /driver/glove             u:object_r:vendor_proc_graphics:s0
 genfscon proc  /globalHbm                u:object_r:vendor_proc_graphics:s0
-genfscon proc  /lcd_brightness           u:object_r:vendor_proc_graphics:s0
 
 # EVT
 genfscon proc /asusevtlog    u:object_r:vendor_proc_evt:s0

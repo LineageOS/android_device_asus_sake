@@ -9,7 +9,6 @@
 #include "FingerprintInscreen.h"
 
 #include <hidl/HidlTransportSupport.h>
-#include <cmath>
 
 #define CMD_FINGER_DOWN 200001
 #define CMD_FINGER_UP 200003
@@ -21,10 +20,6 @@
 #define GLOBAL_HBM_ON "1"
 #define GLOBAL_HBM_OFF "0"
 
-#define BRIGHTNESS_PATH "/proc/lcd_brightness"
-#define GAMMA 2.2f
-#define MASK_BRIGHTNESS 1023.0f
-
 namespace vendor {
 namespace lineage {
 namespace biometrics {
@@ -32,16 +27,6 @@ namespace fingerprint {
 namespace inscreen {
 namespace V1_0 {
 namespace implementation {
-
-static int32_t get(const std::string& path, const int32_t def) {
-    std::string content;
-
-    if (!android::base::ReadFileToString(path, &content)) {
-        return def;
-    }
-
-    return std::stoi(content);
-}
 
 FingerprintInscreen::FingerprintInscreen() {
     this->mGoodixFingerprintDaemon = IGoodixFingerprintDaemon::getService();
@@ -97,15 +82,7 @@ Return<void> FingerprintInscreen::setLongPressEnabled(bool) {
 }
 
 Return<int32_t> FingerprintInscreen::getDimAmount(int32_t) {
-    int32_t currentBrightness = get(BRIGHTNESS_PATH, 0);
-    float dim = 1.0f - pow((currentBrightness / MASK_BRIGHTNESS), 1 / GAMMA);
-    int32_t dimAmount = 255 * dim;
-
-    ALOGI("getDimAmount() currentBrightness: %d, dimAmount: %d",
-          currentBrightness,
-          dimAmount);
-
-    return dimAmount;
+    return 0;
 }
 
 Return<bool> FingerprintInscreen::shouldBoostBrightness() {

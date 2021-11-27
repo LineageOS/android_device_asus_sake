@@ -34,7 +34,6 @@
 #include <inttypes.h>
 #include <linux/input.h>
 #include <log/log.h>
-#include <map>
 #include <string.h>
 #include <sys/ioctl.h>
 #include <thread>
@@ -60,99 +59,7 @@ namespace vibrator {
 
 #define test_bit(bit, array)    ((array)[(bit)/8] & (1<<((bit)%8)))
 
-static const char ACTIVATE_PATH[] = "/sys/class/leds/vibrator/activate";
-static const char BRIGHTNESS_PATH[] = "/sys/class/leds/vibrator/brightness";
-static const char DURATION_PATH[] = "/sys/class/leds/vibrator/duration";
-static const char GAIN_PATH[] = "/sys/class/leds/vibrator/gain";
-static const char LOOP_PATH[] = "/sys/class/leds/vibrator/loop";
-static const char SEQ_PATH[] = "/sys/class/leds/vibrator/seq";
-static const char VMAX_PATH[] = "/sys/class/leds/vibrator/vmax";
-
 static const char LED_DEVICE[] = "/sys/class/leds/vibrator";
-
-static std::map<Effect, std::vector<std::pair<std::string, std::string>>> LED_EFFECTS{
-    { Effect::CLICK, {
-        { DURATION_PATH, "8" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0xa5" },
-        { SEQ_PATH, "0x00 0x01" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-    }},
-    { Effect::DOUBLE_CLICK, {
-        { DURATION_PATH, "13" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x96" },
-        { SEQ_PATH, "0x00 0x01" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-        { "SLEEP", "150" },
-        { DURATION_PATH, "13" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x96" },
-        { SEQ_PATH, "0x00 0x01" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-    }},
-    { Effect::TICK, {
-        { DURATION_PATH, "6" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0xaa" },
-        { SEQ_PATH, "0x00 0x01" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-    }},
-    { Effect::POP, {
-        { DURATION_PATH, "11" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x50" },
-        { SEQ_PATH, "0x00 0x05" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-    }},
-    { Effect::HEAVY_CLICK, {
-        { DURATION_PATH, "30" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0xdc" },
-        { SEQ_PATH, "0x00 0x01" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-    }}
-};
-
-using vibrator_constant_t = std::pair<int, std::vector<std::pair<std::string, std::string>>>;
-static std::vector<vibrator_constant_t> VIBRATOR_CONSTANTS{
-    { 80, {
-        { DURATION_PATH, "AUTO" },
-        { SEQ_PATH, "0x00 0x01" },
-        { GAIN_PATH, "AUTO" },
-        { VMAX_PATH, "0x1f" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-    }},
-    { 90, {
-        { DURATION_PATH, "AUTO" },
-        { SEQ_PATH, "0x00 0x02" },
-        { GAIN_PATH, "AUTO" },
-        { VMAX_PATH, "0x1f" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-    }},
-    { 100, {
-        { DURATION_PATH, "AUTO" },
-        { SEQ_PATH, "0x00 0x03" },
-        { GAIN_PATH, "AUTO" },
-        { VMAX_PATH, "0x1f" },
-        { LOOP_PATH, "0x00 0x00" },
-        { BRIGHTNESS_PATH, "1" },
-    }},
-    {INT32_MAX, {
-        { DURATION_PATH, "AUTO" },
-        { VMAX_PATH, "0x1f" },
-        { GAIN_PATH, "0x80" },
-        { ACTIVATE_PATH, "1" },
-    }}
-};
 
 InputFFDevice::InputFFDevice()
 {
@@ -444,29 +351,25 @@ int LedVibratorDevice::write_value(const char *file, const char *value) {
 }
 
 int LedVibratorDevice::on(int32_t timeoutMs) {
-    int ret = -1;
+    char file[PATH_MAX];
+    char value[32];
+    int ret;
 
-    auto it = std::find_if(
-        VIBRATOR_CONSTANTS.begin(), VIBRATOR_CONSTANTS.end(),
-        [&timeoutMs](const vibrator_constant_t& v) { return v.first >= timeoutMs; });
-    if (it == VIBRATOR_CONSTANTS.end())
-        goto error;
+    snprintf(file, sizeof(file), "%s/%s", LED_DEVICE, "state");
+    ret = write_value(file, "1");
+    if (ret < 0)
+       goto error;
 
-    for (const auto &[path, value] : it->second) {
-        if (path == DURATION_PATH && value == "AUTO") {
-            ret = write_value(path.c_str(), std::to_string(timeoutMs).c_str());
-        } else if (path == GAIN_PATH && value == "AUTO") {
-            int index = it - VIBRATOR_CONSTANTS.begin();
-            int gain = std::min(64 + (2 * timeoutMs) - (18 * (index)), 240);
-            char buf[11];
-            snprintf(buf, sizeof(buf), "0x%x", gain);
-            ret = write_value(path.c_str(), buf);
-        } else {
-            ret = write_value(path.c_str(), value.c_str());
-        }
-        if (ret < 0)
-            goto error;
-    }
+    snprintf(file, sizeof(file), "%s/%s", LED_DEVICE, "duration");
+    snprintf(value, sizeof(value), "%u\n", timeoutMs);
+    ret = write_value(file, value);
+    if (ret < 0)
+       goto error;
+
+    snprintf(file, sizeof(file), "%s/%s", LED_DEVICE, "activate");
+    ret = write_value(file, "1");
+    if (ret < 0)
+       goto error;
 
     return 0;
 
@@ -477,9 +380,11 @@ error:
 
 int LedVibratorDevice::off()
 {
+    char file[PATH_MAX];
     int ret;
 
-    ret = write_value(ACTIVATE_PATH, "0");
+    snprintf(file, sizeof(file), "%s/%s", LED_DEVICE, "activate");
+    ret = write_value(file, "0");
     return ret;
 }
 
@@ -548,36 +453,21 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
     long playLengthMs;
     int ret;
 
+    if (ledVib.mDetected)
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+
     ALOGD("Vibrator perform effect %d", effect);
 
-    if (ledVib.mDetected) {
-        if (const auto it = LED_EFFECTS.find(effect); it != LED_EFFECTS.end()) {
-            for (const auto &[path, value] : it->second) {
-                if (path == "SLEEP") {
-                    usleep(atoi(value.c_str()) * 1000);
-                } else {
-                    ledVib.write_value(path.c_str(), value.c_str());
-                }
-            }
+    if (effect < Effect::CLICK ||
+            effect > Effect::HEAVY_CLICK)
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 
-            // Return magic value for play length so that we won't end up calling on() / off()
-            playLengthMs = effect == Effect::DOUBLE_CLICK ? 250 : 150;
-        } else {
-            return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
-        }
-    } else {
-        if (effect < Effect::CLICK ||
-                effect > Effect::HEAVY_CLICK)
-            return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+    if (es != EffectStrength::LIGHT && es != EffectStrength::MEDIUM && es != EffectStrength::STRONG)
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
 
-        if (es != EffectStrength::LIGHT && es != EffectStrength::MEDIUM &&
-                es != EffectStrength::STRONG)
-            return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
-
-        ret = ff.playEffect((static_cast<int>(effect)), es, &playLengthMs);
-        if (ret != 0)
-            return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_SERVICE_SPECIFIC));
-    }
+    ret = ff.playEffect((static_cast<int>(effect)), es, &playLengthMs);
+    if (ret != 0)
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_SERVICE_SPECIFIC));
 
     if (callback != nullptr) {
         std::thread([=] {
@@ -593,13 +483,11 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
 }
 
 ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_return) {
-    if (ledVib.mDetected) {
-        *_aidl_return = {Effect::CLICK, Effect::DOUBLE_CLICK, Effect::TICK, Effect::POP,
-                         Effect::HEAVY_CLICK};
-    } else {
-        *_aidl_return = {Effect::CLICK, Effect::DOUBLE_CLICK, Effect::TICK, Effect::THUD,
-                         Effect::POP, Effect::HEAVY_CLICK};
-    }
+    if (ledVib.mDetected)
+        return ndk::ScopedAStatus::ok();
+
+    *_aidl_return = {Effect::CLICK, Effect::DOUBLE_CLICK, Effect::TICK, Effect::THUD,
+                     Effect::POP, Effect::HEAVY_CLICK};
 
     return ndk::ScopedAStatus::ok();
 }

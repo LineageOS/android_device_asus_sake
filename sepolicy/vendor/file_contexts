@@ -27,6 +27,3 @@
 
 # Touch
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.sake    u:object_r:hal_lineage_touch_default_exec:s0
-
-# Vibrator
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.sake    u:object_r:hal_vibrator_default_exec:s0

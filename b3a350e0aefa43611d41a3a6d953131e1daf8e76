@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e548d9bf_64ad9212",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29914
+      },
+      "writtenOn": "2021-12-28T23:59:53Z",
+      "side": 1,
+      "message": "sake-vibrator-revert topic is needed",
+      "revId": "b3a350e0aefa43611d41a3a6d953131e1daf8e76",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

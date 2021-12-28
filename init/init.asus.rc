@@ -13,6 +13,29 @@ on fs
     chown system system /sys/class/leds/vibrator/loop
     chown system system /sys/class/leds/vibrator/brightness
 
+on post-fs
+    chmod 0664 /sys/class/leds/vibrator/mem_play
+    chown system shell /sys/class/leds/vibrator/mem_play
+
+    chmod 0664 /sys/class/leds/vibrator/gain
+    chown system shell /sys/class/leds/vibrator/gain
+
+    chmod 0664 /sys/class/leds/vibrator/index
+    chown system shell /sys/class/leds/vibrator/index
+
+    chmod 0664 /sys/class/leds/vibrator/state
+    chown system shell /sys/class/leds/vibrator/state
+
+    chmod 0664 /sys/class/leds/vibrator/duration
+    chown system shell /sys/class/leds/vibrator/duration
+
+    chmod 0664 /sys/class/leds/vibrator/activate
+    chown system shell /sys/class/leds/vibrator/activate
+
+    chmod 0664 /sys/class/leds/vibrator/vmax
+    chown system shell /sys/class/leds/vibrator/vmax
+    write /sys/class/leds/vibrator/vmax 28
+
 on post-fs-data
     # Audio
     chown system audio /mnt/vendor/persist/audio/rcv_cal_val
@@ -28,6 +51,10 @@ on post-fs-data
 
     # ZRAM
     swapon_all fstab.default
+
+    # Awinic haptic
+    mkdir /data/vendor/BBY 0777 system system
+    mkdir /data/vendor/awinic 0777 system system
 
 on boot
     # Accelerometer
@@ -71,6 +98,13 @@ on boot
     chown system system /sys/class/sensors/lsensor_2nd/selection
     chown system system /sys/class/sensors/lsensor_2nd/switch
 
+    # Awinic Haptic
+    chown audioserver audioserver /dev/aw8697_haptic
+    #chown audioserver audioserver /dev/awinic_haptic
+    #chown audioserver audioserver /sys/class/leds/vibrator_aw8697/haptic_audio
+    chown audioserver audioserver /sys/class/leds/vibrator/haptic_audio
+    mkdir /data/awinic 0770 system audio
+
 on charger
     # Battery
     mount_all /vendor/etc/fstab.battery --early
@@ -83,6 +117,11 @@ on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
 on property:ro.boot.country_code=JP
     # NFC
     setprop ro.boot.product.hardware.sku eSE
+
+on property:service.bootanim.exit=0
+    write /sys/class/leds/vibrator/index 3
+    write /sys/class/leds/vibrator/duration 100
+    write /sys/class/leds/vibrator/boot_vibrator 1
 
 on property:sys.boot_completed=1
     # Camera

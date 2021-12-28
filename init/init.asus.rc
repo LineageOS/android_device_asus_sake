@@ -4,15 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-on fs
-    # Haptics
-    chown system system /sys/class/leds/vibrator/duration
-    chown system system /sys/class/leds/vibrator/vmax
-    chown system system /sys/class/leds/vibrator/gain
-    chown system system /sys/class/leds/vibrator/seq
-    chown system system /sys/class/leds/vibrator/loop
-    chown system system /sys/class/leds/vibrator/brightness
-
 on post-fs-data
     # Audio
     chown system audio /mnt/vendor/persist/audio/rcv_cal_val
@@ -21,6 +12,9 @@ on post-fs-data
     # Battery
     mount_all /vendor/etc/fstab.battery
     restorecon_recursive /batinfo
+
+    # Haptics
+    write /sys/class/leds/vibrator/vmax 28
 
     # Sensors
     write /sys/class/sensors/psensor/load_cal 1
@@ -91,6 +85,11 @@ on property:sys.boot_completed=1
     chmod 0755 /data/vendor/camera/dualcam_cali.bin
     chmod 0755 /data/vendor/camera/dualcam_cali
     chmod 0644 /vendor/factory/dualcam_cali.bin
+
+    # Haptics
+    write /sys/class/leds/vibrator/index 3
+    write /sys/class/leds/vibrator/duration 100
+    write /sys/class/leds/vibrator/boot_vibrator 1
 
     # Power
     write /sys/class/asuslib/boot_completed 1

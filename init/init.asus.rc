@@ -4,15 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-on fs
-    # Haptics
-    chown system system /sys/class/leds/vibrator/duration
-    chown system system /sys/class/leds/vibrator/vmax
-    chown system system /sys/class/leds/vibrator/gain
-    chown system system /sys/class/leds/vibrator/seq
-    chown system system /sys/class/leds/vibrator/loop
-    chown system system /sys/class/leds/vibrator/brightness
-
 on post-fs-data
     # Audio
     chown system audio /mnt/vendor/persist/audio/rcv_cal_val

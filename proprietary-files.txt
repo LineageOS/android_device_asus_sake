@@ -1673,6 +1673,7 @@ vendor/lib/libvideoutils.so
 vendor/lib64/libvideooptfeature.so
 
 # Vibrator
+vendor/etc/init/init.aw8697.rc
 vendor/firmware/aw8697_haptic.bin
 
 # WFD

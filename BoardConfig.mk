@@ -130,6 +130,8 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     focaltech_fts_zf.ko \
     gf_spi.ko \
     hdmi_dlkm.ko \
+    hid-aksys.ko \
+    icm206xx.ko \
     it913x.ko \
     lid.ko \
     lid_2.ko \
@@ -156,6 +158,7 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     q6_dlkm.ko \
     q6_notifier_dlkm.ko \
     q6_pdr_dlkm.ko \
+    qcom_edac.ko \
     qm1d1b0004.ko \
     qm1d1c0042.ko \
     qt1010.ko \
@@ -166,6 +169,7 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     rmnet_offload.ko \
     rmnet_shs.ko \
     rx_macro_dlkm.ko \
+    sensors_vcnl36866.ko \
     si2157.ko \
     sla.ko \
     slimbus-ngd.ko \
@@ -190,6 +194,8 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     tuner-xc2028.ko \
     tx_macro_dlkm.ko \
     va_macro_dlkm.ko \
+    wcd937x_dlkm.ko \
+    wcd937x_slave_dlkm.ko \
     wcd938x_dlkm.ko \
     wcd938x_slave_dlkm.ko \
     wcd9xxx_dlkm.ko \
@@ -263,7 +269,8 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOOT_KERNEL_MODULES := \
     focaltech_fts_zf.ko \
-    msm_drm.ko
+    msm_drm.ko \
+    sensors_vcnl36866.ko
 
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default

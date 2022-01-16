@@ -251,6 +251,9 @@ TARGET_BOARD_PLATFORM := lahaina
 # Power
 TARGET_TAP_TO_WAKE_NODE := /proc/driver/dclick
 
+# Properties
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 

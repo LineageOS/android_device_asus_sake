@@ -216,23 +216,21 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # NFC
-$(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
-$(call inherit-product, vendor/nxp/opensource/pn5xx/halimpl/nfc_vendor_product.mk)
-
-TARGET_USES_NQ_NFC := true
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_eSE/android.hardware.se.omapi.ese.xml \
-    frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
+    frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0:64 \
-    ls_nq_client:64 \
-    jcos_nq_client:64 \
-    vendor.nxp.nxpnfc@1.0.vendor
-
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/nxp/opensource/pn5xx
+    android.hardware.nfc@1.2-service \
+    android.hardware.secure_element@1.2.vendor \
+    ese_spi_nxp \
+    libchrome.vendor \
+    vendor.nxp.nxpnfc@2.0.vendor
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \

@@ -312,15 +312,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>INqNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <!-- Performance -->
     <hal format="hidl">
         <name>vendor.qti.hardware.iop</name>

@@ -275,4 +275,13 @@
     <string name="config_comboNetworkLocationProvider">com.qualcomm.location</string>
     <string name="config_networkLocationProviderPackageName">com.qualcomm.location</string>
 
+    <!-- Telephony qualified networks service package name to bind to by default. -->
+    <string name="config_qualified_networks_service_package">vendor.qti.iwlan</string>
+
+    <!-- IWLAN data service package name to bind to by default. -->
+    <string name="config_wlan_data_service_package">vendor.qti.iwlan</string>
+
+    <!-- IWLAN network service package name to bind to by default. -->
+    <string name="config_wlan_network_service_package">vendor.qti.iwlan</string>
+
 </resources>

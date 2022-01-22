@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -7,8 +7,6 @@
 LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter sake,$(TARGET_DEVICE)),)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
 
 # A/B builds require us to create the mount points at compile time.
 # Just creating it for all cases since it does not hurt.

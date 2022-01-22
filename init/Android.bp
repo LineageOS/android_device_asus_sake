@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2021 The LineageOS Project
+// Copyright (C) 2021-2022 The LineageOS Project
 // SPDX-License-Identifier: Apache-2.0
 //
 
@@ -41,6 +41,13 @@ prebuilt_etc {
     src: "init.target.rc",
     sub_dir: "init/hw",
     vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.asus.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.asus.rc",
+    device_specific: true,
 }
 
 prebuilt_etc {

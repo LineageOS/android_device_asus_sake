@@ -24,3 +24,5 @@ persist.vendor.sensors.enable.mag_filter=true
 # Telephony
 ril.subscription.types=RUIM,RUIM
 ro.telephony.default_network=33,33
+ro.telephony.sim_slots.count=2
+telephony.active_modems.max_count=2

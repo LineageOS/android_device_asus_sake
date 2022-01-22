@@ -190,6 +190,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.sh \
     init.target.rc \
+    ueventd.asus.rc \
     ueventd.qcom.rc
 
 # Keymaster

@@ -249,7 +249,8 @@ PRODUCT_PACKAGES += \
     ZenFone8Frameworks \
     ZenFone8Snap \
     ZenFone8SystemUI \
-    ZenFone8Telephony
+    ZenFone8Telephony \
+    aptxalsOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

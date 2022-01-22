@@ -1,0 +1,9 @@
+#
+# Copyright (C) 2022 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# NFC
+/dev/pn553                0660    nfc         nfc
+/dev/p73                  0660    secure_element secure_element

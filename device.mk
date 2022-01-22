@@ -256,7 +256,8 @@ PRODUCT_PACKAGES += \
     ZenFone8Frameworks \
     ZenFone8SettingsProvider \
     ZenFone8Snap \
-    ZenFone8SystemUI
+    ZenFone8SystemUI \
+    ZenFone8Telephony
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

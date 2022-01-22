@@ -4,6 +4,16 @@
 -->
 <manifest version="1.0" type="device" target-level="5">
     <kernel target-level="5" />
+    <!-- Alarm -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.alarm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAlarm</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <!-- Audio -->
     <hal format="hidl">
         <name>android.hardware.audio</name>

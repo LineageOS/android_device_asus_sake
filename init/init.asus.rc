@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -12,6 +12,10 @@ on post-fs-data
     # Battery
     mount_all /vendor/etc/fstab.battery
     restorecon_recursive /batinfo
+
+    # NFC
+    mkdir /data/vendor/nfc 0777 nfc nfc
+    chown nfc nfc /dev/pn553
 
     # Sensors
     write /sys/class/sensors/psensor/load_cal 1

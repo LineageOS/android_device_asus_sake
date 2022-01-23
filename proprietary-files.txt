@@ -1078,7 +1078,7 @@ vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/vendor_modprobe.sh
 vendor/etc/init/hw/init.qti.kernel.rc
-vendor/lib/modules/modules.blocklist
+vendor/lib/modules/modules.blocklist:vendor_dlkm/lib/modules/modules.blocklist
 
 # Keymaster
 vendor/bin/hw/android.hardware.authsecret@1.0-service-qti

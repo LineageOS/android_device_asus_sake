@@ -18,6 +18,7 @@
 
 #include <hardware/hw_auth_token.h>
 
+#include <android-base/properties.h>
 #include <hardware/hardware.h>
 #include <hardware/fingerprint.h>
 #include "BiometricsFingerprint.h"
@@ -211,11 +212,21 @@ IBiometricsFingerprint* BiometricsFingerprint::getInstance() {
     return sInstance;
 }
 
+const char* BiometricsFingerprint::getModuleId() {
+    auto stageId = android::base::GetIntProperty("ro.boot.id.stage", 0);
+
+    if (stageId == 52) {
+        return "fingerprint_er1.default";
+    }
+
+    return FINGERPRINT_HARDWARE_MODULE_ID;
+}
+
 fingerprint_device_t* BiometricsFingerprint::openHal() {
     int err;
     const hw_module_t *hw_mdl = nullptr;
     ALOGD("Opening fingerprint hal library...");
-    if (0 != (err = hw_get_module(FINGERPRINT_HARDWARE_MODULE_ID, &hw_mdl))) {
+    if (0 != (err = hw_get_module(getModuleId(), &hw_mdl))) {
         ALOGE("Can't open fingerprint HW Module, error: %d", err);
         return nullptr;
     }

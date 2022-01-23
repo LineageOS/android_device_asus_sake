@@ -87,7 +87,7 @@ extern "C" {
 
 #define AB_PTN_LIST                     PTN_SWAP_LIST, \
             "boot", "modem", "odm", "product", "system", "system_ext", "vendor", \
-            "vendor_boot"
+            "vendor_dlkm", "vendor_boot"
 
 #define BOOT_DEV_DIR    "/dev/block/bootdevice/by-name"
 

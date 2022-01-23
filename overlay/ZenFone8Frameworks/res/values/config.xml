@@ -379,4 +379,11 @@
         <item>9</item> <!-- COLOR_MODE_DISPLAY_P3 -->
     </integer-array>
 
+    <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+    <integer-array name="config_udfps_sensor_props" translatable="false" >
+        <item>545</item> <!-- sensorLocationX -->
+        <item>1741</item> <!-- sensorLocationY -->
+        <item>110</item> <!-- sensorRadius -->
+    </integer-array>
+
 </resources>

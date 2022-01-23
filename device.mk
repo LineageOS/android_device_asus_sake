@@ -268,6 +268,7 @@ PRODUCT_PACKAGES += \
     WifiResCommon \
     WifiResTarget \
     ZenFone8Frameworks \
+    ZenFone8SettingsProvider \
     ZenFone8Snap \
     ZenFone8SystemUI \
     ZenFone8Telephony \

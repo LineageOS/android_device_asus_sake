@@ -16,8 +16,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := sake
-PRODUCT_MANUFACTURER := ASUS
-PRODUCT_MODEL := ZenFone 8
+PRODUCT_MANUFACTURER := asus
+PRODUCT_MODEL := ASUS_I006D
 PRODUCT_NAME := lineage_sake
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus

@@ -23,4 +23,7 @@
      vibrator is capable of subtle vibrations -->
     <bool name="config_vibrateOnIconAnimation">true</bool>
 
+    <!-- The radius of the enrollment progress bar, in DP. -->
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">115</integer>
+
 </resources>

@@ -1175,6 +1175,7 @@ vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 # NFC
 vendor/etc/libese-nxp.conf
 vendor/etc/libnfc-nxp.conf
+vendor/etc/libnfc-nxp_RF.conf
 vendor/lib/libpn557_fw.so
 
 # Neural Networks

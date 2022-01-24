@@ -1173,8 +1173,6 @@ vendor/lib64/libqconfigclient.so
 vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 
 # NFC
-vendor/bin/hw/android.hardware.secure_element@1.2-service
-vendor/etc/init/android.hardware.secure_element@1.2-service.rc
 vendor/etc/libese-nxp.conf
 vendor/etc/libnfc-nxp.conf
 vendor/lib/libpn557_fw.so

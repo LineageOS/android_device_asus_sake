@@ -1,8 +1,8 @@
 <!--
-     Copyright (C) 2021 The Linux Foundation
+     Copyright (C) 2021-2022 The Linux Foundation
      SPDX-License-Identifier: BSD-3-Clause
 -->
-<manifest version="1.0" type="device" target-level="5">
+<manifest version="2.0" type="device" target-level="5">
     <kernel target-level="5" />
     <!-- Audio -->
     <hal format="hidl">
@@ -299,25 +299,6 @@
         <version>1.0</version>
         <interface>
             <name>IQConfig</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <!-- NFC -->
-    <hal format="hidl">
-        <name>android.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>INqNfc</name>
             <instance>default</instance>
         </interface>
     </hal>

@@ -1,8 +1,8 @@
 <!--
-     Copyright (C) 2021 The LineageOS Project
+     Copyright (C) 2021-2022 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<manifest version="1.0" type="device">
+<manifest version="2.0" type="device">
     <!-- Camera -->
     <hal format="hidl">
         <name>vendor.asus.bspcam</name>
@@ -30,16 +30,6 @@
         <version>2.0</version>
         <interface>
             <name>IPictureAdjustment</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <!-- NFC -->
-    <hal format="hidl">
-        <name>vendor.nxp.nxpnfclegacy</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INxpNfcLegacy</name>
             <instance>default</instance>
         </interface>
     </hal>

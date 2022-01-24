@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -74,6 +74,7 @@ on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
 on property:ro.boot.country_code=JP
     # NFC
     setprop ro.boot.product.hardware.sku eSE
+    start vendor.secure_element_hal_service_1_2
 
 on property:sys.boot_completed=1
     # Camera
@@ -123,3 +124,15 @@ service vendor.camera-provider-2-5 /vendor/bin/hw/android.hardware.camera.provid
     ioprio rt 4
     capabilities SYS_NICE
     writepid /dev/cpuset/camera-daemon/tasks /dev/stune/foreground/tasks
+
+service vendor.secure_element_hal_service_1_2 /vendor/bin/hw/android.hardware.secure_element@1.2-service.p73
+    class hal
+    override
+    disabled
+    interface android.hardware.secure_element@1.0::ISecureElement eSE1
+    interface android.hardware.secure_element@1.1::ISecureElement eSE1
+    interface android.hardware.secure_element@1.2::ISecureElement eSE1
+    interface vendor.nxp.nxpese@1.0::INxpEse default
+    interface vendor.nxp.eventprocessor@1.0::INxpEseEvtProcessor default
+    user secure_element
+    group secure_element

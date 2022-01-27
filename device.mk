@@ -122,7 +122,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 PRODUCT_PACKAGES += \
-    Snap \
     android.hardware.camera.provider@2.5-service_64 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
@@ -275,7 +274,6 @@ PRODUCT_PACKAGES += \
     WifiResTarget \
     ZenFone8Frameworks \
     ZenFone8SettingsProvider \
-    ZenFone8Snap \
     ZenFone8SystemUI \
     ZenFone8Telephony \
     aptxalsOverlay

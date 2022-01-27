@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9acabd04_71ca2f05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2022-01-27T03:23:05Z",
+      "side": 1,
+      "message": "A connection can be established, and inputs can be made however the display is a garbled green.",
+      "revId": "b4f31164ce32cc9070d18f1561dafd6e82f2f22f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

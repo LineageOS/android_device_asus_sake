@@ -270,6 +270,7 @@ PRODUCT_PACKAGES += \
     ZenFone8Frameworks \
     ZenFone8LineageSDK \
     ZenFone8LineageSystemUI \
+    ZenFone8Settings \
     ZenFone8SettingsProvider \
     ZenFone8SystemUI \
     ZenFone8Telephony \

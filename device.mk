@@ -5,6 +5,9 @@
 #
 
 # Inherit from our proprietary files directory.
+PRODUCT_COPY_FILES += \
+    vendor/asus/sake/proprietary/vendor/etc/audio/ZS590KS/audio_policy_configuration_ZS590KS.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml
+
 $(call inherit-product, vendor/asus/sake/sake-vendor.mk)
 
 # A/B

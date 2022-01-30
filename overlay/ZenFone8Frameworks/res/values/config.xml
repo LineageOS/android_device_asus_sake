@@ -267,11 +267,11 @@
          appearance of the cutout as much as possible, and may be smaller than
          config_mainBuiltInDisplayCutout
          -->
-    <string name="config_mainBuiltInDisplayCutoutRectApproximation">
-        M 0.0,0.0
-        h 200
-        v 147
-        h -200
+    <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
+        M 0,0
+        H 198
+        V 114
+        H 0
         Z
         @left
     </string>

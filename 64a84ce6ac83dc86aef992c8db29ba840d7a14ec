@@ -52,6 +52,24 @@
       "parentUuid": "427f3ee1_599f39f2",
       "revId": "64a84ce6ac83dc86aef992c8db29ba840d7a14ec",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87bc10d9_14748142",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2022-02-01T03:14:28Z",
+      "side": 1,
+      "message": "No, it\u0027s not. When you run extract utilities and go to vendor/asus the file \"vendor/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml\" is not \"vendor/etc/audio/ZS590KS/audio_policy_configuration_ZS590KS.xml\", it\u0027s ~/Dumps/ZF8/31/vendor/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml. Because extract utilities is copying the wrong file because it\u0027s broken.",
+      "parentUuid": "6a6bdc49_40afb058",
+      "revId": "64a84ce6ac83dc86aef992c8db29ba840d7a14ec",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

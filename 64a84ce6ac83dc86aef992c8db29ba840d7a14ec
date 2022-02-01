@@ -34,6 +34,24 @@
       "parentUuid": "5bf53a04_54a0e889",
       "revId": "64a84ce6ac83dc86aef992c8db29ba840d7a14ec",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a6bdc49_40afb058",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-02-01T01:42:16Z",
+      "side": 1,
+      "message": "It\u0027s because hardware/qcom-caf/sm8350/audio/configs/lahaina/lahaina.mk is copying it, stop using the fragment that\u0027s intended to be used for QRDs xd",
+      "parentUuid": "427f3ee1_599f39f2",
+      "revId": "64a84ce6ac83dc86aef992c8db29ba840d7a14ec",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

@@ -16,6 +16,24 @@
       "message": "Just do\n vendor/etc/audio/ZS590KS/audio_policy_configuration_ZS590KS.xml:vendor/etc/audio/sku_lahaina_qssi/audio_policy_configuration.xml\n\nIn proprietary-files.txt",
       "revId": "64a84ce6ac83dc86aef992c8db29ba840d7a14ec",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "427f3ee1_599f39f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2022-02-01T00:24:18Z",
+      "side": 1,
+      "message": "I did it like this because that doesn\u0027t work. If the destination file already exists in source (which it does) then it will end up copying that file instead. This seemed like a bug (and still does IMO) to me awhile ago and when I asked I was told it was intended behavior.\n\n\"If target exists, it\u0027ll use it and skip over source. That\u0027s the wanted behavior\".",
+      "parentUuid": "5bf53a04_54a0e889",
+      "revId": "64a84ce6ac83dc86aef992c8db29ba840d7a14ec",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

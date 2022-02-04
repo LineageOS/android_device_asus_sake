@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -80,8 +80,9 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/hidl/asus_framework_matrix.xml \
-    $(DEVICE_PATH)/hidl/device_framework_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
+    vendor/lineage/config/device_framework_matrix.xml \
+    vendor/nxp/nfc/vendor_framework_compatibility_matrix.xml
 
 DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/hidl/asus_manifest.xml \

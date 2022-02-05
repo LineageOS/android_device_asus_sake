@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc4ed0c8_57e87041",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29415
+      },
+      "writtenOn": "2022-02-05T05:39:43Z",
+      "side": 1,
+      "message": "Merging to bring lineage-19.0 up to lineage-18.1",
+      "revId": "e0d5b2340988abda1eb4867e342b9b82477a728e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

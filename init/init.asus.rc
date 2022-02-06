@@ -136,3 +136,12 @@ service vendor.secure_element_hal_service_1_2 /vendor/bin/hw/android.hardware.se
     interface vendor.nxp.eventprocessor@1.0::INxpEseEvtProcessor default
     user secure_element
     group secure_element
+
+service vendor.sensors-hal-2-1-multihal /vendor/bin/hw/android.hardware.sensors@2.1-service.multihal
+    override
+    class hal
+    user system
+    group system wakelock context_hub input
+    writepid /dev/cpuset/system-background/tasks
+    capabilities BLOCK_SUSPEND
+    rlimit rtprio 10 10

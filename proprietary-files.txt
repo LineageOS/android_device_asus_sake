@@ -733,9 +733,7 @@ vendor/etc/display/DPU720.xml
 vendor/etc/display/DPU7__.xml
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib/libdisplayconfig.qti.so
 vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdpps.so
@@ -762,12 +760,7 @@ vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
 # Display (OSS)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/etc/snapdragon_color_libs_config.xml
-vendor/lib64/libdrmutils.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmutils.so
 
 # Display (Pixelworks)
 vendor/bin/hw/vendor.pixelworks.hardware.display.iris-service

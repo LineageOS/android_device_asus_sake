@@ -919,18 +919,7 @@ vendor/firmware/goodixfp64.b05
 vendor/firmware/goodixfp64.b06
 vendor/firmware/goodixfp64.b07
 vendor/firmware/goodixfp64.mdt
-vendor/firmware/goodixfp64_er1.b00
-vendor/firmware/goodixfp64_er1.b01
-vendor/firmware/goodixfp64_er1.b02
-vendor/firmware/goodixfp64_er1.b03
-vendor/firmware/goodixfp64_er1.b04
-vendor/firmware/goodixfp64_er1.b05
-vendor/firmware/goodixfp64_er1.b06
-vendor/firmware/goodixfp64_er1.b07
-vendor/firmware/goodixfp64_er1.mdt
-vendor/lib64/hw/fingerprint_er1.default.so
 vendor/lib64/hw/fingerprint.default.so
-vendor/lib64/libgf_hal_er1.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 

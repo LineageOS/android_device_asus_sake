@@ -23,3 +23,14 @@ cc_binary {
         "vendor.goodix.hardware.biometrics.fingerprint@2.1",
     ],
 }
+
+cc_library_static {
+    name: "libudfps_extension.sake",
+    srcs: ["UdfpsExtension.cpp"],
+    include_dirs: [
+        "frameworks/native/services/surfaceflinger/CompositionEngine/include"
+    ],
+    header_libs: [
+        "generated_kernel_headers",
+    ],
+}

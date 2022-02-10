@@ -25,9 +25,6 @@ on boot
     chown system camera /dev/asus2ndAccelSensor
     chown system camera /sys/class/icm206xx/accel2_poll_delay
 
-    # Display
-    chown system system /proc/globalHbm
-
     # Gyroscope
     chown system camera /dev/asus2ndGyroSensor
     chown system camera /sys/class/icm206xx/gyro2_poll_delay

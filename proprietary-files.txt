@@ -164,14 +164,6 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.7.20_0.0__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/adsp_avs_config.acdb
-vendor/etc/audio/ZS590KS/audio_io_policy_ZS590KS.conf
-vendor/etc/audio/ZS590KS/audio_policy_configuration_ZS590KS.xml
-vendor/etc/audio/ZS590KS/audio_policy_volumes_ZS590KS.xml
-vendor/etc/audio/ZS590KS/default_volume_tables_ZS590KS.xml
-vendor/etc/audio/ZS590KS/mixer_paths_ZS590KS_EU.xml
-vendor/etc/audio/ZS590KS/mixer_paths_ZS590KS.xml
-vendor/etc/audio/ZS590KS/r_submix_audio_policy_configuration_ZS590KS.xml
-vendor/etc/audio/sku_lahaina/audio_platform_info_intcodec_ZS590KS.xml
 vendor/etc/dirac/interfacedb
 vendor/etc/diracvdd.bin
 vendor/firmware/cs35l45-rcv-dsp1-spk-cali.bin
@@ -188,7 +180,6 @@ vendor/firmware/cs35l45-spk-dsp1-spk-prot.wmfw
 vendor/firmware/cs35l45-spk-music.txt
 vendor/firmware/cs35l45-spk-outdoor.txt
 vendor/firmware/cs35l45-spk-voice.txt
-vendor/lib/hw/audio.primary.lahaina.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libdiraceffect.so
 vendor/lib/soundfx/libqcbassboost.so
@@ -239,11 +230,9 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libqtigef.so
 vendor/lib/libsmwrapper.so
-vendor/lib/libssrec.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
-vendor/lib64/hw/audio.primary.lahaina.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
@@ -285,7 +274,6 @@ vendor/lib64/libhdmipassthru.so
 vendor/lib64/liblistensoundmodel2.so
 vendor/lib64/libmulawdec.so
 vendor/lib64/libqtigef.so
-vendor/lib64/libssrec.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
@@ -306,7 +294,6 @@ vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib/btaudio_offload_if.so
-vendor/lib/liba2dpoffload.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 vendor/lib/libbt-hidlclient.so
@@ -324,7 +311,6 @@ vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/btaudio_offload_if.so
-vendor/lib64/liba2dpoffload.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libbt-hidlclient.so

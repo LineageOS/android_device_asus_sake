@@ -56,6 +56,7 @@ $(call inherit-product, hardware/qcom-caf/sm8350/audio/configs/lahaina/lahaina.m
 $(call inherit-product, vendor/qcom/opensource/audio/configs/qssi/qssi.mk)
 
 PRODUCT_PACKAGES += \
+    audio_amplifier.lahaina \
     libbatterylistener \
     libcirrusspkrprot \
     libcomprcapture \

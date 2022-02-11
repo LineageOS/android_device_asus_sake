@@ -6,6 +6,7 @@ ro.opengles.version=196610
 
 # Audio
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
+ro.config.media_vol_steps=30
 
 # Bluetooth
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true

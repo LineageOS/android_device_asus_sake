@@ -188,11 +188,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
-# Hotword Enrollment
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/asus-hiddenapi-package-allowlist.xml \
-    $(LOCAL_PATH)/privapp-permissions-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-asus-product.xml
-
 # Initialization
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
@@ -293,6 +288,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Performance
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/hiddenapi-package-allowlist-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/asus-hiddenapi-package-allowlist.xml \
+    $(LOCAL_PATH)/privapp-permissions-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-asus.xml
 
 # Power
 PRODUCT_PACKAGES += \

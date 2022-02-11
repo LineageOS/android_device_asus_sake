@@ -1,0 +1,18 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "audio_amplifier.lahaina",
+    relative_install_path: "hw",
+    header_libs: [
+        "libhardware_headers",
+    ],
+    shared_libs: [
+        "liblog",
+        "libtinyalsav2",
+    ],
+    srcs: ["audio_amplifier.c"],
+    vendor: true,
+}

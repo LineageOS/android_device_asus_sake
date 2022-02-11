@@ -436,7 +436,7 @@
         </module>
 
         <!-- Remote Submix Audio HAL -->
-        <xi:include href="/vendor/etc/audio/ZS590KS/r_submix_audio_policy_configuration_ZS590KS.xml"/>
+        <xi:include href="/vendor/etc/r_submix_audio_policy_configuration.xml"/>
 
         <!-- Bluetooth Audio HAL for hearing aid -->
         <xi:include href="/vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml"/>
@@ -446,8 +446,8 @@
 
     <!-- Volume section -->
 
-    <xi:include href="/vendor/etc/audio/ZS590KS/audio_policy_volumes_ZS590KS.xml"/>
-    <xi:include href="/vendor/etc/audio/ZS590KS/default_volume_tables_ZS590KS.xml"/>
+    <xi:include href="/vendor/etc/audio/sku_lahaina/audio_policy_volumes.xml"/>
+    <xi:include href="/vendor/etc/audio/sku_lahaina/default_volume_tables.xml"/>
 
     <!-- End of Volume section -->
 

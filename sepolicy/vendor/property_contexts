@@ -1,7 +1,3 @@
-# Audio
-sys.audio.system.brand            u:object_r:vendor_audio_prop:s0
-vendor.use.audio.eu.parameters    u:object_r:vendor_audio_prop:s0
-
 # Camera
 persist.camera.apk.usingname    u:object_r:vendor_camera_prop:s0
 vendor.camera.                  u:object_r:vendor_camera_prop:s0

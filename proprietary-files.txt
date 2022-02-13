@@ -752,108 +752,9 @@ vendor/lib64/vendor.display.postproc@1.0.so
 vendor/etc/snapdragon_color_libs_config.xml
 
 # Display (Pixelworks)
-vendor/bin/hw/vendor.pixelworks.hardware.display.iris-service
-vendor/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service
-vendor/bin/irisConfig
-vendor/bin/irisdbgc
-vendor/bin/irisdbgd
-vendor/etc/init/irisdbgd.rc
-vendor/etc/init/vendor.pixelworks.hardware.display.iris-service.rc
-vendor/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc
-vendor/etc/inparm/irissoft/inparm_sake_mp/Release.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm1.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm10.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm11.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm12.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm13.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm14.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm15.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm16.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm17.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm18.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm2.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm3.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm4.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm5.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm6.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm7.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm8.txt
-vendor/etc/inparm/irissoft/inparm_sake_mp/inParm9.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm10.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm11.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm12.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm13.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm14.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm15.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm16.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm17.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm18.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm1.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm2.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm3.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm4.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm5.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm6.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm7.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm8.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/inParm9.txt
-vendor/etc/inparm/irissoft/inparm_sake_pr/Release.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/Release.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm1.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm10.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm11.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm12.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm13.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm14.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm15.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm16.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm17.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm18.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm2.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm3.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm4.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm5.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm6.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm7.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm8.txt
-vendor/etc/inparm/irissoft/inparm_vodka_mp/inParm9.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm10.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm11.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm12.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm13.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm14.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm15.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm16.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm17.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm18.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm1.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm2.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm3.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm4.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm5.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm6.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm7.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm8.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/inParm9.txt
-vendor/etc/inparm/irissoft/inparm_vodka_pr/Release.txt
--vendor/etc/vintf/manifest/vendor.pixelworks.hardware.display.iris-service.xml
--vendor/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xml
 vendor/etc/irissoft_s.fw
 vendor/etc/irissoft_v.fw
-vendor/etc/irissoft.fw
-vendor/lib64/libpwiriscalibrate.so
-vendor/lib64/libpwirisfeature.so
-vendor/lib64/libpwirishalwrapper.so
-vendor/lib64/libpwirisIoctlWrapper.so
-vendor/lib64/libpwirisPCS.so
-vendor/lib64/libpwirispq.so
-vendor/lib64/libpwirisservice.so
-vendor/lib64/libpwirissoft.so
-vendor/lib64/libpwsoftirisPCS.so
 vendor/lib64/libsnapdragoncolor-pxlw.so
-vendor/lib64/vendor.pixelworks.hardware.display@1.0.so
-vendor/lib64/vendor.pixelworks.hardware.display@1.1.so
-vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so
 
 # FASTCV
 vendor/lib/libfastcvopt.so
@@ -1079,31 +980,23 @@ vendor/etc/media_profiles_vendor.xml
 vendor/etc/media_profiles.xml
 vendor/etc/video_system_specs.json
 vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
-vendor/lib/libqc2colorconvertfilter.so
-vendor/lib/libqc2filter.so
 vendor/lib/libqc2vppfilter.so
 vendor/lib/libqcodec2_basecodec.so
 vendor/lib/libqcodec2_base.so
 vendor/lib/libqcodec2_core.so
 vendor/lib/libqcodec2_hooks.so
-vendor/lib/libqcodec2_mockfilter.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
-vendor/lib/libqconfigclient.so
 vendor/lib/vendor.qti.hardware.qconfig@1.0.so
-vendor/lib64/libqc2colorconvertfilter.so
-vendor/lib64/libqc2filter.so
 vendor/lib64/libqc2vppfilter.so
 vendor/lib64/libqcodec2_basecodec.so
 vendor/lib64/libqcodec2_base.so
 vendor/lib64/libqcodec2_core.so
 vendor/lib64/libqcodec2_hooks.so
-vendor/lib64/libqcodec2_mockfilter.so
 vendor/lib64/libqcodec2_platform.so
 vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
-vendor/lib64/libqconfigclient.so
 vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 
 # NFC
@@ -1155,7 +1048,6 @@ vendor/etc/pwr/VideoPowerOptFeature.xml
 -vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
 vendor/etc/msm_irqbalance.conf
 vendor/etc/task_profiles.json
-vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libperfioctl.so
@@ -1168,7 +1060,6 @@ vendor/lib/libqti-perfd-client-vendor.so
 vendor/lib/libqti-util.so
 vendor/lib/libqti-util-vendor.so
 vendor/lib/libqti-utils.so
-vendor/lib/libskewknob.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
 vendor/lib/vendor.qti.hardware.iop@2.0.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
@@ -1186,7 +1077,6 @@ vendor/lib64/libmeters-ns.so
 vendor/lib64/libperfconfig.so
 vendor/lib64/libperfgluelayer.so
 vendor/lib64/libperfioctl.so
-vendor/lib64/libpowercallback.so
 vendor/lib64/libpowercore.so
 vendor/lib64/libprekill.so
 vendor/lib64/libqti-iopd.so
@@ -1198,9 +1088,9 @@ vendor/lib64/libqti-perfd-client-vendor.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-util-vendor.so
 vendor/lib64/libqti-utils.so
-vendor/lib64/libreffeature.so
 vendor/lib64/libskewknob.so
 vendor/lib64/libsplh.so
+vendor/lib64/libvideooptfeature.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
@@ -1311,34 +1201,20 @@ vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so
 
 # QMI
 vendor/bin/irsc_util
-vendor/bin/qdss_qmi_helper
 vendor/bin/qmipriod
-vendor/bin/qrtr-cfg
-vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
 vendor/etc/init/qmipriod.rc
 vendor/etc/init/qmipriod.debug.rc
 vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/lib/libidl.so
-vendor/lib/libmdmdetect.so
-vendor/lib/libqcci_legacy.so
 vendor/lib/libqmi.so
 vendor/lib/libqmiservices.so
-vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_csvt_srvc.so
-vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmi_legacy.so
-vendor/lib/libqrtr.so
-vendor/lib/libqsocket.so
-vendor/lib/libsmemlog.so
-vendor/lib/libsystem_health_mon.so
 vendor/lib64/libidl.so
 vendor/lib64/libmdmdetect.so
-vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqmi.so
 vendor/lib64/libqmiextservices.so
 vendor/lib64/libqmiservices.so
@@ -1347,12 +1223,10 @@ vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_csi.so
-vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
-vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
 
 # QTEE
@@ -1364,7 +1238,6 @@ vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
-
 
 # QSEECOM
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
@@ -1615,12 +1488,9 @@ vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice.rc
 vendor/lib/vendor.qti.hardware.vpp@2.0.so
-vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so
 vendor/lib64/libvpphvx.so
-vendor/lib64/libvppimmotion.so
 vendor/lib64/libvpplibrary.so
-vendor/lib64/libvpptestutils.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
@@ -1650,13 +1520,6 @@ vendor/firmware/vpu20_4v.b19
 vendor/firmware/vpu20_4v.mbn
 vendor/firmware/vpu20_4v.mdt
 vendor/firmware/vpu20_4v_unsigned.mbn
-
-# Video
-vendor/lib/libfastcrc.so
-vendor/lib/libstreamparser.so
-vendor/lib/libvideooptfeature.so
-vendor/lib/libvideoutils.so
-vendor/lib64/libvideooptfeature.so
 
 # Vibrator
 vendor/etc/init/init.aw8697.rc

@@ -1,8 +1,0 @@
-hal_client_domain(hal_graphics_composer_default, hal_display_iris)
-hal_server_domain(hal_graphics_composer_default, hal_display_iris)
-
-add_hwservice(hal_graphics_composer_default, hal_display_iris_hwservice)
-
-set_prop(hal_graphics_composer_default, vendor_display_prop)
-
-allow hal_graphics_composer_default sysfs_devices_system_cpu:file rw_file_perms;

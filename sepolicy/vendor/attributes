@@ -1,4 +1,0 @@
-# Display (Pixelworks)
-attribute hal_display_iris;
-attribute hal_display_iris_client;
-attribute hal_display_iris_server;

@@ -79,6 +79,16 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
     this->mGoodixFingerprintDaemon = IGoodixFingerprintDaemon::getService();
 
     std::thread([this]() {
+        unsigned int cmd;
+
+        while (true) {
+            mCmdQueue.pop(cmd);
+            this->mGoodixFingerprintDaemon->sendCommand(cmd, {},
+                                                        [](int, const hidl_vec<signed char>&) {});
+        }
+    }).detach();
+
+    std::thread([this]() {
         int fd = open(FOD_UI_PATH, O_RDONLY);
         if (fd < 0) {
             LOG(ERROR) << "failed to open fd, err: " << fd;
@@ -99,8 +109,7 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
             }
 
             if (readBool(fd)) {
-                this->mGoodixFingerprintDaemon->sendCommand(CMD_LIGHT_AREA_STABLE, {},
-                                                            [](int, const hidl_vec<signed char>&) {});
+                mCmdQueue.push(CMD_LIGHT_AREA_STABLE);
             }
         }
     }).detach();
@@ -126,15 +135,13 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
-    this->mGoodixFingerprintDaemon->sendCommand(CMD_FINGER_DOWN, {},
-                                                [](int, const hidl_vec<signed char>&) {});
+    mCmdQueue.push(CMD_FINGER_DOWN);
 
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
-    this->mGoodixFingerprintDaemon->sendCommand(CMD_FINGER_UP, {},
-                                                [](int, const hidl_vec<signed char>&) {});
+    mCmdQueue.push(CMD_FINGER_UP);
 
     return Void();
 }

@@ -108,9 +108,8 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
                 continue;
             }
 
-            if (readBool(fd)) {
-                mCmdQueue.push(CMD_LIGHT_AREA_STABLE);
-            }
+            mCmdQueue.push(readBool(fd) ? CMD_LIGHT_AREA_STABLE
+                                        : CMD_LIGHT_AREA_CLOSE);
         }
     }).detach();
 }

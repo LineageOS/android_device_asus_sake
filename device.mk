@@ -345,7 +345,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.multihal \
-    libsensorndkbridge
+    libsensorndkbridge \
+    sensors.sake
 
 # Service Tracker
 PRODUCT_PACKAGES += \

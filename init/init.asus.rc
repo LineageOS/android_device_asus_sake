@@ -90,13 +90,7 @@ on property:vendor.asus.virtualtherm=*
 
 on property:vendor.audio.in_call=*
     # Audio
-    write /sys/class/asuslib/in_call ${vendor.audio.in_call}
     write /sys/class/sensors/psensor/oil_flag ${vendor.audio.in_call}
-    write /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_phone_state ${vendor.audio.in_call}
-
-on property:vendor.goodix.sensor.status=*
-   # Fingerprint
-   write /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fp_auth_status ${vendor.goodix.sensor.status}
 
 on property:vendor.zram.enable=*
    # ZRAM

@@ -59,6 +59,10 @@ on boot
     chown system system /sys/class/sensors/lsensor_2nd/selection
     chown system system /sys/class/sensors/lsensor_2nd/switch
 
+    # FOD
+    chown system system /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_fod_mode
+    chown system system /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_fod_pressed
+
 on charger
     # Battery
     mount_all /vendor/etc/fstab.battery --early

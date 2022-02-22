@@ -641,7 +641,6 @@ vendor/etc/init/ssgtzd.rc
 vendor/lib64/libminksocket.so
 
 # DPM
--system/framework/tcmclient.jar
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/init/dpmd.rc

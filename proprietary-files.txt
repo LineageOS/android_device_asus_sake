@@ -1515,7 +1515,6 @@ vendor/firmware/vpu20_4v.mdt
 vendor/firmware/vpu20_4v_unsigned.mbn
 
 # Vibrator
-vendor/etc/init/init.aw8697.rc
 vendor/firmware/aw8697_haptic.bin
 
 # WFD

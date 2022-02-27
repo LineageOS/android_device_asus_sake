@@ -8,6 +8,8 @@
 
 #include <aidl/android/hardware/vibrator/BnVibrator.h>
 
+#include <fstream>
+
 namespace aidl {
 namespace android {
 namespace hardware {
@@ -15,6 +17,8 @@ namespace vibrator {
 
 class Vibrator : public BnVibrator {
   public:
+    Vibrator();
+
     ndk::ScopedAStatus getCapabilities(int32_t* _aidl_return) override;
     ndk::ScopedAStatus off() override;
     ndk::ScopedAStatus on(int32_t timeoutMs,
@@ -35,6 +39,13 @@ class Vibrator : public BnVibrator {
     ndk::ScopedAStatus getSupportedAlwaysOnEffects(std::vector<Effect>* _aidl_return) override;
     ndk::ScopedAStatus alwaysOnEnable(int32_t id, Effect effect, EffectStrength strength) override;
     ndk::ScopedAStatus alwaysOnDisable(int32_t id) override;
+
+  private:
+    std::ofstream mMemPlayStream;
+    std::ofstream mIndexStream;
+    std::ofstream mDurationStream;
+    std::ofstream mActivateStream;
+    std::ofstream mGainStream;
 };
 
 }  // namespace vibrator

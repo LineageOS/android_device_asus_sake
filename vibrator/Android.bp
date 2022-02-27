@@ -1,0 +1,25 @@
+Common_CFlags = ["-Wall"]
+Common_CFlags += ["-Werror"]
+
+cc_binary {
+    name: "android.hardware.vibrator.service.sake",
+    vendor: true,
+    relative_install_path: "hw",
+    init_rc: ["android.hardware.vibrator.service.sake.rc"],
+    vintf_fragments: [
+        "android.hardware.vibrator.service.sake.xml",
+    ],
+    cflags: Common_CFlags,
+    srcs: [
+        "service.cpp",
+        "Vibrator.cpp",
+    ],
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "liblog",
+        "libbase",
+        "libbinder_ndk",
+        "android.hardware.vibrator-V1-ndk_platform",
+    ],
+}

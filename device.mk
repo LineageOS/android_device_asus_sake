@@ -105,9 +105,7 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
     android.hardware.boot@1.2-impl-qti.recovery \
-    android.hardware.boot@1.2-service \
-    bootctrl.lahaina \
-    bootctrl.lahaina.recovery
+    android.hardware.boot@1.2-service
 
 # Camera
 PRODUCT_COPY_FILES += \

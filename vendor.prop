@@ -79,5 +79,8 @@ persist.vendor.sensors.sync_request=true
 # SoC
 ro.soc.manufacturer=QTI
 
+# USB
+vendor.usb.product_string=ZenFone 8
+
 # WiFi
 wifi.aware.interface=wifi-aware0

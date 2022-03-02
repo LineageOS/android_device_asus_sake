@@ -329,9 +329,6 @@ PRODUCT_PACKAGES += \
 BOOT_SECURITY_PATCH := 2021-12-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf

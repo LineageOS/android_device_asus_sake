@@ -2,6 +2,7 @@
 persist.vendor.audio.bcl.enabled=false
 persist.vendor.audio.speaker.prot.enable=false
 persist.vendor.audio.vbat.enabled=false
+persist.vendor.audio.voicecall.speaker.stereo=false
 vendor.audio.spkr_prot.tx.sampling_rate=0
 
 # QC Value Addons

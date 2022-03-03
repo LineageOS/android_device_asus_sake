@@ -20,16 +20,18 @@ const std::string kGloveModePath =
 
 Return<bool> GloveMode::isEnabled() {
     std::ifstream file(kGloveModePath);
-    std::string line;
-    while (getline(file, line)) {
-        if (line == "Glove Mode: On") return true;
-    }
-    return false;
+    bool enabled;
+
+    file >> enabled;
+
+    return enabled;
 }
 
 Return<bool> GloveMode::setEnabled(bool enabled) {
     std::ofstream file(kGloveModePath);
-    file << (enabled ? "1" : "0");
+
+    file << enabled << std::flush;
+
     return !file.fail();
 }
 

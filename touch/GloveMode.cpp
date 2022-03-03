@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The LineageOS Project
+ * Copyright (C) 2021-2022 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -15,7 +15,8 @@ namespace touch {
 namespace V1_0 {
 namespace implementation {
 
-const std::string kGloveModePath = "/proc/driver/glove";
+const std::string kGloveModePath =
+    "/sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_glove_mode";
 
 Return<bool> GloveMode::isEnabled() {
     std::ifstream file(kGloveModePath);

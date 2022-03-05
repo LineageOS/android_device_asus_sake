@@ -7,6 +7,8 @@
 
 #include <vendor/lineage/touch/1.0/ITouchscreenGesture.h>
 
+#include <fstream>
+
 namespace vendor {
 namespace lineage {
 namespace touch {
@@ -15,6 +17,12 @@ namespace implementation {
 
 using ::android::hardware::Return;
 using ::vendor::lineage::touch::V1_0::Gesture;
+
+struct GestureInfo {
+    int32_t keycode;
+    const char* name;
+    const char* type;
+};
 
 class TouchscreenGesture : public ITouchscreenGesture {
   public:

@@ -92,10 +92,6 @@ on property:vendor.asus.virtualtherm=*
     # Thermal
     write /sys/class/asuslib/virtual_thermal ${vendor.asus.virtualtherm}
 
-on property:vendor.audio.in_call=*
-    # Audio
-    write /sys/class/sensors/psensor/oil_flag ${vendor.audio.in_call}
-
 on property:vendor.zram.enable=*
    # ZRAM
    start asus_zram

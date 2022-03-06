@@ -40,6 +40,25 @@ $(FACTORY_MOUNT_POINT_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(ASUSFW_MOUNT_POINT) $(FACTORY_MOUNT_POINT_SYMLINK)
 
+SENSOR_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/sensors
+$(SENSOR_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating sensor firmware symlinks: $@"
+	@mkdir -p $@
+	$(hide) ln -sf /vendor/factory/lsensor.nv $@/
+	$(hide) ln -sf /vendor/factory/lsensor_50ms.nv $@/
+	$(hide) ln -sf /vendor/factory/lsensor_100ms.nv $@/
+	$(hide) ln -sf /vendor/factory/lsensor_200ms.nv $@/
+	$(hide) ln -sf /vendor/factory/lsensor_400ms.nv $@/
+	$(hide) ln -sf /vendor/factory/psensor_1cm.nv $@/
+	$(hide) ln -sf /vendor/factory/psensor_2cm.nv $@/
+	$(hide) ln -sf /vendor/factory/psensor_3cm.nv $@/
+	$(hide) ln -sf /vendor/factory/psensor_4cm.nv $@/
+	$(hide) ln -sf /vendor/factory/psensor_5cm.nv $@/
+	$(hide) ln -sf /vendor/factory/psensor_hi.nv $@/
+	$(hide) ln -sf /vendor/factory/psensor_inf.nv $@/
+	$(hide) ln -sf /vendor/factory/psensor_low.nv $@/
+	$(hide) ln -sf /vendor/factory/psensor_offset.nv $@/
+
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@/*
@@ -92,6 +111,7 @@ $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/firmware/wlan/qca_cld/wlan/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
 
 ALL_DEFAULT_INSTALLED_MODULES += \
+    $(SENSOR_FIRMWARE_SYMLINKS) \
     $(RFS_MSM_ADSP_SYMLINKS) \
     $(RFS_MSM_CDSP_SYMLINKS) \
     $(RFS_MSM_MPSS_SYMLINKS) \

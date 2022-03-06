@@ -1,6 +1,6 @@
 r_dir_file(vendor_hal_perf_default, sysfs_dm)
 set_prop(vendor_hal_perf_default, vendor_camera_prop)
-
+set_prop(vendor_hal_perf_default, vendor_thermal_prop)
 
 allow vendor_hal_perf_default sysfs_dm:file rw_file_perms;
 allow vendor_hal_perf_default sysfs_thermal:file w_file_perms;

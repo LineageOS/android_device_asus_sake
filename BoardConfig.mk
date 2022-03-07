@@ -217,7 +217,6 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc \
     LLVM=1
 
-TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := vendor/$(PRODUCT_DEVICE)_defconfig
 TARGET_KERNEL_SOURCE := kernel/asus/sm8350
 

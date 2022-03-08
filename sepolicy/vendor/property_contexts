@@ -1,6 +1,5 @@
 # Camera
-persist.camera.apk.usingname    u:object_r:vendor_camera_prop:s0
-vendor.camera.                  u:object_r:vendor_camera_prop:s0
+vendor.camera.    u:object_r:vendor_camera_prop:s0
 
 # DRM
 vendor.drm.keystatus    u:object_r:vendor_display_prop:s0

@@ -7,6 +7,7 @@
 on boot
     chown system system /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_glove_mode
     chown system system /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_gestures
+    chown system system /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_high_report_rate
 
 service vendor.touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.sake
     class hal

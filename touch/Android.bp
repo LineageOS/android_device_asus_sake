@@ -11,6 +11,7 @@ cc_binary {
     relative_install_path: "hw",
     srcs: [
         "GloveMode.cpp",
+        "HighTouchPollingRate.cpp",
         "TouchscreenGesture.cpp",
         "service.cpp",
     ],

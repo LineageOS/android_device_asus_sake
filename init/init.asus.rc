@@ -62,6 +62,7 @@ on boot
     # Gestures
     chown system system /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_gestures
     chown system system /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_fod_pressed
+    chown system system /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_double_click_pressed
 
 on charger
     # Battery

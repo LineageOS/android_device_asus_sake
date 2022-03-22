@@ -56,9 +56,6 @@ ro.crypto.volume.metadata.method=dm-default-key
 # Media
 debug.stagefright.ccodec=4
 
-# Netflix
-ro.netflix.bsp_rev=Q875-32408-1
-
 # Performance
 ro.vendor.extension_library=libqti-perfd-client.so
 

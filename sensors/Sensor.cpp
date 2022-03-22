@@ -216,7 +216,7 @@ OneShotSensor::OneShotSensor(int32_t sensorHandle, ISensorsEventCallback* callba
 SysfsPollingOneShotSensor::SysfsPollingOneShotSensor(
     int32_t sensorHandle, ISensorsEventCallback* callback, const std::string& pollPath,
     const std::string& enablePath, const std::string& name, const std::string& typeAsString,
-    SensorType type)
+    SensorType type, int screenX, int screenY)
     : OneShotSensor(sensorHandle, callback) {
     mSensorInfo.name = name;
     mSensorInfo.type = type;
@@ -225,6 +225,9 @@ SysfsPollingOneShotSensor::SysfsPollingOneShotSensor(
     mSensorInfo.resolution = 1.0f;
     mSensorInfo.power = 0;
     mSensorInfo.flags |= SensorFlagBits::WAKE_UP;
+
+    mScreenX = screenX;
+    mScreenY = screenY;
 
     mEnableStream.open(enablePath);
 
@@ -337,14 +340,14 @@ void SysfsPollingOneShotSensor::interruptPoll() {
     write(mWaitPipeFd[1], &c, sizeof(c));
 }
 
-std::vector<Event> UdfpsSensor::readEvents() {
+std::vector<Event> SysfsPollingOneShotSensor::readEvents() {
     std::vector<Event> events;
     Event event;
     event.sensorHandle = mSensorInfo.sensorHandle;
     event.sensorType = mSensorInfo.type;
     event.timestamp = ::android::elapsedRealtimeNano();
-    event.u.data[0] = 540;
-    event.u.data[1] = 1761;
+    event.u.data[0] = mScreenX;
+    event.u.data[1] = mScreenY;
     events.push_back(event);
     return events;
 }

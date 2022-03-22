@@ -97,13 +97,14 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
     SysfsPollingOneShotSensor(int32_t sensorHandle, ISensorsEventCallback* callback,
                               const std::string& pollPath, const std::string& enablePath,
                               const std::string& name, const std::string& typeAsString,
-                              SensorType type);
+                              SensorType type, int screenX, int screenY);
     virtual ~SysfsPollingOneShotSensor() override;
 
     virtual void activate(bool enable) override;
     virtual void activate(bool enable, bool notify, bool lock);
     virtual void writeEnable(bool enable);
     virtual void setOperationMode(OperationMode mode) override;
+    virtual std::vector<Event> readEvents() override;
 
   protected:
     virtual void run() override;
@@ -116,6 +117,9 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
     struct pollfd mPolls[2];
     int mWaitPipeFd[2];
     int mPollFd;
+
+    int mScreenX;
+    int mScreenY;
 };
 
 const std::string kFtsPath = "/sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/";
@@ -126,9 +130,9 @@ class FtsPollingOneShotSensor : public SysfsPollingOneShotSensor {
     FtsPollingOneShotSensor(int32_t sensorHandle, ISensorsEventCallback* callback,
                             const std::string& pollPath, const std::string& gestureName,
                             const std::string& name, const std::string& typeAsString,
-                            SensorType type)
+                            SensorType type, int screenX, int screenY)
         : SysfsPollingOneShotSensor(sensorHandle, callback, pollPath, kFtsGesturesPath, name,
-                                    typeAsString, type) {
+                                    typeAsString, type, screenX, screenY) {
         mGestureName = gestureName;
     }
 
@@ -146,10 +150,8 @@ class UdfpsSensor : public FtsPollingOneShotSensor {
         : FtsPollingOneShotSensor(
               sensorHandle, callback, kFodPressedPath, "fod", "UDFPS Sensor",
               "org.lineageos.sensor.udfps",
-              static_cast<SensorType>(static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) + 1)) {}
-
-  protected:
-    virtual std::vector<Event> readEvents() override;
+              static_cast<SensorType>(static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) + 1),
+              540, 1761) {}
 };
 
 }  // namespace implementation

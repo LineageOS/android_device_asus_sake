@@ -17,7 +17,7 @@ debug.sf.enable_hwc_vds=1
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
-vendor.mm.enable.qcom_parser=16777215
+vendor.mm.enable.qcom_parser=16776959
 
 # QC Value Addons
 ro.vendor.qti.va_aosp.support=1

@@ -7,7 +7,6 @@ genfscon proc /driver/ois_i2c_rw      u:object_r:vendor_proc_camera:s0
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_glove_mode          u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_high_report_rate    u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_gestures            u:object_r:vendor_sysfs_graphics:s0
-genfscon proc  /driver/dclick                                                        u:object_r:vendor_proc_graphics:s0
 
 # EVT
 genfscon proc /asusevtlog    u:object_r:vendor_proc_evt:s0

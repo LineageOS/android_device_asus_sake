@@ -21,7 +21,6 @@ genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable    u:object_r:
 genfscon sysfs /class/icm206xx                                                  u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/virtual/sensors                                         u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_fod_pressed    u:object_r:vendor_sysfs_sensors:s0
-genfscon sysfs /devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_fod_mode       u:object_r:vendor_sysfs_sensors:s0
 
 # Thermal
 genfscon sysfs /class/asuslib/set_virtualthermal    u:object_r:sysfs_thermal:s0

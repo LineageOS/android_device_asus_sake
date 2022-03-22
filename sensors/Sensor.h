@@ -119,14 +119,32 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
 };
 
 const std::string kFtsPath = "/sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/";
-const std::string kFodPressedPath = kFtsPath + "fts_fod_pressed";
-const std::string kFodModePath = kFtsPath + "fts_fod_mode";
+const std::string kFtsGesturesPath = kFtsPath + "fts_gestures";
 
-class UdfpsSensor : public SysfsPollingOneShotSensor {
+class FtsPollingOneShotSensor : public SysfsPollingOneShotSensor {
+  public:
+    FtsPollingOneShotSensor(int32_t sensorHandle, ISensorsEventCallback* callback,
+                            const std::string& pollPath, const std::string& gestureName,
+                            const std::string& name, const std::string& typeAsString,
+                            SensorType type)
+        : SysfsPollingOneShotSensor(sensorHandle, callback, pollPath, kFtsGesturesPath, name,
+                                    typeAsString, type) {
+        mGestureName = gestureName;
+    }
+
+    virtual void writeEnable(bool enable) override;
+
+  private:
+    std::string mGestureName;
+};
+
+const std::string kFodPressedPath = kFtsPath + "fts_fod_pressed";
+
+class UdfpsSensor : public FtsPollingOneShotSensor {
   public:
     UdfpsSensor(int32_t sensorHandle, ISensorsEventCallback* callback)
-        : SysfsPollingOneShotSensor(
-              sensorHandle, callback, kFodPressedPath, kFodModePath, "UDFPS Sensor",
+        : FtsPollingOneShotSensor(
+              sensorHandle, callback, kFodPressedPath, "fod", "UDFPS Sensor",
               "org.lineageos.sensor.udfps",
               static_cast<SensorType>(static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) + 1)) {}
 

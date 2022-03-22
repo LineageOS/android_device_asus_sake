@@ -349,6 +349,12 @@ std::vector<Event> UdfpsSensor::readEvents() {
     return events;
 }
 
+void FtsPollingOneShotSensor::writeEnable(bool enable) {
+    if (mEnableStream) {
+        mEnableStream << mGestureName << "=" << (enable ? '1' : '0') << std::endl;
+    }
+}
+
 }  // namespace implementation
 }  // namespace subhal
 }  // namespace V2_1

@@ -89,10 +89,6 @@ on property:sys.boot_completed=1
     # Power
     write /sys/class/asuslib/boot_completed 1
 
-on property:vendor.asus.virtualtherm=*
-    # Thermal
-    write /sys/class/asuslib/virtual_thermal ${vendor.asus.virtualtherm}
-
 on property:vendor.zram.enable=*
    # ZRAM
    start asus_zram

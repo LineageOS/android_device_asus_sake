@@ -511,6 +511,50 @@
     <ctl name="TX2 MODE" value="ADC_NORMAL" />
     <ctl name="TX3 MODE" value="ADC_NORMAL" />
 
+    <!-- Defaults for Cirrus CS35L45 -->
+    <ctl name="RCV DACPCM Source" value="DSP_TX1" />
+    <ctl name="RCV DSP_RX1 Source" value="ASP_RX1" />
+    <ctl name="RCV DSP_RX2 Source" value="ASP_RX2" />
+    <ctl name="RCV ASP_TX1 Source" value="DSP_TX1" />
+    <ctl name="RCV ASP_TX2 Source" value="Zero" />
+    <ctl name="RCV ASP_TX3 Source" value="Zero" />
+    <ctl name="RCV ASP_TX4 Source" value="Zero" />
+    <ctl name="RCV ASPRX1 Slot Position" value="0" />
+    <ctl name="RCV ASPRX2 Slot Position" value="1" />
+    <ctl name="RCV ASPTX1 Slot Position" value="0" />
+    <ctl name="RCV ASPTX2 Slot Position" value="1" />
+    <ctl name="RCV AMP Mute" value="0" />
+    <ctl name="RCV Digital PCM Volume" value="817" />
+    <ctl name="RCV AMP PCM Gain" value="19dB" />
+    <ctl name="RCV Amplifier Mode" value="SPK" />
+    <ctl name="RCV AMP Enable Switch" value="0" />
+    <ctl name="RCV AMP PWR Enable Switch" value="0" />
+    <ctl name="RCV Fast Use Case Delta File" value="cs35l45-rcv-music.txt" />
+    <ctl name="RCV Fast Use Case Switch Enable" value="0" />
+    <ctl name="RCV BBPE Enable Switch" value="1" />
+    <ctl name="RCV Digital PCM Volume Soft Ramp" value="2ms" />
+    <ctl name="SPK DACPCM Source" value="DSP_TX1" />
+    <ctl name="SPK DSP_RX1 Source" value="ASP_RX1" />
+    <ctl name="SPK DSP_RX2 Source" value="ASP_RX2" />
+    <ctl name="SPK ASP_TX1 Source" value="Zero" />
+    <ctl name="SPK ASP_TX2 Source" value="DSP_TX1" />
+    <ctl name="SPK ASP_TX3 Source" value="Zero" />
+    <ctl name="SPK ASP_TX4 Source" value="Zero" />
+    <ctl name="SPK ASPRX1 Slot Position" value="0" />
+    <ctl name="SPK ASPRX2 Slot Position" value="1" />
+    <ctl name="SPK ASPTX1 Slot Position" value="0" />
+    <ctl name="SPK ASPTX2 Slot Position" value="1" />
+    <ctl name="SPK AMP Mute" value="0" />
+    <ctl name="SPK Digital PCM Volume" value="817" />
+    <ctl name="SPK AMP PCM Gain" value="19dB" />
+    <ctl name="SPK Amplifier Mode" value="SPK" />
+    <ctl name="SPK AMP Enable Switch" value="0" />
+    <ctl name="SPK AMP PWR Enable Switch" value="0" />
+    <ctl name="SPK Fast Use Case Delta File" value="cs35l45-spk-music.txt" />
+    <ctl name="SPK Fast Use Case Switch Enable" value="0" />
+    <ctl name="SPK BBPE Enable Switch" value="1" />
+    <ctl name="SPK Digital PCM Volume Soft Ramp" value="2ms" />
+
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="gsm-mode">
         <ctl name="GSM mode Enable" value="ON" />
@@ -2658,19 +2702,18 @@
     </path>
 
     <path name="speaker">
-        <ctl name="PRI_MI2S_RX Channels" value="Two" />
-        <ctl name="WSA RX0 MUX" value="AIF1_PB" />
-        <ctl name="WSA RX1 MUX" value="AIF1_PB" />
-        <ctl name="WSA_RX0 INP0" value="RX0" />
-        <ctl name="WSA_RX1 INP0" value="RX1" />
-        <ctl name="WSA_COMP1 Switch" value="1" />
-        <ctl name="WSA_COMP2 Switch" value="1" />
-        <ctl name="SpkrLeft COMP Switch" value="1" />
-        <ctl name="SpkrLeft VISENSE Switch" value="1" />
-        <ctl name="SpkrLeft SWR DAC_Port Switch" value="1" />
-        <ctl name="SpkrRight COMP Switch" value="1" />
-        <ctl name="SpkrRight VISENSE Switch" value="1" />
-        <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
+        <ctl name="RCV DSP_RX1 Source" value="ASP_RX1" />
+        <ctl name="RCV DSP_RX2 Source" value="ASP_RX1" />
+        <ctl name="RCV DACPCM Source" value="DSP_TX1" />
+        <ctl name="RCV Fast Use Case Switch Enable" value="1" />
+        <ctl name="SPK DSP_RX1 Source" value="ASP_RX2" />
+        <ctl name="SPK DSP_RX2 Source" value="ASP_RX2" />
+        <ctl name="SPK DACPCM Source" value="DSP_TX1" />
+        <ctl name="SPK Fast Use Case Switch Enable" value="1" />
+        <ctl name="RCV AMP Enable Switch" value="1" />
+        <ctl name="RCV AMP PWR Enable Switch" value="1" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+        <ctl name="SPK AMP PWR Enable Switch" value="1" />
     </path>
 
     <path name="haptics">
@@ -2678,23 +2721,21 @@
     </path>
 
     <path name="speaker-mono-2">
-        <ctl name="PRI_MI2S_RX Channels" value="One" />
-        <ctl name="WSA RX0 MUX" value="AIF1_PB" />
-        <ctl name="WSA_RX0 INP0" value="RX0" />
-        <ctl name="WSA_COMP1 Switch" value="1" />
-        <ctl name="SpkrLeft COMP Switch" value="1" />
-        <ctl name="SpkrLeft VISENSE Switch" value="1" />
-        <ctl name="SpkrLeft SWR DAC_Port Switch" value="1" />
+        <ctl name="SPK DSP_RX1 Source" value="ASP_RX1" />
+        <ctl name="SPK DSP_RX2 Source" value="ASP_RX2" />
+        <ctl name="SPK DACPCM Source" value="DSP_TX1" />
+        <ctl name="SPK Fast Use Case Switch Enable" value="1" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+        <ctl name="SPK AMP PWR Enable Switch" value="1" />
     </path>
 
     <path name="speaker-mono">
-        <ctl name="PRI_MI2S_RX Channels" value="One" />
-        <ctl name="WSA RX1 MUX" value="AIF1_PB" />
-        <ctl name="WSA_RX1 INP0" value="RX1" />
-        <ctl name="WSA_COMP2 Switch" value="1" />
-        <ctl name="SpkrRight COMP Switch" value="1" />
-        <ctl name="SpkrRight VISENSE Switch" value="1" />
-        <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
+        <ctl name="RCV DSP_RX1 Source" value="ASP_RX1" />
+        <ctl name="RCV DSP_RX2 Source" value="ASP_RX2" />
+        <ctl name="RCV DACPCM Source" value="DSP_TX1" />
+        <ctl name="RCV Fast Use Case Switch Enable" value="1" />
+        <ctl name="RCV AMP Enable Switch" value="1" />
+        <ctl name="RCV AMP PWR Enable Switch" value="1" />
     </path>
 
    <path name="speaker-vbat-mono">
@@ -2828,14 +2869,15 @@
     </path>
 
     <path name="handset">
-        <ctl name="PRI_MI2S_RX Channels" value="One" />
-        <ctl name="WSA RX0 MUX" value="AIF1_PB" />
-        <ctl name="WSA_RX0 INP0" value="RX0" />
-        <ctl name="WSA_COMP1 Switch" value="1" />
-        <ctl name="SpkrLeft COMP Switch" value="1" />
-        <ctl name="SpkrLeft VISENSE Switch" value="1" />
-        <ctl name="SpkrLeft SWR DAC_Port Switch" value="1" />
-        <ctl name="EAR SPKR PA Gain" value="G_6_DB" />
+        <ctl name="RCV DSP_RX1 Source" value="ASP_RX1" />
+        <ctl name="RCV DSP_RX2 Source" value="ASP_RX2" />
+        <ctl name="RCV DACPCM Source" value="DSP_TX1" />
+        <ctl name="RCV Fast Use Case Switch Enable" value="1" />
+        <ctl name="RCV Digital PCM Volume" value="673" />
+        <ctl name="RCV AMP PCM Gain" value="19dB" />
+        <ctl name="RCV Amplifier Mode" value="SPK" />
+        <ctl name="RCV AMP Enable Switch" value="1" />
+        <ctl name="RCV AMP PWR Enable Switch" value="1" />
     </path>
 
     <path name="handset-mic">
@@ -2917,7 +2959,21 @@
         <path name="handset" />
     </path>
     <path name="voice-speaker">
-        <path name="speaker-mono" />
+        <ctl name="SPK Digital PCM Volume" value="793" />
+        <ctl name="RCV DSP_RX1 Source" value="ASP_RX1" />
+        <ctl name="RCV DSP_RX2 Source" value="ASP_RX1" />
+        <ctl name="RCV DACPCM Source" value="DSP_TX1" />
+        <ctl name="RCV Fast Use Case Delta File" value="cs35l45-rcv-voice.txt" />
+        <ctl name="RCV Fast Use Case Switch Enable" value="1" />
+        <ctl name="SPK DSP_RX1 Source" value="ASP_RX2" />
+        <ctl name="SPK DSP_RX2 Source" value="ASP_RX2" />
+        <ctl name="SPK DACPCM Source" value="DSP_TX1" />
+        <ctl name="SPK Fast Use Case Delta File" value="cs35l45-spk-voice.txt" />
+        <ctl name="SPK Fast Use Case Switch Enable" value="1" />
+        <ctl name="RCV AMP Enable Switch" value="1" />
+        <ctl name="RCV AMP PWR Enable Switch" value="1" />
+        <ctl name="SPK AMP Enable Switch" value="1" />
+        <ctl name="SPK AMP PWR Enable Switch" value="1" />
     </path>
 
     <path name="voice-speaker-stereo">

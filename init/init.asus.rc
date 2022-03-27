@@ -86,9 +86,6 @@ on property:sys.boot_completed=1
     chmod 0755 /data/vendor/camera/dualcam_cali
     chmod 0644 /vendor/factory/dualcam_cali.bin
 
-    # Power
-    write /sys/class/asuslib/boot_completed 1
-
 on property:vendor.zram.enable=*
    # ZRAM
    start asus_zram

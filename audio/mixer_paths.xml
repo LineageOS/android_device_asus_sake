@@ -62,6 +62,12 @@
     <ctl name="MultiMedia5 Mixer TX_CDC_DMA_TX_3" value="0" />
     <ctl name="MultiMedia1 Mixer TX_CDC_DMA_TX_3" value="0" />
     <ctl name="MultiMedia1 Mixer TX_CDC_DMA_TX_4" value="0" />
+    <ctl name="MultiMedia1 Channels" value="0" />
+    <ctl name="MultiMedia1 Channel1" value="ZERO" />
+    <ctl name="MultiMedia1 Output Channel1" value="0" />
+    <ctl name="MultiMedia1 Output Channel2" value="0" />
+    <ctl name="MultiMedia1 Output Channel3" value="0" />
+    <ctl name="MultiMedia1 Channel Mixer" value="Disable" />
     <ctl name="MultiMedia1 Mixer SLIM_7_TX" value="0" />
     <ctl name="MultiMedia8 Mixer SLIM_7_TX" value="0" />
     <ctl name="MultiMedia10 Mixer TX_CDC_DMA_TX_3" value="0" />
@@ -1949,6 +1955,10 @@
         <ctl name="MultiMedia1 Mixer TX_CDC_DMA_TX_4" value="1" />
     </path>
 
+    <path name="audio-record headset-mic-ozo">
+        <ctl name="MultiMedia1 Mixer TX_CDC_DMA_TX_4" value="1" />
+    </path>
+
     <path name="audio-record capture-fm">
         <ctl name="MultiMedia1 Mixer TERT_MI2S_TX" value="1" />
     </path>
@@ -2739,7 +2749,27 @@
         <ctl name="HDR12 MUX" value="NO_HDR12" />
         <ctl name="ADC2_MIXER Switch" value="1" />
     </path>
-
+    <path name="amic2-ozo">
+		<ctl name="MultiMedia1 Mixer TX_CDC_DMA_TX_4" value="1" />
+		<ctl name="MultiMedia1 Channels" value="3" />
+		<ctl name="MultiMedia1 Channel1" value="TX_CDC_DMA_TX_4" />
+		<ctl name="MultiMedia1 Output Channel1" value="16384 " />
+		<ctl name="MultiMedia1 Output Channel2" value="16384 " />
+		<ctl name="MultiMedia1 Output Channel3" value="0" />
+		<ctl name="MultiMedia1 Channel Mixer" value="Enable" />
+        <ctl name="TX DEC0 MUX" value="SWR_MIC" />
+        <ctl name="TX SMIC MUX0" value="SWR_MIC5" />
+        <ctl name="TX_CDC_DMA_TX_4 Channels" value="One" />
+        <ctl name="DEC0_BCS Switch" value="1" />
+        <ctl name="TX_AIF2_CAP Mixer DEC0" value="1" />
+        <ctl name="ADC2 MUX" value="INP2" />
+        <ctl name="ADC2 ChMap" value="SWRM_TX2_CH2" />
+        <ctl name="MBHC ChMap" value="SWRM_TX3_CH3" />
+        <ctl name="TX1 MODE" value="ADC_LP" />
+        <ctl name="BCS Channel" value="CH10" />
+        <ctl name="HDR12 MUX" value="NO_HDR12" />
+        <ctl name="ADC2_MIXER Switch" value="1" />
+    </path>
 	<!-- main mic -->
     <path name="amic1">
         <ctl name="TX_CDC_DMA_TX_3 Channels" value="One" />
@@ -3075,7 +3105,10 @@
         <ctl name="TX_DEC0 Volume" value="84" />
         <path name="amic2" />
     </path>
-
+    <path name="headset-mic-ozo">
+        <ctl name="TX_DEC0 Volume" value="84" />
+        <path name="amic2-ozo" />
+    </path>
     <path name="headset-mic-liquid">
         <path name="amic2" />
     </path>
@@ -3167,7 +3200,7 @@
     <path name="voip-speaker-mic">
         <path name="amic5" />
         <ctl name="TX_DEC3 Volume" value="84" />
-        <ctl name="ADC4 Volume" value="4" />
+        <ctl name="ADC4 Volume" value="11" />
     </path>
 
     <path name="voip-game-speaker-mic">

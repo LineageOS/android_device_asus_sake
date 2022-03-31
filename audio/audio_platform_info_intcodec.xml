@@ -192,6 +192,7 @@
         <device name="SND_DEVICE_IN_VOIP_GAME_SPEAKER_MIC" acdb_id="709"/>
         <device name="SND_DEVICE_IN_VOIP_SPEAKER_MIC" acdb_id="322"/>
         <device name="SND_DEVICE_IN_CAMCORDER_HEADSET_MIC" acdb_id="401"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_HEADSET_MIC_OZO" acdb_id="401"/>
         <device name="SND_DEVICE_IN_CAMCORDER_USB_HEADSET_MIC" acdb_id="308"/>
         <device name="SND_DEVICE_IN_UNPROCESSED_THREE_MIC" acdb_id="145"/>
         <device name="SND_DEVICE_IN_CAMCORDER_INVERT_LANDSCAPE" acdb_id="48"/>
@@ -423,6 +424,7 @@
         <device name="SND_DEVICE_IN_VOIP_GAME_SPEAKER_MIC" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_VOIP_SPEAKER_MIC" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_CAMCORDER_HEADSET_MIC" backend="headset-mic" interface="TX_CDC_DMA_TX_4"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_HEADSET_MIC_OZO" backend="headset-mic" interface="TX_CDC_DMA_TX_4"/>
         <device name="SND_DEVICE_IN_CAMCORDER_USB_HEADSET_MIC" backend="usb-headset-mic" interface="USB_AUDIO_TX"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC_NS" backend="headset-mic" interface="TX_CDC_DMA_TX_4"/>
         <device name="SND_DEVICE_IN_USB_HEADSET_MIC_NS" backend="usb-headset-mic" interface="USB_AUDIO_TX"/>

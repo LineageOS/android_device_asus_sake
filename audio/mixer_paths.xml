@@ -2236,6 +2236,7 @@
     </path>
 
     <path name="voicemmode1-call">
+        <ctl name="VOC_EXT_EC MUX" value="PRI_MI2S_TX" />
         <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer TX_CDC_DMA_TX_3_MMode1" value="1" />
     </path>
@@ -2321,6 +2322,7 @@
     </path>
 
     <path name="voicemmode2-call">
+        <ctl name="VOC_EXT_EC MUX" value="PRI_MI2S_TX" />
         <ctl name="PRI_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer TX_CDC_DMA_TX_3_MMode2" value="1" />
     </path>

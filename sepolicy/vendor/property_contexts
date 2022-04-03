@@ -24,6 +24,7 @@ persist.vendor.asus.gyrosensor2calibtime    u:object_r:vendor_sensors_prop:s0
 vendor.proximity.                           u:object_r:vendor_sensors_prop:s0
 
 # Thermal
+vendor.asus.virtualtherm            u:object_r:vendor_thermal_prop:s0
 vendor.thermal.current.perf.conf    u:object_r:vendor_thermal_prop:s0
 vendor.thermal.engine.version       u:object_r:vendor_thermal_prop:s0
 

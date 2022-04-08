@@ -1,0 +1,45 @@
+#
+# Copyright (C) 2022 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on property:sys.usb.config=adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0B05
+    write /config/usb_gadget/g1/idProduct 0x7770
+
+on property:sys.usb.config=midi && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0B05
+    write /config/usb_gadget/g1/idProduct 0x7778
+
+on property:sys.usb.config=midi,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0B05
+    write /config/usb_gadget/g1/idProduct 0x7779
+
+on property:sys.usb.config=mtp && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0B05
+    write /config/usb_gadget/g1/idProduct 0x7772
+
+on property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0B05
+    write /config/usb_gadget/g1/idProduct 0x7773
+
+on property:sys.usb.config=ptp && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0B05
+    write /config/usb_gadget/g1/idProduct 0x7776
+
+on property:sys.usb.config=ptp,adb && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0B05
+    write /config/usb_gadget/g1/idProduct 0x7777
+
+on property:sys.usb.config=rndis,none && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0B05
+    write /config/usb_gadget/g1/idProduct 0x7774
+
+on property:sys.usb.config=rndis,none,adb && property:sys.usb.ffs.ready=1 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0B05
+    write /config/usb_gadget/g1/idProduct 0x7775
+
+on property:sys.usb.config=rndis,sec && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idVendor 0x0B05
+    write /config/usb_gadget/g1/idProduct 0x7774

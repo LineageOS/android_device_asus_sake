@@ -19,7 +19,10 @@ on property:ro.boot.usbcontroller=*
     write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
 
 on property:sys.usb.config=adb && property:sys.usb.ffs.ready=1 && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/idProduct 0x7770
+    write /config/usb_gadget/g1/idProduct 0x4DAE
+
+on property:sys.usb.config=sideload && property:sys.usb.ffs.ready=1 && property:sys.usb.configfs=1
+    write /config/usb_gadget/g1/idProduct 0x4DAE
 
 on property:sys.usb.config=fastboot && property:sys.usb.ffs.ready=1 && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idProduct 0x4DAF

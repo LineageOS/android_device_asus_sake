@@ -8,7 +8,7 @@
 $(call inherit-product, vendor/asus/sake/sake-vendor.mk)
 
 # A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 PRODUCT_RO_FILE_SYSTEM ?= ext4
 

@@ -100,7 +100,6 @@ vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Adreno
--vendor/app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk;PRESIGNED
 vendor/firmware/a660_gmu.bin
 vendor/firmware/a660_sqe.fw
 vendor/firmware/a660_zap.b00

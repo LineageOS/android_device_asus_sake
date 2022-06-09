@@ -10,11 +10,13 @@
          corner edges), this pulls out just the curve.
      -->
     <string name="config_rounded_mask" translatable="false">
-        M 36.32 0
-        c -2.48 0 -9.02 0.04 -13.44 0.89
-        C 17.91 1.85 12.54 3.85 8.2 8.2
-        S 1.85 17.91 0.89 22.88
-        C 0.04 27.3 0 33.84 0 36.32
+        M 145.27,0
+        c -9.91,0 -36.06,0.17 -53.76,3.57
+        C 71.64,7.4 50.16,15.4 32.78,32.78
+        S 7.4,71.64 3.57,91.51
+        C 0.17,109.21 0,135.36 0,145.27
+        V 0
+        Z
     </string>
 
     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the

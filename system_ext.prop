@@ -1,3 +1,20 @@
+# Audio (Dirac)
+ro.vendor.dirac.acs.controller=gef
+ro.vendor.dirac.acs.ignore_error=1
+ro.vendor.dirac.acs.rotation=true
+ro.vendor.dirac.acs.storeSettings=1
+ro.vendor.dirac.config=16
+ro.vendor.dirac.gef.ext.did=0xA,0x2D,0x14,0x2C7,0x2C9,0x1F7,0x38E,0x3B1,0x1F6,0x136,0x137,0x2CA
+ro.vendor.dirac.gef.ext.mid=0x10012DE1
+ro.vendor.dirac.gef.ins.appt=0x00011131
+ro.vendor.dirac.gef.ins.did=0xF,0x313,0x2C4
+ro.vendor.dirac.gef.ins.mid=0x10012DE2
+ro.vendor.dirac.gef.ins.tid=0x10012D02
+ro.vendor.dirac.gef.int.did=0xF,0x313,0x2C4
+ro.vendor.dirac.gef.int.mid=0x10012DE0
+ro.vendor.dirac.gef.int.tid=0x10012D00
+ro.vendor.dirac.gef.system_sound=1
+
 # Bluetooth
 persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.btstack.enable.twsplus=true

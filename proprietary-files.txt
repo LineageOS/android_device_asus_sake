@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from ZenFone 8 (31.1010.0410.61). OTAs to extract from can be found here:
+## are from ZenFone 8 (31.1010.0410.72). OTAs to extract from can be found here:
 ## https://www.asus.com/Mobile/Phones/ZenFone/Zenfone-8/HelpDesk_BIOS/
 
 # ADSPRPC

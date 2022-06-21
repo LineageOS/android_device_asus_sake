@@ -7,12 +7,12 @@
 
     <!-- Height of the status bar in landscape. The height should be
          Max((status bar content height + waterfall top size), top cutout size) -->
-    <dimen name="status_bar_height_landscape">30dp</dimen>
+    <dimen name="status_bar_height_landscape">80px</dimen>
 
     <!-- Height of the status bar in portrait. The height should be
          Max((status bar content height + waterfall top size), top cutout size) -->
-    <dimen name="status_bar_height_default">28dp</dimen>
-    <dimen name="status_bar_height_portrait">115px</dimen>
+    <dimen name="status_bar_height_default">118px</dimen>
+    <dimen name="status_bar_height_portrait">118px</dimen>
 
     <!-- Height of area above QQS where battery/time go. -->
     <dimen name="quick_qs_offset_height">150px</dimen>
@@ -24,6 +24,6 @@
         round. This value is used when retrieving the "radius" of the rounded corner in cases
         where the exact bezier curve cannot be retrieved.  This value will be subtracted from
         rounded_corner_radius to more accurately provide a "radius" for the rounded corner. -->
-    <dimen name="rounded_corner_radius_adjustment">38px</dimen>
+    <dimen name="rounded_corner_radius_adjustment">66px</dimen>
 
 </resources>

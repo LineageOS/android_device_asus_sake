@@ -104,12 +104,6 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.sake
 
 # Bluetooth
--include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
-
-BOARD_HAVE_QCOM_FM := false
-
-$(call inherit-product-if-exists, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml

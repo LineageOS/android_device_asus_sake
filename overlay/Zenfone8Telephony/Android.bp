@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "ZenFone8Telephony",
+    name: "Zenfone8Telephony",
     vendor: true,
 }

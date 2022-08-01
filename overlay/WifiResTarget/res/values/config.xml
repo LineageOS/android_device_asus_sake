@@ -30,6 +30,6 @@
     <integer name="config_wifi_partial_scan_results_fetching_period_ms">1000</integer>
 
     <!-- Do not translate. Default access point SSID used for tethering. -->
-    <string name="wifi_tether_configure_ssid_default" translatable="false">ZenFone</string>
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Zenfone</string>
 
 </resources>

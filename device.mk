@@ -288,13 +288,13 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon \
     WifiResCommon \
     WifiResTarget \
-    ZenFone8Frameworks \
-    ZenFone8LineageSDK \
-    ZenFone8LineageSystemUI \
-    ZenFone8Settings \
-    ZenFone8SettingsProvider \
-    ZenFone8SystemUI \
-    ZenFone8Telephony \
+    Zenfone8Frameworks \
+    Zenfone8LineageSDK \
+    Zenfone8LineageSystemUI \
+    Zenfone8Settings \
+    Zenfone8SettingsProvider \
+    Zenfone8SystemUI \
+    Zenfone8Telephony \
     aptxalsOverlay
 
 # Partitions

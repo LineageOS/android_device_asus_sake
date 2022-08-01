@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "ZenFone8SettingsProvider",
+    name: "Zenfone8SettingsProvider",
     vendor: true,
 }

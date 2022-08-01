@@ -1,3 +1,4 @@
+
 # Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -100,6 +101,7 @@ on post-fs-data
 
 on early-boot
     start vendor.sensors
+    verity_update_state
 
 on boot
     write /dev/cpuset/audio-app/cpus 1-2

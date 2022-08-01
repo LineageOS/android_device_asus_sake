@@ -71,11 +71,6 @@ persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 ro.bluetooth.a2dp_offload.supported=true
 
-# Camera
-vendor.camera.asus.system=1
-vendor.camera.cam5.crop_region=2:0,0,4032,3024;3:728,546,3304,2478
-vendor.camera.expTimeMax=0
-
 # DPM
 persist.vendor.dpmhalservice.enable=1
 
@@ -139,13 +134,10 @@ debug.stagefright.ccodec=4
 # Performance
 ro.vendor.extension_library=libqti-perfd-client.so
 
-# RIL
+# Radio
 persist.radio.multisim.config=dsds
-persist.vendor.radio.add_power_save=1
-persist.vendor.radio.always_send_plmn=1
-persist.vendor.radio.data_ltd_sys_ind=1
 persist.vendor.radio.procedure_bytes=SKIP
-persist.vendor.radio.rat_on=none
+persist.vendor.radio.rat_on=combine
 
 # Sensors
 persist.vendor.sensors.allow_non_default_discovery=true

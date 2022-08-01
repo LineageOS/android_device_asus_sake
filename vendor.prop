@@ -85,6 +85,15 @@ drm.service.enabled=true
 # Data
 persist.vendor.data.iwlan.enable=true
 
+# Display
+vendor.display.comp_mask=0
+vendor.display.disable_excl_rect=0
+vendor.display.disable_excl_rect_partial_fb=1
+vendor.display.disable_hw_recovery_dump=1
+vendor.display.disable_offline_rotator=1
+vendor.display.enable_async_powermode=0
+vendor.display.enable_optimize_refresh=1
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
@@ -93,6 +102,24 @@ ro.hardware.fingerprint=goodixfp
 
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
+
+# Graphics
+debug.sf.disable_client_composition_cache=1
+debug.sf.enable_gl_backpressure=1
+debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
+debug.sf.high_fps_early_phase_offset_ns=-4000000
+debug.sf.high_fps_late_app_phase_offset_ns=1000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-2000000
+debug.sf.latch_unsignaled=1
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.max_virtual_display_dimension=4096
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
+ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # IMS
 persist.dbg.volte_avail_ovr=1
@@ -129,7 +156,10 @@ persist.vendor.sensors.sync_request=true
 ro.soc.manufacturer=QTI
 
 # USB
+sys.usb.mtp.batchcancel=1
+vendor.usb.diag.func.name=ffs
 vendor.usb.product_string=Zenfone 8
+vendor.usb.use_ffs_mtp=1
 
 # WiFi
 wifi.aware.interface=wifi-aware0

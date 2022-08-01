@@ -72,6 +72,7 @@ persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 ro.bluetooth.a2dp_offload.supported=true
 
 # DPM
+persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpmhalservice.enable=1
 
 # DRM
@@ -130,6 +131,7 @@ ro.crypto.volume.metadata.method=dm-default-key
 
 # Media
 debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=0
 
 # Performance
 ro.vendor.extension_library=libqti-perfd-client.so

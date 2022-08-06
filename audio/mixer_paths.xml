@@ -3796,6 +3796,9 @@
 
     <path name="unprocessed-three-mic">
         <path name="three-mic" />
+        <ctl name="ADC1 Volume" value="4" />
+        <ctl name="ADC3 Volume" value="4" />
+        <ctl name="ADC4 Volume" value="4" />
     </path>
 
     <path name="unprocessed-quad-mic">

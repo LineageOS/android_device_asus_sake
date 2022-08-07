@@ -158,11 +158,8 @@ ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
 persist.radio.multisim.config=dsds
-persist.vendor.radio.add_power_save=1
-persist.vendor.radio.always_send_plmn=1
-persist.vendor.radio.data_ltd_sys_ind=1
 persist.vendor.radio.procedure_bytes=SKIP
-persist.vendor.radio.rat_on=none
+persist.vendor.radio.rat_on=combine
 ro.telephony.default_network=33,33
 
 # Sensors

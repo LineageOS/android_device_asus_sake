@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8806761_7a4b7a15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 18106
+      },
+      "writtenOn": "2022-08-14T11:10:20Z",
+      "side": 1,
+      "message": "even if there might be some unit related issues with proximity, this commit is still needed to have proximity being checked on dt2w",
+      "revId": "6f9ca92e5ec41cb3cfd44fe02da170a2b6e265a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

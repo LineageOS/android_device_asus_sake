@@ -308,6 +308,7 @@ PRODUCT_PACKAGES += \
     WifiResTarget \
     Zenfone8Frameworks \
     Zenfone8LineageSDK \
+    Zenfone8LineageSettings \
     Zenfone8LineageSystemUI \
     Zenfone8Settings \
     Zenfone8SettingsProvider \

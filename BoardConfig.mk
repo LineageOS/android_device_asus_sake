@@ -218,6 +218,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_KERNEL_CONFIG := vendor/$(PRODUCT_DEVICE)_defconfig
 TARGET_KERNEL_SOURCE := kernel/asus/sm8350
+TARGET_KERNEL_NO_GCC := true
 
 # Partitions
 BOARD_ASUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm

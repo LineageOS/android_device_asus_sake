@@ -65,6 +65,10 @@ function blob_fixup() {
     vendor/lib64/hw/fingerprint.lahaina.so)
         patchelf --set-soname "fingerprint.lahaina.so" "${2}"
         ;;
+
+    vendor/etc/msm_irqbalance.conf)
+        sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
+        ;;
     esac
 }
 

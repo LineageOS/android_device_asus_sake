@@ -25,3 +25,9 @@ on property:vendor.post_boot.parsed=1
     write /sys/block/dm-7/queue/read_ahead_kb 128
     write /sys/block/dm-8/queue/read_ahead_kb 128
     write /sys/block/dm-9/queue/read_ahead_kb 128
+
+    # IRQ Tuning
+    # IRQ 243: msm_drm
+    # IRQ 240: kgsl_3d0_irq
+    write /proc/irq/243/smp_affinity_list 2
+    write /proc/irq/240/smp_affinity_list 1

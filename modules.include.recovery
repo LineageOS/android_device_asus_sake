@@ -1,3 +1,8 @@
+adsp_loader_dlkm.ko
+apr_dlkm.ko
 focaltech_fts_zf.ko
 msm_drm.ko
+q6_notifier_dlkm.ko
+q6_pdr_dlkm.ko
 sensors_vcnl36866.ko
+snd_event_dlkm.ko

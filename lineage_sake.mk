@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2022 The LineageOS Project
+# Copyright (C) 2021-2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -26,4 +26,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=ASUS_I006D \
     TARGET_PRODUCT=WW_I006D
 
-BUILD_FINGERPRINT := asus/WW_I006D/ASUS_I006D:12/SKQ1.210821.001/31.1010.0411.113:user/release-keys
+BUILD_FINGERPRINT := asus/WW_I006D/ASUS_I006D:13/TKQ1.220807.001/33.0210.0210.210:user/release-keys

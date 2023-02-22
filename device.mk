@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2022 The LineageOS Project
+# Copyright (C) 2021-2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -348,7 +348,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor
 
 # Security
-BOOT_SECURITY_PATCH := 2022-08-05
+BOOT_SECURITY_PATCH := 2023-01-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Sensors

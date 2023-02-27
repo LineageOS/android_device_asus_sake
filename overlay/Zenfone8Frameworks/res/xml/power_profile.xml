@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <device name="Android">
     <item name="none">0</item>
     <item name="ambient.on">32</item>
@@ -137,12 +137,6 @@
     <item name="camera.flashlight">299</item>
     <item name="camera.avg">1070</item>
     <item name="gps.on">13.7</item>
-    <item name="radio.active">160</item>
-    <item name="radio.scanning">5.5</item>
-    <array name="radio.on">
-        <value>86</value>
-        <value>8</value>
-    </array>
     <item name="modem.controller.idle">6</item>
     <item name="modem.controller.rx">180</item>
     <item name="modem.controller.tx">186</item>
@@ -153,7 +147,7 @@
     <item name="wifi.controller.idle">1</item>
     <item name="wifi.controller.rx">176</item>
     <item name="wifi.controller.tx">200</item>
-    <array name="wifi.controller.tx_levels">1 </array>
+    <array name="wifi.controller.tx_levels">1</array>
     <item name="wifi.controller.voltage">3700</item>
     <array name="wifi.batchedscan">
         <value>.0001</value>

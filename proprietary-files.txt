@@ -911,11 +911,9 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
 # Initialization
 vendor/bin/init.asus.zram.sh
-vendor/bin/init.kernel.post_boot-lahaina.sh
 vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/vendor_modprobe.sh
-vendor/etc/init/hw/init.qti.kernel.rc
 vendor/lib/modules/modules.blocklist:vendor_dlkm/lib/modules/modules.blocklist
 
 # Keymaster

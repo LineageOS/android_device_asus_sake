@@ -82,6 +82,9 @@ TARGET_SCREEN_DENSITY := 440
 # FSConfig
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
+# Health
+TARGET_HEALTH_CHARGING_CONTROL_PATH := /sys/class/asuslib/charging_suspend
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/hidl/asus_framework_matrix.xml \

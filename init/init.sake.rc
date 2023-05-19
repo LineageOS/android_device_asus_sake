@@ -3,3 +3,8 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+
+on property:vendor.post_boot.parsed=1
+    # cpuset parameters
+    write /dev/cpuset/background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-3

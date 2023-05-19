@@ -233,6 +233,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
+    init.sake.rc \
     init.target.rc \
     ueventd.asus.rc \
     ueventd.qcom.rc

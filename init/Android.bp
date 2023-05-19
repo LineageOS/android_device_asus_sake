@@ -45,6 +45,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.sake.rc",
+    src: "init.sake.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.target.rc",
     src: "init.target.rc",
     sub_dir: "init/hw",

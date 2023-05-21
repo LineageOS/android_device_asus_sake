@@ -46,6 +46,30 @@
       },
       "revId": "ba4858166d2eb664c8fff2cbc7a98d9a20423ced",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79805426_cbe95811",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 18106
+      },
+      "writtenOn": "2023-05-21T14:56:15Z",
+      "side": 1,
+      "message": "Thanks, I didn\u0027t notice the typo",
+      "parentUuid": "c5da90b8_a87e9459",
+      "range": {
+        "startLine": 9,
+        "startChar": 34,
+        "endLine": 9,
+        "endChar": 41
+      },
+      "revId": "ba4858166d2eb664c8fff2cbc7a98d9a20423ced",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

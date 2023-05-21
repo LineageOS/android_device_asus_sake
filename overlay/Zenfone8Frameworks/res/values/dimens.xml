@@ -14,9 +14,6 @@
     <dimen name="status_bar_height_default">118px</dimen>
     <dimen name="status_bar_height_portrait">118px</dimen>
 
-    <!-- Height of area above QQS where battery/time go. -->
-    <dimen name="quick_qs_offset_height">150px</dimen>
-
     <!-- Default radius of the software rounded corners. -->
     <dimen name="rounded_corner_radius">146px</dimen>
 

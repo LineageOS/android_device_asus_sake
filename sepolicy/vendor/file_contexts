@@ -4,6 +4,9 @@
 # Camera
 /vendor/lib(64)?/libipebpsstriping\.so    u:object_r:same_process_hal_file:s0
 
+# Fastcharge
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@1\.0-service\.sake   u:object_r:hal_lineage_fastcharge_default_exec:s0
+
 # Fingerprint
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.sake    u:object_r:hal_fingerprint_default_exec:s0
 /data/vendor/goodix/gf_data(/.*)?                                                               u:object_r:vendor_goodix_data_file:s0

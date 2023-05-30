@@ -11,6 +11,9 @@ genfscon sysfs /devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_gestures       
 # EVT
 genfscon proc /asusevtlog    u:object_r:vendor_proc_evt:s0
 
+# Fastcharge
+genfscon sysfs /class/asuslib/slow_charging_enable  u:object_r:vendor_sysfs_battery_supply:s0
+
 # Fingerprint
 genfscon proc /driver/fp_xy    u:object_r:vendor_proc_fingerprint:s0
 

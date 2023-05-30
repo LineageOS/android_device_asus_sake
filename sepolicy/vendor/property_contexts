@@ -4,6 +4,9 @@ vendor.camera.    u:object_r:vendor_camera_prop:s0
 # DRM
 vendor.drm.keystatus    u:object_r:vendor_display_prop:s0
 
+# Fastcharge
+persist.vendor.sec.fastchg_enabled  u:object_r:vendor_fastcharge_prop:s0
+
 # Fingerprint
 vendor.goodix.    u:object_r:vendor_fingerprint_prop:s0
 

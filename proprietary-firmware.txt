@@ -1,0 +1,24 @@
+## All proprietary files from this list, unless pinned and noted otherwise,
+## are from ZenFone 8 (33.0210.0210.296). OTAs to extract from can be found here:
+## https://www.asus.com/Mobile/Phones/ZenFone/Zenfone-8/HelpDesk_BIOS/
+
+# Firmware
+abl.img;AB
+aop.img;AB
+bluetooth.img;AB
+cpucp.img;AB
+devcfg.img;AB
+dsp.img;AB
+featenabler.img;AB
+hyp.img;AB
+keymaster.img;AB
+modem.img;AB
+multiimgoem.img;AB
+qupfw.img;AB
+qweslicstore.img;AB
+shrm.img;AB
+tz.img;AB
+uefisecapp.img;AB
+xbl.img;AB
+xbl_config.img;AB
+xrom.img;AB

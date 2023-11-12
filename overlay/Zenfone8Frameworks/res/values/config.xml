@@ -59,29 +59,22 @@
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
-        <item>15</item>
-        <item>30</item>
-        <item>50</item>
-        <item>100</item>
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>12</item>
+        <item>17</item>
+        <item>24</item>
+        <item>140</item>
         <item>200</item>
-        <item>300</item>
-        <item>400</item>
-        <item>500</item>
-        <item>650</item>
+        <item>250</item>
+        <item>330</item>
         <item>800</item>
-        <item>1000</item>
-        <item>1500</item>
-        <item>2000</item>
         <item>3000</item>
-        <item>4000</item>
-        <item>5000</item>
-        <item>7000</item>
+        <item>4500</item>
+        <item>6000</item>
         <item>10000</item>
-        <item>12500</item>
-        <item>15000</item>
-        <item>17500</item>
-        <item>20000</item>
-        <item>50000</item>
     </integer-array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
@@ -98,29 +91,22 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessDisplayValuesNits">
+        <item>2</item>
+        <item>8</item>
         <item>8</item>
         <item>11</item>
+        <item>11</item>
+        <item>11</item>
+        <item>35</item>
         <item>35</item>
         <item>52</item>
         <item>67</item>
-        <item>81</item>
         <item>103</item>
-        <item>119</item>
-        <item>130</item>
         <item>138</item>
         <item>151</item>
-        <item>164</item>
         <item>176</item>
         <item>229</item>
-        <item>264</item>
-        <item>291</item>
-        <item>303</item>
-        <item>310</item>
-        <item>314</item>
-        <item>319</item>
         <item>399</item>
-        <item>405</item>
-        <item>405</item>
         <item>405</item>
         <item>405</item>
     </integer-array>
@@ -188,48 +174,6 @@
         <item>405</item>
     </integer-array>
 
-    <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
-         values by calculating the index to use for lookup and then setting the constraint value
-         to the corresponding value of the array. The new brightening hysteresis constraint value
-         is the n-th element of config_ambientBrighteningThresholds, and the new darkening
-         hysteresis constraint value is the n-th element of config_ambientDarkeningThresholds.
-
-         The (zero-based) index is calculated as follows: (MAX is the largest index of the array)
-         condition                       calculated index
-         value < level[0]                0
-         level[n] <= value < level[n+1]  n+1
-         level[MAX] <= value             MAX+1 -->
-    <integer-array name="config_ambientThresholdLevels">
-        <item>30</item>
-        <item>300</item>
-        <item>5000</item>
-    </integer-array>
-
-    <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
-         percent. The length of this array is assumed to be one greater than
-         config_ambientThresholdLevels. The brightening threshold is calculated as
-         lux * (1.0f + CONSTRAINT_VALUE). When the current lux is higher than this threshold,
-         the screen brightness is recalculated. See the config_ambientThresholdLevels
-         description for how the constraint value is chosen. -->
-    <integer-array name="config_ambientBrighteningThresholds">
-        <item>800</item>
-        <item>3000</item>
-        <item>2000</item>
-        <item>500</item>
-    </integer-array>
-
-    <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
-         percent. The length of this array is assumed to be one greater than
-         config_ambientThresholdLevels. The darkening threshold is calculated as
-         lux * (1.0f - CONSTRAINT_VALUE). When the current lux is lower than this threshold,
-         the screen brightness is recalculated. See the config_ambientThresholdLevels
-         description for how the constraint value is chosen. -->
-    <integer-array name="config_ambientDarkeningThresholds">
-        <item>950</item>
-        <item>950</item>
-        <item>800</item>
-        <item>800</item>
-    </integer-array>
 
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by

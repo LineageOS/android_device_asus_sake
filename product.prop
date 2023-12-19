@@ -4,3 +4,7 @@ audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
 audio.offload.video=true
 ro.af.client_heap_size_kbyte=7168
+
+# LMKD
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=15

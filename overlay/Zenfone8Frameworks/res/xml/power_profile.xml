@@ -2,8 +2,8 @@
 <device name="Android">
     <item name="none">0</item>
     <item name="ambient.on">32</item>
-    <item name="screen.on">129</item>
-    <item name="screen.full">164</item>
+    <item name="screen.on.display0">129</item>
+    <item name="screen.full.display0">164</item>
     <array name="cpu.clusters.cores">
         <value>4</value>
         <value>3</value>

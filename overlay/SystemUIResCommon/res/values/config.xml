@@ -16,5 +16,10 @@
 
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
+    
+    <!-- Mangle the QS to show more tiles
+         Show 3 collumns (OG: 2), Show 6 tiles (OG: 4) (for landscape, else it shows only 4) -->
+    <integer name="quick_settings_num_columns">3</integer> 
+    <integer name="quick_qs_panel_max_tiles">6</integer>
 
 </resources>

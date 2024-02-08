@@ -136,6 +136,15 @@
       "ResetOnInit": true
     },
     {
+      "Name": "CPUBigPlusOnline",
+      "Path": "/sys/devices/system/cpu/cpu7/online",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "UclampTAMin",
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
@@ -522,6 +531,12 @@
       "Node": "GPUMinFreq",
       "Duration": 0,
       "Value": "540000000"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "CPUBigPlusOnline",
+      "Duration": 0,
+      "Value": "0"
     }
   ]
 }

@@ -5,7 +5,10 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1612800"
+        "1708800",
+        "1612800",
+        "1209600",
+        "1094400"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -15,8 +18,12 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "691200"
+        "998400",
+        "691200",
+        "403200",
+        "300000"
       ],
+      "DefaultIndex": 3,
       "ResetOnInit": true
     },
     {
@@ -42,6 +49,9 @@
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
+        "2227200",
+        "1996800",
+        "1766400",
         "1324800"
       ],
       "DefaultIndex": 0,
@@ -53,6 +63,7 @@
       "Values": [
         "9999999",
         "1881600",
+        "1209600",
         "710400"
       ],
       "ResetOnInit": true
@@ -80,6 +91,9 @@
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
+        "2496000",
+        "2150400",
+        "1785600",
         "1555200"
       ],
       "DefaultIndex": 0,
@@ -116,10 +130,10 @@
       "Name": "UclampTAMin",
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
-        "26",
         "0",
+        "26",
         "30",
-	"35",
+	      "35",
         "45"
       ],
       "DefaultIndex": 0,
@@ -138,7 +152,7 @@
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
       "Values": [
-        "840000000",
+        "738000000",
         "540000000",
         "443000000"
       ],
@@ -149,10 +163,12 @@
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
       "Values": [
+      	 "540000000",
         "443000000",
         "379000000",
         "315000000"
       ],
+      "DefaultIndex": 3,
       "ResetOnInit": true
     },
     {
@@ -296,9 +312,9 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CPUBigClusterMinFreq",
+      "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1881600"
+      "Value": "998400"
     },
     {
       "PowerHint": "INTERACTION",
@@ -370,7 +386,7 @@
       "PowerHint": "LAUNCH",
       "Node": "UclampTAMin",
       "Duration": 3000,
-      "Value": "45"
+      "Value": "30"
     },
     {
       "PowerHint": "LAUNCH",
@@ -451,6 +467,12 @@
       "Value": "0"
     },
     {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "300000"
+    },
+    {
       "PowerHint": "Flipendo",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 0,
@@ -469,4 +491,4 @@
       "Value": "1555200"
     }
   ]
-}
+}   

@@ -10,7 +10,7 @@
         "1209600",
         "1094400"
       ],
-      "DefaultIndex": 0,
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -54,7 +54,7 @@
         "1766400",
         "1324800"
       ],
-      "DefaultIndex": 0,
+      "DefaultIndex": 3,
       "ResetOnInit": true
     },
     {
@@ -96,7 +96,7 @@
         "1785600",
         "1555200"
       ],
-      "DefaultIndex": 0,
+      "DefaultIndex": 3,
       "ResetOnInit": true
     },
     {

@@ -176,7 +176,8 @@
         "540",
         "443",
         "379",
-        "315"
+        "315",
+        "150"
       ],
       "DefaultIndex": 3,
       "ResetOnInit": true
@@ -491,6 +492,12 @@
       "Node": "GPUMaxFreq",
       "Duration": 0,
       "Value": "443"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "GPUMinFreq",
+      "Duration": 0,
+      "Value": "150"
     }
   ]
 }   

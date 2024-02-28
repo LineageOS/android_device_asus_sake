@@ -15,6 +15,9 @@ persist.vendor.asus.agps.    u:object_r:vendor_gps_prop:s0
 persist.vendor.asus.gps.     u:object_r:vendor_gps_prop:s0
 vendor.gps.                  u:object_r:vendor_gps_prop:s0
 
+# Power
+vendor.powerhal.    u:object_r:vendor_powerhal_prop:s0
+
 # RIL
 ro.vendor.csc.modemhash             u:object_r:vendor_radio_prop:s0
 vendor.asus.operator.iso-country    u:object_r:vendor_radio_prop:s0

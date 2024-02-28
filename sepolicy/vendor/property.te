@@ -7,5 +7,8 @@ vendor_internal_prop(vendor_fingerprint_prop)
 # GPS
 vendor_internal_prop(vendor_gps_prop)
 
+# Power
+vendor_internal_prop(vendor_powerhal_prop)
+
 # Thermal
 vendor_internal_prop(vendor_thermal_prop)

@@ -348,7 +348,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Protobuf
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # QMI
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
@@ -362,8 +363,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+    android.hardware.radio.deprecated@1.0.vendor
 
 # Security
 BOOT_SECURITY_PATCH := 2023-05-05

@@ -798,11 +798,9 @@ system_ext/etc/permissions/com.qti.location.sdk.xml
 system_ext/etc/permissions/com.qualcomm.location.xml
 system_ext/etc/permissions/com.qualcomm.qti.izattools.xml
 system_ext/etc/permissions/izat.xt.srv.xml
-system_ext/etc/permissions/privapp-permissions-com.qualcomm.location.xml
 system_ext/framework/com.qti.location.sdk.jar
 system_ext/framework/izat.xt.srv.jar
 system_ext/lib64/liblocsdk_diag_jni.so
-system_ext/priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
@@ -850,6 +848,10 @@ vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+
+# GPS - from OnePlus9 - UKQ1.230924.001-1705587840531
+system_ext/etc/permissions/privapp-permissions-com.qualcomm.location.xml|54b04c5a5ef7a395c295982c7290de5aac8e75d1
+system_ext/priv-app/com.qualcomm.location/com.qualcomm.location.apk|77fd9e90b658df449dd1d11e9d5189f5e07302e7
 
 # Hotword Enrollment
 product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk

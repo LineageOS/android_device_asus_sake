@@ -16,6 +16,23 @@
       "message": "There\u0027s much more to it.",
       "revId": "4edd4265fe65c8afa68ec150cdca5458c2cf3904",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "629cec6d_19c7464c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-03-27T00:46:37Z",
+      "side": 1,
+      "message": "AGPS/fused location still works?",
+      "revId": "4edd4265fe65c8afa68ec150cdca5458c2cf3904",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

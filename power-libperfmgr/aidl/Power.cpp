@@ -57,7 +57,7 @@ Power::Power(std::shared_ptr<DisplayLowPower> dlpw)
       mInteractionHandler(nullptr),
       mVRModeOn(false),
       mSustainedPerfModeOn(false),
-      mBatterySaverOn(false) { {
+      mBatterySaverOn(false) {
     mInteractionHandler = std::make_unique<InteractionHandler>();
     mInteractionHandler->Init();
 
@@ -267,7 +267,7 @@ binder_status_t Power::dump(int fd, const char **, uint32_t) {
             "SustainedPerformanceMode: %s\n",
             "BatterySaverMode: %s\n",
             boolToString(HintManager::GetInstance()->IsRunning()), boolToString(mVRModeOn),
-            boolToString(mSustainedPerfModeOn)
+            boolToString(mSustainedPerfModeOn),
             boolToString(mBatterySaverOn)));
     // Dump nodes through libperfmgr
     HintManager::GetInstance()->DumpToFd(fd);

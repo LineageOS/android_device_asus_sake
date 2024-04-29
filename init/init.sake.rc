@@ -11,8 +11,8 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/foreground/cpus 0-6
 
-    # Gpu default power level, defaults to 1 with perfd removed As per kernel change, level  is now 315Mhz
-    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 9
+    # Gpu default power level, defaults to 1 with perfd removed As per kernel change, level 7 is now 315Mhz
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 7
 
     # Runtime fs tuning
     write /sys/block/sda/queue/read_ahead_kb 128

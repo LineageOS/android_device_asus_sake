@@ -150,23 +150,24 @@
     },
     {
       "Name": "GPUMaxFreq",
-      "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
+      "Path": "/sys/class/kgsl/kgsl-3d0/max_clock_mhz",
       "Values": [
-        "738000000",
-        "540000000",
-        "443000000"
+        "738",
+        "540",
+        "443"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "GPUMinFreq",
-      "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
+      "Path": "/sys/class/kgsl/kgsl-3d0/min_clock_mhz",
       "Values": [
-      	 "540000000",
-        "443000000",
-        "379000000",
-        "315000000"
+        "540",
+        "443",
+        "379",
+        "315",
+        "150"
       ],
       "DefaultIndex": 3,
       "ResetOnInit": true
@@ -247,14 +248,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "DisplayWakeup",
-      "Path": "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/early_wakeup",
-      "Values": [
-        "1",
-        "0"
-      ]
-    },
-    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -302,7 +295,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "443000000"
+      "Value": "443"
     },
     {
       "PowerHint": "INTERACTION",
@@ -446,31 +439,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "315000000"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "540000000"
-    },
-    {
-      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
-      "Node": "DisplayWakeup",
-      "Duration": 60,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "UclampTAMin",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
-      "Value": "300000"
+      "Value": "315"
     },
     {
       "PowerHint": "Flipendo",
@@ -489,6 +458,24 @@
       "Node": "CPUBigPlusClusterMaxFreq",
       "Duration": 0,
       "Value": "1555200"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUMaxFreq",
+      "Duration": 0,
+      "Value": "540"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "UclampTAMin",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "300000"
     }
   ]
 }   

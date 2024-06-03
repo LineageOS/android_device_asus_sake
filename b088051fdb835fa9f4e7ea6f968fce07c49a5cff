@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbe46d8d_ff9fb226",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29080
+      },
+      "writtenOn": "2024-06-03T06:17:13Z",
+      "side": 1,
+      "message": "Do you have any tests showing decreased power consumption with this change? Usually disabling any cores (even inefficient ones) makes it worse due to increased load on the other cores.",
+      "revId": "b088051fdb835fa9f4e7ea6f968fce07c49a5cff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

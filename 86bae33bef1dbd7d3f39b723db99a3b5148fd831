@@ -34,6 +34,24 @@
       "parentUuid": "891ddec7_a7c8ee56",
       "revId": "86bae33bef1dbd7d3f39b723db99a3b5148fd831",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f4a2124_bd9c366f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32882
+      },
+      "writtenOn": "2024-06-21T23:55:52Z",
+      "side": 1,
+      "message": "You are right, so Google maybe wrongly documented this property. (https://source.android.com/docs/core/perf/lmkd#configuring-lmkd)",
+      "parentUuid": "bb90bb58_f8e15efc",
+      "revId": "86bae33bef1dbd7d3f39b723db99a3b5148fd831",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

@@ -1,2 +1,20 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
 soong_namespace {
+}
+
+install_symlink {
+    name: "firmware_wlan_mac.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/qca_cld/wlan_mac.bin",
+    symlink_target: "/vendor/factory/wlan_mac.bin",
+}
+install_symlink {
+    name: "firmware_WCNSS_qcom_cfg.ini_symlink",
+    vendor: true,
+    installed_location: "firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini",
+    symlink_target: "/vendor/firmware/wlan/qca_cld/wlan/WCNSS_qcom_cfg.ini",
 }

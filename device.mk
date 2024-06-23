@@ -527,6 +527,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     android.hardware.wifi.hostapd@1.0.vendor \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
     hostapd \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \

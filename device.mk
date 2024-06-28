@@ -90,6 +90,9 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     sound_trigger.primary.lahaina
 
+PRODUCT_PACKAGES += \
+    libaudioroute.vendor
+
 # Authsecret
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor
@@ -400,6 +403,14 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.multihal \
     libsensorndkbridge \
     sensors.sake
+
+PRODUCT_PACKAGES += \
+    liblz4.vendor \
+    libssl.vendor \
+    libcurl.vendor \
+    libjsoncpp.vendor \
+    libsqlite.vendor \
+    libpng.vendor
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30

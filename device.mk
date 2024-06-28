@@ -410,7 +410,8 @@ PRODUCT_PACKAGES += \
     libcurl.vendor \
     libjsoncpp.vendor \
     libsqlite.vendor \
-    libpng.vendor
+    libpng.vendor \
+    libutilscallstack.vendor
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30

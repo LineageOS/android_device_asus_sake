@@ -64,6 +64,10 @@ function blob_fixup() {
     vendor/etc/msm_irqbalance.conf)
         sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
         ;;
+
+    vendor/etc/media_codecs.xml|vendor/etc/media_codecs_lahaina.xml|vendor/etc/media_codecs_lahaina_vendor.xml|vendor/etc/media_codecs_yupik_v1.xml)
+        sed -Ei "/media_codecs_(google_audio|google_telephony|vendor_audio)/d" "${2}"
+        ;;
     esac
 }
 

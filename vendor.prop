@@ -151,10 +151,6 @@ ro.incremental.enable=yes
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
 
-# Media
-debug.stagefright.ccodec=4
-debug.stagefright.omx_default_rank=0
-
 # Performance
 ro.vendor.extension_library=libqti-perfd-client.so
 

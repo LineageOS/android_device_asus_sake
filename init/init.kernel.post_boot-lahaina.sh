@@ -57,7 +57,7 @@ function configure_zram_parameters() {
 		swapoff /dev/block/zram0 2>/dev/kmsg
 		echo 1 > sys/block/zram0/reset 2>/dev/kmsg
 		sleep 1
-		echo lz4 > /sys/block/zram0/comp_algorithm
+		echo zstd > /sys/block/zram0/comp_algorithm
 		echo $disksize > /sys/block/zram0/disksize 2>/dev/kmsg
 		mkswap /dev/block/zram0 2>/dev/kmsg
 		swapon /dev/block/zram0 -p 32758 2>/dev/kmsg
@@ -81,7 +81,7 @@ function configure_zram_parameters() {
 		fi
 
 		#if [ "$low_ram" == "true" ]; then
-			echo lz4 > /sys/block/zram0/comp_algorithm
+			echo zstd > /sys/block/zram0/comp_algorithm
 		#fi
 
 		if [ -f /sys/block/zram0/disksize ]; then

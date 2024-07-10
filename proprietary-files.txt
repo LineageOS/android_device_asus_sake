@@ -1379,7 +1379,6 @@ vendor/etc/init/vendor.qti.tftp.rc
 # Thermal
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
-vendor/etc/thermal-engine.conf
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 

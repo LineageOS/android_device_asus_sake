@@ -223,6 +223,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service
 
 # Initialization
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.asus.zram.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.asus.zram.sh \
+    $(LOCAL_PATH)/init/init.kernel.post_boot-lahaina.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-lahaina.sh \
+
 PRODUCT_PACKAGES += \
     fstab.battery \
     fstab.default \

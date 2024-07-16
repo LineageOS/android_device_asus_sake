@@ -7,6 +7,9 @@
 # Inherit from our proprietary files directory.
 $(call inherit-product, vendor/asus/sake/sake-vendor.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 

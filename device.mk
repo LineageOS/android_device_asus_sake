@@ -145,6 +145,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service_64 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
+# Config Store
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
+
 # Dirac
 PRODUCT_PACKAGES += \
     ASUSDiracGef

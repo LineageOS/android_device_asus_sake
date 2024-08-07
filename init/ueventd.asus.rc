@@ -11,5 +11,4 @@
 /sys/class/asuslib slow_charging_enable 0660 system system
 
 # NFC
-/dev/pn553    0660    nfc               nfc
-/dev/p73      0660    secure_element    secure_element
+/dev/nxp-nci 0660    nfc         nfc

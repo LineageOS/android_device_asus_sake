@@ -27,6 +27,10 @@ on post-fs-data
     mount_all /vendor/etc/fstab.battery
     restorecon_recursive /batinfo
 
+    # NFC
+    mkdir /data/vendor/nfc 0660 nfc nfc
+    chown nfc nfc /dev/nxp-nci
+
     # Sensors
     write /sys/class/sensors/psensor/load_cal 1
     write /sys/class/sensors/psensor_2nd/load_cal 1
@@ -123,18 +127,6 @@ service vendor.camera-provider-2-5 /vendor/bin/hw/android.hardware.camera.provid
     ioprio rt 4
     capabilities SYS_NICE
     writepid /dev/cpuset/camera-daemon/tasks /dev/stune/foreground/tasks
-
-service vendor.secure_element_hal_service_1_2 /vendor/bin/hw/android.hardware.secure_element@1.2-service.p73
-    class hal
-    override
-    disabled
-    interface android.hardware.secure_element@1.0::ISecureElement eSE1
-    interface android.hardware.secure_element@1.1::ISecureElement eSE1
-    interface android.hardware.secure_element@1.2::ISecureElement eSE1
-    interface vendor.nxp.nxpese@1.0::INxpEse default
-    interface vendor.nxp.eventprocessor@1.0::INxpEseEvtProcessor default
-    user secure_element
-    group secure_element
 
 service vendor.sensors-hal-2-1-multihal /vendor/bin/hw/android.hardware.sensors@2.1-service.multihal
     override

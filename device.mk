@@ -314,6 +314,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResCommon \
     FrameworksResTarget \
+    NcmTetheringOverlay \
     SystemUIResCommon \
     TelephonyResCommon \
     WifiResCommon \

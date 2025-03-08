@@ -40,7 +40,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
     (
-        'libwpa_client',
     ): lib_fixup_remove,
 }
 blob_fixups: blob_fixups_user_type = {

@@ -91,11 +91,6 @@ on property:persist.vendor.zram.enable=${persist.vendor.zram.enable}
     setprop vendor.zram.enable ${persist.vendor.zram.enable}
     setprop vendor.zram.disksize ${persist.vendor.zram.disksize}
 
-on property:ro.boot.country_code=JP
-    # NFC
-    setprop ro.boot.product.hardware.sku eSE
-    start vendor.secure_element_hal_service_1_2
-
 on property:sys.boot_completed=1
     # Camera
     copy /proc/driver/dualcam_cali /data/vendor/camera/dualcam_cali

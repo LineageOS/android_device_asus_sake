@@ -199,6 +199,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.qti.hardware.memtrack-service
 
+$(call soong_config_set,qtidisplay,gralloc_handle_has_reserved_size,true)
+
 # Fastboot
 PRODUCT_PACKAGES += \
     fastbootd

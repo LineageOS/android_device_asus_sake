@@ -239,7 +239,6 @@ PRODUCT_PACKAGES += \
     fstab.default.vendor_ramdisk \
     init.asus.rc \
     init.asus.recovery.rc \
-    init.asus.usb.rc \
     init.class_main.sh \
     init.qcom.early_boot.sh \
     init.qcom.rc \
@@ -466,7 +465,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti \
     android.hardware.usb.gadget-service.qti \
-    usb_compositions.conf
+    sake_usb_compositions.conf
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc

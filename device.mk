@@ -239,7 +239,6 @@ PRODUCT_PACKAGES += \
     fstab.default.vendor_ramdisk \
     init.asus.rc \
     init.asus.recovery.rc \
-    init.asus.usb.rc \
     init.class_main.sh \
     init.qcom.early_boot.sh \
     init.qcom.rc \

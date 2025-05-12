@@ -29,7 +29,7 @@ static const std::map<int32_t, GestureInfo> kGestureInfoMap = {
     {4, {0x2ec, "Letter S", "s"}},
     {5, {0x2ed, "Letter V", "v"}},
     {6, {0x2ee, "Letter Z", "z"}},
-    {7, {0x2ef, "Two finger down swipe", "pause"}},
+    {7, {0x2ef, "Two fingers down swipe", "pause"}},
     {8, {0x2f0, "Left arrow", "rewind"}},
     {9, {0x2f1, "Right arrow", "forward"}},
 };

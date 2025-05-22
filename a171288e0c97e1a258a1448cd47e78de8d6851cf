@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a29a51c_becf6e65",
+        "filename": "proprietary-firmware.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-05-22T20:16:58Z",
+      "side": 1,
+      "message": "Why do I keep removing this and you don\u0027t notice?",
+      "revId": "a171288e0c97e1a258a1448cd47e78de8d6851cf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

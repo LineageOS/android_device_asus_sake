@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "561c12ba_4f3b086c",
+        "filename": "device.mk",
+        "patchSetId": 9
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-05-22T23:53:41Z",
+      "side": 1,
+      "message": "Use LOCAL_PATH variable please, like in my previous edits.",
+      "revId": "a18f48b786a20754201b05601cf9a919684340bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

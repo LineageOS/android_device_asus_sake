@@ -16,6 +16,24 @@
       "message": "Why do I keep removing this and you don\u0027t notice?",
       "revId": "a171288e0c97e1a258a1448cd47e78de8d6851cf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53574a59_8a8d6243",
+        "filename": "proprietary-firmware.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33194
+      },
+      "writtenOn": "2025-05-22T20:19:38Z",
+      "side": 1,
+      "message": "My bad, was fixing previous things, just saw this",
+      "parentUuid": "4a29a51c_becf6e65",
+      "revId": "a171288e0c97e1a258a1448cd47e78de8d6851cf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

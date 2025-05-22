@@ -34,6 +34,24 @@
       "parentUuid": "4a29a51c_becf6e65",
       "revId": "a171288e0c97e1a258a1448cd47e78de8d6851cf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0203ce56_2480eb53",
+        "filename": "proprietary-firmware.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33194
+      },
+      "writtenOn": "2025-05-22T20:37:48Z",
+      "side": 1,
+      "message": "296 is correct. Corrected in the initial commit",
+      "parentUuid": "53574a59_8a8d6243",
+      "revId": "a171288e0c97e1a258a1448cd47e78de8d6851cf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

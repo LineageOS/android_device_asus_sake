@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2a046b5_f4883056",
+        "filename": "overlay/Zenfone8LineageSDK/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 33194
+      },
+      "writtenOn": "2025-06-02T18:00:12Z",
+      "side": 1,
+      "message": "[1] brightness is supported. [2] RGB is partially supported, we don\u0027t have a blue channel though. [3] Pulsating requires brightness to be enabled before setting \"breath\", or else no lights. We don\u0027t support breath, only pulsate at one frequency",
+      "range": {
+        "startLine": 69,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 63
+      },
+      "revId": "1b724b282c9c2fc864fae7680f730dbcdb515a57",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

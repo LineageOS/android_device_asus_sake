@@ -107,6 +107,7 @@ BOARD_KERNEL_CMDLINE := \
     pcie_ports=compat \
     service_locator.enable=1 \
     swiotlb=0 \
+    sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
     kpti=off
 
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))

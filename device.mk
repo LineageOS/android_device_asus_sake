@@ -205,10 +205,6 @@ $(call soong_config_set,qtidisplay,gralloc_handle_has_reserved_size,true)
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fastcharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.sake
-
 # GPS
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
@@ -230,6 +226,10 @@ PRODUCT_PACKAGES += \
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti
+
+$(call soong_config_set,lineage_health,fast_charge_node,/sys/class/asuslib/slow_charging_enable)
+$(call soong_config_set,lineage_health,fast_charge_value_none,1)
+$(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 
 # Initialization
 PRODUCT_COPY_FILES += \

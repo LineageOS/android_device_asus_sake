@@ -12,9 +12,6 @@
 /data/vendor/goodix/gf_data(/.*)?                                                               u:object_r:vendor_goodix_data_file:s0
 /dev/goodix_fp                                                                                  u:object_r:fingerprint_device:s0
 
-# Livedisplay
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.sake                  u:object_r:hal_lineage_livedisplay_qti_exec:s0
-
 # NFC
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element-service\.nxp   u:object_r:hal_secure_element_default_exec:s0
 /dev/nxp-nci                                                                    u:object_r:nfc_device:s0

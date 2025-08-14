@@ -191,8 +191,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.15.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
-    vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.0-service.sake \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.mapper@1.1.vendor \
@@ -272,6 +270,14 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/asuslib/charging_suspend)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
+
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay-service.sdm \
+    vendor.lineage.livedisplay-service.sysfs
+
+$(call soong_config_set,livedisplay_sdm,enable_dm,false)
+$(call soong_config_set,livedisplay_sysfs,enable_se,true)
 
 # Media
 PRODUCT_COPY_FILES += \

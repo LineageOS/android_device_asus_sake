@@ -13,7 +13,7 @@
 /dev/goodix_fp                                                                                  u:object_r:fingerprint_device:s0
 
 # Livedisplay
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.sake                  u:object_r:hal_lineage_livedisplay_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay-service\.sake   u:object_r:hal_lineage_livedisplay_qti_exec:s0
 
 # NFC
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element-service\.nxp   u:object_r:hal_secure_element_default_exec:s0

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021-2022 The LineageOS Project
+ * Copyright (C) 2021-2022, 2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -9,34 +9,42 @@
 
 #include <fstream>
 
+namespace aidl {
 namespace vendor {
 namespace lineage {
 namespace touch {
-namespace V1_0 {
-namespace implementation {
 
 const std::string kGloveModePath =
     "/sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_glove_mode";
 
-Return<bool> GloveMode::isEnabled() {
+ndk::ScopedAStatus GloveMode::getEnabled(bool* _aidl_return) {
     std::ifstream file(kGloveModePath);
+
+    if (file.fail()) {
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+
     bool enabled;
 
     file >> enabled;
 
-    return enabled;
+    *_aidl_return = enabled;
+    return ndk::ScopedAStatus::ok();
 }
 
-Return<bool> GloveMode::setEnabled(bool enabled) {
+ndk::ScopedAStatus GloveMode::setEnabled(bool enable) {
     std::ofstream file(kGloveModePath);
 
-    file << enabled << std::flush;
+    if (file.fail()) {
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
 
-    return !file.fail();
+    file << enable << std::flush;
+
+    return ndk::ScopedAStatus::ok();
 }
 
-}  // namespace implementation
-}  // namespace V1_0
 }  // namespace touch
 }  // namespace lineage
 }  // namespace vendor
+}  // namespace aidl

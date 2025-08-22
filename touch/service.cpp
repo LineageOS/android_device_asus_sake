@@ -1,50 +1,43 @@
 /*
- * Copyright (C) 2021 The LineageOS Project
+ * Copyright (C) 2021, 2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "vendor.lineage.touch@1.0-service.sake"
+#define LOG_TAG "vendor.lineage.touch-service.sake"
 
 #include <android-base/logging.h>
-#include <hidl/HidlTransportSupport.h>
+#include <android/binder_manager.h>
+#include <android/binder_process.h>
 
 #include "GloveMode.h"
 #include "HighTouchPollingRate.h"
 #include "TouchscreenGesture.h"
 
-using ::vendor::lineage::touch::V1_0::IGloveMode;
-using ::vendor::lineage::touch::V1_0::IHighTouchPollingRate;
-using ::vendor::lineage::touch::V1_0::ITouchscreenGesture;
-using ::vendor::lineage::touch::V1_0::implementation::GloveMode;
-using ::vendor::lineage::touch::V1_0::implementation::HighTouchPollingRate;
-using ::vendor::lineage::touch::V1_0::implementation::TouchscreenGesture;
+using ::aidl::vendor::lineage::touch::GloveMode;
+using ::aidl::vendor::lineage::touch::HighTouchPollingRate;
+using ::aidl::vendor::lineage::touch::TouchscreenGesture;
 
 int main() {
-    android::sp<IGloveMode> gloveMode = new GloveMode();
-    android::sp<IHighTouchPollingRate> highTouchPollingRate = new HighTouchPollingRate();
-    android::sp<ITouchscreenGesture> touchscreenGesture = new TouchscreenGesture();
+    ABinderProcess_setThreadPoolMaxThreadCount(0);
 
-    android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
+    LOG(INFO) << "Touch HAL service is starting.";
 
-    if (gloveMode->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register touchscreen glove HAL service.";
-        return 1;
-    }
+    std::shared_ptr<GloveMode> gm = ndk::SharedRefBase::make<GloveMode>();
+    std::shared_ptr<HighTouchPollingRate> htpr = ndk::SharedRefBase::make<HighTouchPollingRate>();
+    std::shared_ptr<TouchscreenGesture> tg = ndk::SharedRefBase::make<TouchscreenGesture>();
 
-    if (highTouchPollingRate->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register touchscreen high polling rate HAL service.";
-        return 1;
-    }
+    std::string instance = std::string() + GloveMode::descriptor + "/default";
+    binder_status_t status = AServiceManager_addService(gm->asBinder().get(), instance.c_str());
+    CHECK_EQ(status, STATUS_OK);
 
-    if (touchscreenGesture->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register touchscreen gesture HAL service.";
-        return 1;
-    }
+    instance = std::string() + HighTouchPollingRate::descriptor + "/default";
+    status = AServiceManager_addService(htpr->asBinder().get(), instance.c_str());
+    CHECK_EQ(status, STATUS_OK);
 
-    LOG(INFO) << "Touchscreen HAL service ready.";
+    instance = std::string() + TouchscreenGesture::descriptor + "/default";
+    status = AServiceManager_addService(tg->asBinder().get(), instance.c_str());
+    CHECK_EQ(status, STATUS_OK);
 
-    android::hardware::joinRpcThreadpool();
-
-    LOG(ERROR) << "Touchscreen HAL service failed to join thread pool.";
-    return 1;
+    ABinderProcess_joinThreadPool();
+    return EXIT_FAILURE;  // should not reach
 }

@@ -1,13 +1,13 @@
 //
-// Copyright (C) 2021 The LineageOS Project
+// Copyright (C) 2021, 2025 The LineageOS Project
 // SPDX-License-Identifier: Apache-2.0
 //
 
 cc_binary {
-    name: "vendor.lineage.touch@1.0-service.sake",
-    init_rc: ["vendor.lineage.touch@1.0-service.sake.rc"],
-    vintf_fragments: ["vendor.lineage.touch@1.0-service.sake.xml"],
-    defaults: ["hidl_defaults"],
+    name: "vendor.lineage.touch-service.sake",
+    init_rc: ["vendor.lineage.touch-service.sake.rc"],
+    vintf_fragments: ["vendor.lineage.touch-service.sake.xml"],
+    vendor: true,
     relative_install_path: "hw",
     srcs: [
         "GloveMode.cpp",
@@ -17,10 +17,9 @@ cc_binary {
     ],
     shared_libs: [
         "libbase",
-        "libbinder",
-        "libhidlbase",
+        "libbinder_ndk",
+        "liblog",
         "libutils",
-        "vendor.lineage.touch@1.0",
+        "vendor.lineage.touch-V1-ndk",
     ],
-    vendor: true,
 }

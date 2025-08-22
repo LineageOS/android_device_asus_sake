@@ -472,7 +472,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.sake
+    vendor.lineage.touch-service.sake
 
 # TrustedUI
 PRODUCT_PACKAGES += \

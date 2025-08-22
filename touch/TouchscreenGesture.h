@@ -1,22 +1,19 @@
 /*
- * Copyright (C) 2022 The LineageOS Project
+ * Copyright (C) 2022, 2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
 #pragma once
 
-#include <vendor/lineage/touch/1.0/ITouchscreenGesture.h>
+#include <aidl/vendor/lineage/touch/BnTouchscreenGesture.h>
 
-#include <fstream>
 
+namespace aidl {
 namespace vendor {
 namespace lineage {
 namespace touch {
-namespace V1_0 {
-namespace implementation {
 
-using ::android::hardware::Return;
-using ::vendor::lineage::touch::V1_0::Gesture;
+using ::aidl::vendor::lineage::touch::Gesture;
 
 struct GestureInfo {
     int32_t keycode;
@@ -24,15 +21,13 @@ struct GestureInfo {
     const char* type;
 };
 
-class TouchscreenGesture : public ITouchscreenGesture {
+class TouchscreenGesture : public BnTouchscreenGesture {
   public:
-    // Methods from ::vendor::lineage::touch::V1_0::ITouchscreenGesture follow.
-    Return<void> getSupportedGestures(getSupportedGestures_cb resultCb) override;
-    Return<bool> setGestureEnabled(const Gesture& gesture, bool enabled) override;
+    ndk::ScopedAStatus getSupportedGestures(std::vector<Gesture>* _aidl_return) override;
+    ndk::ScopedAStatus setGestureEnabled(const Gesture& gesture, bool enabled) override;
 };
 
-}  // namespace implementation
-}  // namespace V1_0
 }  // namespace touch
 }  // namespace lineage
 }  // namespace vendor
+}  // namespace aidl

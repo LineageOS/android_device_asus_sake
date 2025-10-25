@@ -7,6 +7,12 @@ soong_namespace {
 }
 
 install_symlink {
+    name: "factory_mount_point_symlink",
+    vendor: true,
+    installed_location: "factory",
+    symlink_target: "/mnt/vendor/persist",
+}
+install_symlink {
     name: "firmware_wlan_mac.bin_symlink",
     vendor: true,
     installed_location: "firmware/wlan/qca_cld/wlan_mac.bin",
@@ -17,4 +23,9 @@ install_symlink {
     vendor: true,
     installed_location: "firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini",
     symlink_target: "/vendor/firmware/wlan/qca_cld/wlan/WCNSS_qcom_cfg.ini",
+}
+mkdir {
+    name: "asusfw_mountpoint",
+    dir: "asusfw",
+    vendor: true,
 }

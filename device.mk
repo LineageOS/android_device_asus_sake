@@ -350,6 +350,8 @@ PRODUCT_PACKAGES += \
 
 # Partitions
 PRODUCT_PACKAGES += \
+    asusfw_mountpoint \
+    factory_mount_point_symlink \
     vendor_bt_firmware_mountpoint \
     vendor_dsp_mountpoint \
     vendor_firmware_mnt_mountpoint

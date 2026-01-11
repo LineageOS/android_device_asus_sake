@@ -339,7 +339,7 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay \
     SystemUIResCommon \
     TelephonyResCommon \
-    WifiResCommon \
+    WifiOverlay \
     WifiResTarget \
     Zenfone8Frameworks \
     Zenfone8LineageSDK \

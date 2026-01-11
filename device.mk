@@ -340,7 +340,6 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     TelephonyResCommon \
     WifiOverlay \
-    WifiResTarget \
     Zenfone8Frameworks \
     Zenfone8LineageSDK \
     Zenfone8LineageSettings \

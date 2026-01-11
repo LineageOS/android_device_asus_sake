@@ -61,4 +61,18 @@
          range string like '1-6,11'. -->
     <string name="config_wifiSoftap2gChannelList" />
 
+    <!-- Boolean indicating performing a partial initial scan is enabled. -->
+    <bool name="config_wifiEnablePartialInitialScan">true</bool>
+
+    <!-- WiFi driver supports IEEE80211AX for SoftAP. -->
+    <bool name="config_wifiSoftapIeee80211axSupported">true</bool>
+
+    <!-- WiFi driver supports IEEE80211AX single user beamformee for SoftAP. -->
+    <bool name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
+
+    <!-- WiFi driver supports IEEE80211AX single user beamformer for SoftAP. -->
+    <bool name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
+
+    <!-- Do not translate. Default access point SSID used for tethering. -->
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Zenfone 8</string>
 </resources>

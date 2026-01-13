@@ -261,9 +261,14 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOOT_KERNEL_MODULES := \
+    adsp_loader_dlkm.ko \
+    apr_dlkm.ko \
     focaltech_fts_zf.ko \
     msm_drm.ko \
-    sensors_vcnl36866.ko
+    q6_notifier_dlkm.ko \
+    q6_pdr_dlkm.ko \
+    sensors_vcnl36866.ko \
+    snd_event_dlkm.ko
 
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default

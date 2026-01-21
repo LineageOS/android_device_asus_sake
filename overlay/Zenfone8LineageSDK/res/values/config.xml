@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2021 The LineageOS Project
+     SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-
     <!-- Default value for proximity check on screen wake
      NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
     <bool name="config_proximityCheckOnWake">true</bool>
     <integer name="config_proximityCheckTimeout">100</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
-
-    <!-- Whether device has screen with higher aspect ratio. -->
-    <bool name="config_haveHigherAspectRatioScreen">true</bool>
-
-    <!-- Defines the actions shown in advanced reboot submenu -->
-    <string-array name="config_restartActionsList">
-        <item>restart</item>
-        <item>restart_recovery</item>
-        <item>restart_bootloader</item>
-        <item>restart_fastboot</item>
-    </string-array>
 
     <!-- All the capabilities of the LEDs on this device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
@@ -61,8 +49,21 @@
          // RGB color values.
          LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS = 128
 
+         // The notification light has non-adjustable pulsing capability.
+         LIGHTS_BREATHING_LED = 256
+
          For example, a device with notification and battery lights that supports
          pulsating and RGB control would set this config to 75. -->
     <integer name="config_deviceLightCapabilities">72</integer>
 
+    <!-- Defines the actions shown in advanced reboot submenu -->
+    <string-array name="config_restartActionsList">
+        <item>restart</item>
+        <item>restart_recovery</item>
+        <item>restart_bootloader</item>
+        <item>restart_fastboot</item>
+    </string-array>
+
+    <!-- Whether device has a screen with a higher aspect ratio -->
+    <bool name="config_haveHigherAspectRatioScreen">true</bool>
 </resources>

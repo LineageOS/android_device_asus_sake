@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6760b570_06236ff8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33194
+      },
+      "writtenOn": "2026-01-22T01:38:39Z",
+      "side": 1,
+      "message": "even though /firmware/image is populated with firmware files:\n\n\n\u003c4\u003e[    1.839846][  T366] subsys-pil-tz 17300000.qcom,lpass: Direct firmware load for adsp.mdt failed with error -2\n\u003c4\u003e[    1.839852][  T366] subsys-pil-tz 17300000.qcom,lpass: Falling back to sysfs fallback for: adsp.mdt\n\u003c6\u003e[    1.845038][  T366] subsys-pil-tz 17300000.qcom,lpass: adsp: loading from 0x0000000086100000 to 0x0000000088200000\n\u003c3\u003e[    1.847525][  T366] subsys-pil-tz 17300000.qcom,lpass: adsp: Initializing image failed(rc:-22)\n\u003c3\u003e[    1.847715][  T366] subsys-pil-tz: subsys_powerup(): pil_boot failed for adsp",
+      "revId": "2cf8a008100d9dc21a224584037dfbb14d7e3067",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

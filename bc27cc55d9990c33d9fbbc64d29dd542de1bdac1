@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "242036ce_74629449",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33194
+      },
+      "writtenOn": "2026-01-23T16:54:19Z",
+      "side": 1,
+      "message": "Need to migrate auto brightness prior to this",
+      "revId": "bc27cc55d9990c33d9fbbc64d29dd542de1bdac1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

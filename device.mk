@@ -344,7 +344,6 @@ PRODUCT_PACKAGES += \
     Zenfone8LineageSDK \
     Zenfone8LineageSettings \
     Zenfone8LineageSystemUI \
-    Zenfone8Settings \
     Zenfone8SettingsProvider \
     Zenfone8SystemUI \
     Zenfone8Telephony

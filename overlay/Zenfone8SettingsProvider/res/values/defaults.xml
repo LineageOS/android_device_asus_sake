@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2022 The LineageOS Project
+     SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <!-- Default screen brightness, from 0 to 255.  102 is 40%. -->
+    <bool name="def_screen_brightness_automatic_mode">true</bool>
 
     <!-- Default for Settings.Global.DEVICE_NAME $1=MANUFACTURER $2=MODEL-->
     <string name="def_device_name">ASUS Zenfone 8</string>
 
     <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
     <string name="def_device_name_simple">Zenfone 8</string>
-
-    <!-- Automatic Brightness -->
-    <bool name="def_screen_brightness_automatic_mode">true</bool>
-
 </resources>

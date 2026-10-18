@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1b59024a_c7e04e4b",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-10-18T22:09:19Z",
+      "side": 0,
+      "message": "This should be in the previous commit",
+      "range": {
+        "startLine": 141,
+        "startChar": 0,
+        "endLine": 143,
+        "endChar": 5
+      },
+      "revId": "4409822109492a7b67ec09a96254f3695e17d99d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

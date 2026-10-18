@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ee351fe_99a5bbf8",
+        "filename": "init/fstab.default",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-10-18T22:09:19Z",
+      "side": 1,
+      "message": "Fix the newline",
+      "revId": "d4727e180345121c01e5a9c9fe7fdee72096420f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}

@@ -33,6 +33,24 @@
       "message": "This should be used for battery-less devices only.",
       "revId": "08601990b4fa3140e2383453e678a30d5f7343a8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a56815a7_7a6e1107",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33194
+      },
+      "writtenOn": "2026-10-18T22:15:52Z",
+      "side": 1,
+      "message": "It was attempted to no avail with 468427 468358 468428",
+      "parentUuid": "a6e69941_15dc2e4a",
+      "revId": "08601990b4fa3140e2383453e678a30d5f7343a8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

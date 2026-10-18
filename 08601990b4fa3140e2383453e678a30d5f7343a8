@@ -16,6 +16,23 @@
       "message": "Just fix battery like other devices?",
       "revId": "08601990b4fa3140e2383453e678a30d5f7343a8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d60332ef_15048361",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-18T22:11:50Z",
+      "side": 1,
+      "message": "This should be used for battery-less devices only.",
+      "revId": "08601990b4fa3140e2383453e678a30d5f7343a8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

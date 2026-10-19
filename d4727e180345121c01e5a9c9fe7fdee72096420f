@@ -16,6 +16,24 @@
       "message": "Fix the newline",
       "revId": "d4727e180345121c01e5a9c9fe7fdee72096420f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da3cb582_8e80f7d9",
+        "filename": "init/fstab.default",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 33194
+      },
+      "writtenOn": "2026-10-19T01:22:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ee351fe_99a5bbf8",
+      "revId": "d4727e180345121c01e5a9c9fe7fdee72096420f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
